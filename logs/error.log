@@ -171,6 +171,7 @@ Stack Trace:
 #17 {main}
 
 
+<<<<<<< HEAD
 2018-09-17 17:56:50 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
 Exception Attributes: array (
   'controller' => 'UsersController',
@@ -204,11 +205,20 @@ Stack Trace:
 2018-09-17 18:01:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Interships could not be found.
 Exception Attributes: array (
   'class' => 'Interships',
+=======
+2018-09-10 20:45:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Add could not be found.
+Exception Attributes: array (
+  'class' => 'Add',
+>>>>>>> 45022bde7df0d4367f6248b2972c9c3703646080
   'plugin' => false,
   'prefix' => false,
   '_ext' => false,
 )
+<<<<<<< HEAD
 Request URL: /interships
+=======
+Request URL: /add
+>>>>>>> 45022bde7df0d4367f6248b2972c9c3703646080
 Stack Trace:
 #0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
 #1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
@@ -230,6 +240,7 @@ Stack Trace:
 #17 {main}
 
 
+<<<<<<< HEAD
 2018-09-17 18:08:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Login could not be found.
 Exception Attributes: array (
   'class' => 'Login',
@@ -241,6 +252,53 @@ Request URL: /login
 Stack Trace:
 #0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
 #1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+=======
+2018-09-10 20:46:23 Error: [Cake\Core\Exception\Exception] App\Controller\UsersController does not implement an isAuthorized() method.
+Request URL: /
+Referer URL: http://localhost/Dev/pages
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Auth\ControllerAuthorize.php(58): Cake\Auth\ControllerAuthorize->controller(Object(App\Controller\UsersController))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(583): Cake\Auth\ControllerAuthorize->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(537): Cake\Controller\Component\AuthComponent->constructAuthorize()
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(326): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(276): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Event\EventManager.php(353): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Event\EventManager.php(330): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(114): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(662): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(115): Cake\Controller\Controller->startupProcess()
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-09-10 20:54:57 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /pages
+Referer URL: http://localhost/Dev/pages
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+>>>>>>> 45022bde7df0d4367f6248b2972c9c3703646080
 #2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
 #3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
 #4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
@@ -259,3 +317,72 @@ Stack Trace:
 #17 {main}
 
 
+<<<<<<< HEAD
+=======
+2018-09-17 17:38:50 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\Program Files (x86)\Ampps\www\Dev\src\Controller\UsersController.php, line 30]
+Request URL: /pages
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 17:38:50 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\src\Controller\UsersController.php line=30 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /pages
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 17:38:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\src\Controller\UsersController.php:30) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /pages
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 17:38:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\src\Controller\UsersController.php:30) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /pages
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 17:38:50 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean in C:\Program Files (x86)\Ampps\www\Dev\src\Controller\UsersController.php on line 30
+Request URL: /pages
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\Program File...', 30)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+>>>>>>> 45022bde7df0d4367f6248b2972c9c3703646080
