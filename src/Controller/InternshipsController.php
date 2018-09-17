@@ -116,7 +116,7 @@ class InternshipsController extends AppController
         $action = $this->request->getParam('action');
         // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
         // authentifiés sur l'application
-        if (in_array($action, ['view', 'tags'])) {
+        if (in_array($action, ['view'])) {
             return true;
         }
 
@@ -126,9 +126,6 @@ class InternshipsController extends AppController
             return false;
         }
 
-        // On vérifie que l'article appartient à l'utilisateur connecté
-        $article = $this->Interships->findById($id)->first();
-
-        return $article->user_id === $user['id'];
+        return $intership->user_id === $user['id'];
     }
 }
