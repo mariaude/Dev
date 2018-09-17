@@ -116,13 +116,13 @@ class InternshipsController extends AppController
         $action = $this->request->getParam('action');
         // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
         // authentifiés sur l'application
-        if (in_array($action, ['add', 'tags'])) {
+        if (in_array($action, ['view', 'tags'])) {
             return true;
         }
 
         // Toutes les autres actions nécessitent un slug
         $id = $this->request->getParam('pass.0');
-        if (!$slug) {
+        if (!$id) {
             return false;
         }
 
