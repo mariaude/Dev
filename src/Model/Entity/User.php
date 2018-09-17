@@ -1,11 +1,7 @@
 <?php
 namespace App\Model\Entity;
 
-<<<<<<< HEAD
 use Cake\Auth\DefaultPasswordHasher; 
-=======
-use Cake\Auth\DefaultPasswordHasher;
->>>>>>> 45022bde7df0d4367f6248b2972c9c3703646080
 use Cake\ORM\Entity;
 
 /**
@@ -20,8 +16,7 @@ use Cake\ORM\Entity;
  */
 class User extends Entity
 {
-    
-  
+
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -31,7 +26,6 @@ class User extends Entity
      *
      * @var array
      */
-    
     protected $_accessible = [
         'email' => true,
         'password' => true,
@@ -56,8 +50,5 @@ class User extends Entity
             return $hasher->hash($value);
         }
     }
-<<<<<<< HEAD
     
-=======
->>>>>>> 45022bde7df0d4367f6248b2972c9c3703646080
 }
