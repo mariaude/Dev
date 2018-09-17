@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Lun 10 Septembre 2018 à 19:28
+-- Généré le :  Lun 17 Septembre 2018 à 18:16
 -- Version du serveur :  5.6.37
 -- Version de PHP :  5.6.31
 
@@ -84,7 +84,14 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Contenu de la table `Users`
+--
+
+INSERT INTO `Users` (`id`, `email`, `password`) VALUES
+(1, 'cynt@bidon.com', '$2y$10$zQ0PIni8iLdkPjP.m8RB6.3w5gRufEMSCkZtszELjCATsiTKSxBJO');
 
 --
 -- Index pour les tables exportées
@@ -140,7 +147,7 @@ ALTER TABLE `Students`
 -- AUTO_INCREMENT pour la table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Contraintes pour les tables exportées
 --
