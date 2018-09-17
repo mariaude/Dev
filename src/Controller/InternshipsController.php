@@ -54,6 +54,7 @@ class InternshipsController extends AppController
         $internship = $this->Internships->newEntity();
         if ($this->request->is('post')) {
             $internship = $this->Internships->patchEntity($internship, $this->request->getData());
+            $internship->user_id = $this->Auth->user('id');
             if ($this->Internships->save($internship)) {
                 $this->Flash->success(__('The internship has been saved.'));
 
@@ -72,7 +73,7 @@ class InternshipsController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit($id)
     {
         $internship = $this->Internships->get($id, [
             'contain' => []
@@ -108,5 +109,26 @@ class InternshipsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+    
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+        // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
+        // authentifiés sur l'application
+        if (in_array($action, ['add', 'tags'])) {
+            return true;
+        }
+
+        // Toutes les autres actions nécessitent un slug
+        $id = $this->request->getParam('pass.0');
+        if (!$slug) {
+            return false;
+        }
+
+        // On vérifie que l'article appartient à l'utilisateur connecté
+        $article = $this->Interships->findById($id)->first();
+
+        return $article->user_id === $user['id'];
     }
 }
