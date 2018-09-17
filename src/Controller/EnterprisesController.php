@@ -109,4 +109,22 @@ class EnterprisesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+        // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
+        // authentifiés sur l'application
+        if (in_array($action, ['view'])) {
+            return true;
+        }
+
+        // Toutes les autres actions nécessitent un slug
+        $id = $this->request->getParam('pass.0');
+        if (!$id) {
+            return false;
+        }
+
+        return $enterprise->user_id === $user['id'];
+    }
 }

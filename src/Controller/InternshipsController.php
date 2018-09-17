@@ -122,6 +122,7 @@ class InternshipsController extends AppController
 
         // Toutes les autres actions nécessitent un slug
         $id = $this->request->getParam('pass.0');
+        
         if (!$id) {
             return false;
         }
