@@ -71,7 +71,7 @@ class UsersController extends AppController
 
             
 
-                if(isset($logged_user['role'])){
+                if(!isset($logged_user['role'])){
                     $logged_user['role'] = 'toBeStudent';
                 }
 
