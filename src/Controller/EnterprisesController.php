@@ -54,9 +54,15 @@ class EnterprisesController extends AppController
         $enterprise = $this->Enterprises->newEntity();
         if ($this->request->is('post')) {
             $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            $enterprise->user_id = $this->Auth->user('id');
+
             if ($this->Enterprises->save($enterprise)) {
                 $this->Flash->success(__('The enterprise has been saved.'));
 
+                $this->requestAction([
+                    'controller' => 'Users', 
+                    'action' => 'confirmEnterprise'
+                ]);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));
@@ -119,12 +125,30 @@ class EnterprisesController extends AppController
             return true;
         }
 
-        // Toutes les autres actions nécessitent un slug
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
+        // Autorisations pour l'action edit
+        if (in_array($action, ['edit'])) {
+            
+            if(isset($user['role']) && $user['role'] === 'enterprise'){
+                $enterprise_id = (int) $this->request->params['pass'][0];
+                
+                $enterprise = $this->Enterprises->get($enterprise_id);
+                
+                //Si user_id de l'entreprise correspond au id de l'user courrant
+                if($enterprise['user_id'] == $user['id']){
+                    return true;
+                }
+                return false;
+            }    
+        }
+
+        if (in_array($action, ['delete'])) {
             return false;
         }
 
-        return $enterprise->user_id === $user['id'];
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
+             return true;
+        }
+        
+        return parent::isAuthorized($user);
     }
 }

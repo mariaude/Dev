@@ -79,9 +79,10 @@ class AppController extends Controller
     public function isAuthorized($user)
     {
         // Par défaut, on refuse l'accès.
-        return false;
+        
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
+        return false;
     }
 }

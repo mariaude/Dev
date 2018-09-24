@@ -67,12 +67,19 @@ class UsersController extends AppController
                 }
                 //return $this->redirect(['action' => 'index']);
                 debug($user);
-                if(isset($user['role']) && $user['role'] === 'toBeStudent'){
-                    return $this->redirect([
-                        'controller' => 'Students', 
-                        'action' => 'add'
-                    ]);
+                if(isset($user['role'])){
+                    if($user['role'] === 'toBeStudent'){
+                        return $this->redirect([
+                            'controller' => 'Students', 
+                            'action' => 'add'
+                        ]);
+                    }else if($user['role'] === 'toBeEnterprise')
+                        return $this->redirect([
+                            'controller' => 'Enterprises', 
+                            'action' => 'add'
+                        ]);
                 }
+
 
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -82,9 +89,7 @@ class UsersController extends AppController
 
     public function confirmStudent(){
 
-        $user = $this->Users->get($this->Auth->user('id'), [
-            'contain' => []
-        ]);
+        $user = $this->Users->get($this->Auth->user('id'));
         
         $user->role = 'student';
     
@@ -96,6 +101,23 @@ class UsersController extends AppController
         $this->Flash->error(__('The user account could not be linked to the student. Please, try again.'));
 
     }
+
+    public function confirmEnterprise(){
+
+        $user = $this->Users->get($this->Auth->user('id'));
+        
+        $user->role = 'enterprise';
+    
+        if ($this->Users->save($user)) {
+            $this->Flash->success(__('The user account has been linked to the enterprise.'));
+
+            return $this->redirect(['action' => 'index']);
+        }
+        $this->Flash->error(__('The user account could not be linked to the enterprise. Please, try again.'));
+
+    }
+
+
 
     /**
      * Edit method
@@ -170,6 +192,24 @@ class UsersController extends AppController
 
         if (in_array($action, ['confirmStudent']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
             return true;
+        }
+
+        if (in_array($action, ['confirmEnterprise']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
+            return true;
+        }
+
+        // Autorisations pour l'action edit
+        if (in_array($action, ['edit'])) {
+            if(isset($user['role']) && $user['role'] === 'student'){
+                        
+                $user_id = (int) $this->request->params['pass'][0];
+                    
+                //Si user_id correspond au id de l'user courrant
+                if($user['id'] == $user_id){
+                    return true;
+                }
+                return false;
+            }    
         }
 
 

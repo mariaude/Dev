@@ -37,9 +37,11 @@ class StudentsController extends AppController
      */
     public function view($id = null)
     {
+
         $student = $this->Students->get($id, [
             'contain' => ['Users']
         ]);
+        
 
         $this->set('student', $student);
     }
@@ -55,6 +57,7 @@ class StudentsController extends AppController
         if ($this->request->is('post')) {
             $student = $this->Students->patchEntity($student, $this->request->getData());
             $student->user_id = $this->Auth->user('id');
+
             if ($this->Students->save($student)) {
                 $this->Flash->success(__('The student has been saved.'));
 
@@ -123,29 +126,35 @@ class StudentsController extends AppController
         // View toujour vrai
 
         if (in_array($action, ['view'])) {
-
+            
             return true;
         }
 
-       
-
-        //$user_id = (int) $this->request->params['user_id'][0];
-        //debug($student);
-        if (in_array($action, ['edit']) && isset($user['role']) && $user['role'] === 'student') {
-            
-            $user_id = $this->request->params['pass'][0];
-
-            if($user_id == $user->id){
-                return true;
-            }else{
+        // Autorisations pour l'action edit
+        if (in_array($action, ['edit'])) {
+            if(isset($user['role']) && $user['role'] === 'student'){
+                
+                $student_id = (int) $this->request->params['pass'][0];
+                
+                $student = $this->Students->get($student_id);
+                
+                //Si user_id du student correspond au id de l'user courrant
+                if($student['user_id'] == $user['id']){
+                    return true;
+                }
                 return false;
-            }
-            
+            }    
+        }
+
+        if (in_array($action, ['delete'])) {
+            return false;
         }
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
              return true;
-         }
+        }
+
+        return parent::isAuthorized($user);
 
 
     }

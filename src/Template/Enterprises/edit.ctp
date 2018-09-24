@@ -25,7 +25,6 @@
     <fieldset>
         <legend><?= __('Edit Enterprise') ?></legend>
         <?php
-            echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('name');
             echo $this->Form->control('adress');
             echo $this->Form->control('city');
