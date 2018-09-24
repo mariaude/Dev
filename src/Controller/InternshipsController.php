@@ -119,6 +119,10 @@ class InternshipsController extends AppController
             return true;
         }
 
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'enterprise') {
+            return true;
+        }
+
         return parent::isAuthorized($user);
     }
 }

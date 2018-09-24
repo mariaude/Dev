@@ -19,12 +19,22 @@
         <?php
             echo $this->Form->control('email');
             echo $this->Form->control('password');
-            echo 'Account type:';
-            $options = [
-                'toBeStudent' => 'Student',
-                'toBeEnterprise' => 'Enterprise',
-            ];
-            echo $this->Form->select('role', $options);
+
+            if(isset($logged_user['role']) && $logged_user['role'] === 'admin'){
+                $options = [
+                    'toBeStudent' => 'Student',
+                    'toBeEnterprise' => 'Enterprise',
+                ];
+
+                echo 'Account type:';
+                echo $this->Form->select('role', $options);
+            }else{
+                echo 'Account type: Student';
+            }
+            
+
+
+            
 
         ?>
     </fieldset>

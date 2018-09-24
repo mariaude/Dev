@@ -55,19 +55,37 @@ class UsersController extends AppController
      */
     public function add()
     {
+        $logged_user = $this->Users->get($this->Auth->user('id'));
+        
+        $this->set('logged_user', $logged_user);
+        
+
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                
 
-                $user = $this->Auth->identify();
-                if ($user) {
-                    $this->Auth->setUser($user);
-                }
+
                 //return $this->redirect(['action' => 'index']);
-                debug($user);
-                if(isset($user['role'])){
+
+            
+
+                if(isset($logged_user['role'])){
+                    $logged_user['role'] = 'toBeStudent';
+                }
+
+                if(isset($logged_user['role']) && $logged_user['role'] === 'admin'){
+                    echo 'test admin';
+                    $this->Flash->success(__('The user has been saved.'));
+                    return $this->redirect(['action' => 'index']);
+                }else{
+
+                    $user = $this->Auth->identify();
+                    if ($user) {
+                        $this->Auth->setUser($user);
+                    }
+
                     if($user['role'] === 'toBeStudent'){
                         return $this->redirect([
                             'controller' => 'Students', 
@@ -169,6 +187,19 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+                if(isset($user['role'])){
+                    if($user['role'] === 'toBeStudent'){
+                        return $this->redirect([
+                            'controller' => 'Students', 
+                            'action' => 'add'
+                        ]);
+                    }else if($user['role'] === 'toBeEnterprise')
+                        return $this->redirect([
+                            'controller' => 'Enterprises', 
+                            'action' => 'add'
+                        ]);
+                }
+
                 return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error('Votre identifiant ou votre mot de passe est incorrect.');

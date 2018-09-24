@@ -14,7 +14,10 @@
 </nav>
 <div class="enterprises index large-9 medium-8 columns content">
     <h3><?= __('Enterprises') ?></h3>
-    <?= $this->Html->link(__('New Enterprise'), ['controller' => 'Enterprises', 'action' => 'add']) ?>
+    <?= 
+    
+    $this->Html->link(__('New Enterprise'), ['controller' => 'Users', 'action' => 'add']) 
+    ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
