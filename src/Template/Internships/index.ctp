@@ -7,17 +7,17 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Internship'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Enterprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Enterprise'), ['controller' => 'Enterprises', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="internships index large-9 medium-8 columns content">
     <h3><?= __('Internships') ?></h3>
+    <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add']) ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('enterprise_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('semester') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('start_date') ?></th>
@@ -31,7 +31,6 @@
         <tbody>
             <?php foreach ($internships as $internship): ?>
             <tr>
-                <td><?= $this->Number->format($internship->id) ?></td>
                 <td><?= $internship->has('enterprise') ? $this->Html->link($internship->enterprise->name, ['controller' => 'Enterprises', 'action' => 'view', $internship->enterprise->id]) : '' ?></td>
                 <td><?= h($internship->semester) ?></td>
                 <td><?= h($internship->start_date) ?></td>

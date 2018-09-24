@@ -13,9 +13,10 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $internship->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Internships'), ['action' => 'index']) ?></li>
+        <br/>
         <li><?= $this->Html->link(__('List Enterprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Enterprise'), ['controller' => 'Enterprises', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="internships form large-9 medium-8 columns content">

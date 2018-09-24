@@ -7,17 +7,17 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Student'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Enterprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="students index large-9 medium-8 columns content">
     <h3><?= __('Students') ?></h3>
+    <?= $this->Html->link(__('New Student'), ['controller' => 'Users', 'action' => 'add']) ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('admission_number') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('first_name') ?></th>
@@ -30,8 +30,7 @@
         <tbody>
             <?php foreach ($students as $student): ?>
             <tr>
-                <td><?= $this->Number->format($student->id) ?></td>
-                <td><?= $student->has('user') ? $this->Html->link($student->user->id, ['controller' => 'Users', 'action' => 'view', $student->user->id]) : '' ?></td>
+                <td><?= $student->has('user') ? $this->Html->link($student->user->email, ['controller' => 'Users', 'action' => 'view', $student->user->id]) : '' ?></td>
                 <td><?= h($student->admission_number) ?></td>
                 <td><?= h($student->first_name) ?></td>
                 <td><?= h($student->last_name) ?></td>
