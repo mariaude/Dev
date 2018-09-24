@@ -80,5 +80,8 @@ class AppController extends Controller
     {
         // Par défaut, on refuse l'accès.
         return false;
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
     }
 }

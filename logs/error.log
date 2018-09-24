@@ -533,3 +533,1145 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 
 
 
+2018-09-17 20:43:08 Error: Fatal Error (4): syntax error, unexpected 'use' (T_USE) in [E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php, line 4]
+Request URL: /users/login?redirect=%2Fstudents%2Fadd
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:08 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php line=4 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/login?redirect=%2Fstudents%2Fadd
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:4) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/login?redirect=%2Fstudents%2Fadd
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:4) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/login?redirect=%2Fstudents%2Fadd
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'use' (T_USE) in E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php on line 4
+Request URL: /users/login?redirect=%2Fstudents%2Fadd
+Referer URL: http://localhost/GestionDesStages/students/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\Ampps\\www\\Ge...', 4)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-09-17 20:43:43 Error: Fatal Error (1): Class 'App\Controller\App' not found in [E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php, line 3]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:43 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php line=3 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:3) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:3) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:43:43 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\App' not found in E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php on line 3
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'E:\\Ampps\\www\\Ge...', 3)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-09-17 20:44:27 Error: Fatal Error (1): Class 'App\Controller\App' not found in [E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php, line 5]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:44:27 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php line=5 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:44:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:5) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:44:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:5) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-17 20:44:28 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\App' not found in E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php on line 5
+Request URL: /users/login
+Referer URL: http://localhost/GestionDesStages/
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'E:\\Ampps\\www\\Ge...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-09-24 14:47:20 Error: Fatal Error (1): Class 'App\Controller\App' not found in [E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php, line 5]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:20 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php line=5 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:5) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:5) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:20 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\App' not found in E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php on line 5
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'E:\\Ampps\\www\\Ge...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-09-24 14:47:54 Error: Fatal Error (1): Call to a member function addnewStudent() on null in [E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php, line 64]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:54 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:54 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:54 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:47:54 Error: [Cake\Error\FatalErrorException] Call to a member function addnewStudent() on null in E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php on line 64
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'E:\\Ampps\\www\\Ge...', 64)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-09-24 14:50:07 Error: Fatal Error (1): Class 'App\Controller\App' not found in [E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php, line 57]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:50:07 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php line=57 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:50:07 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:57) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:50:07 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php:57) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-09-24 14:50:07 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\App' not found in E:\Ampps\www\GestionDesStages\src\Controller\UsersController.php on line 57
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'E:\\Ampps\\www\\Ge...', 57)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-09-24 15:19:28 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:19:28 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=952 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:19:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:19:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:19:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:24:42 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:24:42 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=952 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:24:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:24:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:24:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:24:58 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:32:27 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:34:23 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:34:45 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:35:20 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 15:47:19 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=952 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:19 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:19 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:19 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:19 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:50 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=952 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 15:47:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /students/add
+Referer URL: http://localhost/GestionDesStages/students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 16:03:23 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 16:04:05 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 16:05:12 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 16:05:25 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /users/add
+Referer URL: http://localhost/GestionDesStages/users/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(109): Cake\View\Form\EntityContext->_prepare()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(65): Cake\View\Form\EntityContext->__construct(Object(Cake\Http\ServerRequest), Array)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Form\ContextFactory.php(137): Cake\View\Form\ContextFactory::Cake\View\Form\{closure}(Object(Cake\Http\ServerRequest), Array)
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(2806): Cake\View\Form\ContextFactory->get(Object(Cake\Http\ServerRequest), Array)
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(412): Cake\View\Helper\FormHelper->_getContext(Array)
+#5 E:\Ampps\www\GestionDesStages\src\Template\Users\add.ctp(18): Cake\View\Helper\FormHelper->create(Array)
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1240): include('E:\\Ampps\\www\\Ge...')
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('E:\\Ampps\\www\\Ge...', Array)
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('E:\\Ampps\\www\\Ge...')
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2018-09-24 16:16:14 Error: [Cake\Controller\Exception\MissingActionException] Action StudentsController::confirmStudent() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'StudentsController',
+  'action' => 'confirmStudent',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /students/confirm-student/28
+Referer URL: http://localhost/GestionDesStages/students/add
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\StudentsController))
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2018-09-24 16:16:42 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /users/confirm-student/28
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 16:16:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
+Request URL: /users/confirm-student/28
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 16:16:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/confirm-student/28
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 16:16:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/confirm-student/28
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-09-24 16:16:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /users/confirm-student/28
+Referer URL: http://localhost/GestionDesStages/students/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+

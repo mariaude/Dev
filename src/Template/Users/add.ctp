@@ -21,6 +21,13 @@
         <?php
             echo $this->Form->control('email');
             echo $this->Form->control('password');
+            echo 'Account type:';
+            $options = [
+                'toBeStudent' => 'Student',
+                'toBeEnterprise' => 'Enterprise',
+            ];
+            echo $this->Form->select('role', $options);
+
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

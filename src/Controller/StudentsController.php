@@ -54,9 +54,14 @@ class StudentsController extends AppController
         $student = $this->Students->newEntity();
         if ($this->request->is('post')) {
             $student = $this->Students->patchEntity($student, $this->request->getData());
+            $student->user_id = $this->Auth->user('id');
             if ($this->Students->save($student)) {
                 $this->Flash->success(__('The student has been saved.'));
 
+                $this->requestAction([
+                    'controller' => 'Users', 
+                    'action' => 'confirmStudent'
+                ]);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
@@ -112,19 +117,36 @@ class StudentsController extends AppController
     
     public function isAuthorized($user)
     {
+        
+
         $action = $this->request->getParam('action');
-        // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
-        // authentifiés sur l'application
+        // View toujour vrai
+
         if (in_array($action, ['view'])) {
+
             return true;
         }
 
-        // Toutes les autres actions nécessitent un slug
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
-            return false;
+       
+
+        //$user_id = (int) $this->request->params['user_id'][0];
+        //debug($student);
+        if (in_array($action, ['edit']) && isset($user['role']) && $user['role'] === 'student') {
+            
+            $user_id = $this->request->params['pass'][0];
+
+            if($user_id == $user->id){
+                return true;
+            }else{
+                return false;
+            }
+            
         }
 
-        return $student->user_id === $user['id'];
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
+             return true;
+         }
+
+
     }
 }

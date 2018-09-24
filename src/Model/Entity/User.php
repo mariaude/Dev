@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $email
  * @property string $password
+ * @property string $role
  *
  * @property \App\Model\Entity\Enterprise[] $enterprises
  * @property \App\Model\Entity\Student[] $students
@@ -29,6 +30,7 @@ class User extends Entity
     protected $_accessible = [
         'email' => true,
         'password' => true,
+        'role' => true,
         'enterprises' => true,
         'students' => true
     ];

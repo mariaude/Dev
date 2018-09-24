@@ -1,8 +1,8 @@
 <?php
 namespace App\Controller;
+use Cake\Core\App;
 
 use App\Controller\AppController;
-
 /**
  * Users Controller
  *
@@ -17,6 +17,7 @@ class UsersController extends AppController
     {
         parent::initialize();
         $this->Auth->allow(['logout', 'add']);
+        
     }
 
     /**
@@ -60,11 +61,40 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                $user = $this->Auth->identify();
+                if ($user) {
+                    $this->Auth->setUser($user);
+                }
+                //return $this->redirect(['action' => 'index']);
+                debug($user);
+                if(isset($user['role']) && $user['role'] === 'toBeStudent'){
+                    return $this->redirect([
+                        'controller' => 'Students', 
+                        'action' => 'add'
+                    ]);
+                }
+
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+    }
+
+    public function confirmStudent(){
+
+        $user = $this->Users->get($this->Auth->user('id'), [
+            'contain' => []
+        ]);
+        
+        $user->role = 'student';
+    
+        if ($this->Users->save($user)) {
+            $this->Flash->success(__('The user account has been linked to the student.'));
+
+            return $this->redirect(['action' => 'index']);
+        }
+        $this->Flash->error(__('The user account could not be linked to the student. Please, try again.'));
+
     }
 
     /**
@@ -138,13 +168,16 @@ class UsersController extends AppController
             return true;
         }
 
+        if (in_array($action, ['confirmStudent']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
+            return true;
+        }
+
+
         // Toutes les autres actions nécessitent un slug
         $id = $this->request->getParam('pass.0');
         if (!$id) {
             return false;
         }
-
-        return $user->id === $user['id'];
     }
     
 }

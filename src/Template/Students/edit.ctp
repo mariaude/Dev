@@ -23,7 +23,6 @@
     <fieldset>
         <legend><?= __('Edit Student') ?></legend>
         <?php
-            echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('admission_number');
             echo $this->Form->control('first_name');
             echo $this->Form->control('last_name');
