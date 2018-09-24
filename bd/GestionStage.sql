@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Client :  localhost
--- Généré le :  Lun 17 Septembre 2018 à 18:16
--- Version du serveur :  5.6.37
--- Version de PHP :  5.6.31
+-- Host: localhost
+-- Generation Time: Sep 24, 2018 at 04:48 PM
+-- Server version: 5.6.37
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `GestionStage`
+-- Database: `GestionStage`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Enterprises`
+-- Table structure for table `Enterprises`
 --
 
 CREATE TABLE IF NOT EXISTS `Enterprises` (
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `Enterprises` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Internships`
+-- Table structure for table `Internships`
 --
 
 CREATE TABLE IF NOT EXISTS `Internships` (
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `Internships` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Students`
+-- Table structure for table `Students`
 --
 
 CREATE TABLE IF NOT EXISTS `Students` (
@@ -72,100 +72,109 @@ CREATE TABLE IF NOT EXISTS `Students` (
   `informations` text COLLATE utf8_unicode_ci NOT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
   `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `Students`
+--
+
+INSERT INTO `Students` (`id`, `user_id`, `admission_number`, `first_name`, `last_name`, `phone_number`, `informations`, `notes`, `active`) VALUES
+(18, 40, '111111111', '11111111', '11111111', '11111111', '1111111111111111', '1111111111111', 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Users`
+-- Table structure for table `Users`
 --
 
 CREATE TABLE IF NOT EXISTS `Users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `role` varchar(40) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `Users`
+-- Dumping data for table `Users`
 --
 
-INSERT INTO `Users` (`id`, `email`, `password`) VALUES
-(1, 'cynt@bidon.com', '$2y$10$zQ0PIni8iLdkPjP.m8RB6.3w5gRufEMSCkZtszELjCATsiTKSxBJO');
+INSERT INTO `Users` (`id`, `email`, `password`, `role`) VALUES
+(1, 'cynt@bidon.com', '$2y$10$zQ0PIni8iLdkPjP.m8RB6.3w5gRufEMSCkZtszELjCATsiTKSxBJO', 'admin'),
+(40, 'camarche@gmail.com', '$2y$10$.m3ZX2uUtm9jQnNeU6h.o.lhzOgmzYn5DqgcjH3fjlVX9z7izpl2m', 'student');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `Enterprises`
+-- Indexes for table `Enterprises`
 --
 ALTER TABLE `Enterprises`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `Internships`
+-- Indexes for table `Internships`
 --
 ALTER TABLE `Internships`
   ADD PRIMARY KEY (`id`),
   ADD KEY `enterprise_id` (`enterprise_id`);
 
 --
--- Index pour la table `Students`
+-- Indexes for table `Students`
 --
 ALTER TABLE `Students`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `Users`
+-- Indexes for table `Users`
 --
 ALTER TABLE `Users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `Enterprises`
+-- AUTO_INCREMENT for table `Enterprises`
 --
 ALTER TABLE `Enterprises`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `Internships`
+-- AUTO_INCREMENT for table `Internships`
 --
 ALTER TABLE `Internships`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `Students`
+-- AUTO_INCREMENT for table `Students`
 --
 ALTER TABLE `Students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT pour la table `Users`
+-- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
 --
--- Contraintes pour les tables exportées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `Enterprises`
+-- Constraints for table `Enterprises`
 --
 ALTER TABLE `Enterprises`
   ADD CONSTRAINT `enterprises_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`);
 
 --
--- Contraintes pour la table `Internships`
+-- Constraints for table `Internships`
 --
 ALTER TABLE `Internships`
   ADD CONSTRAINT `internships_ibfk_1` FOREIGN KEY (`enterprise_id`) REFERENCES `Enterprises` (`id`);
 
 --
--- Contraintes pour la table `Students`
+-- Constraints for table `Students`
 --
 ALTER TABLE `Students`
   ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`);
