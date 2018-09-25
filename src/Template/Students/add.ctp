@@ -14,9 +14,9 @@
     </ul>
 </nav>
 <div class="students form large-9 medium-8 columns content">
-    <?= $this->Form->create($student) ?>
+<?= $this->Form->create(null, ['url' => ['controller' => 'Students', 'action' => 'add', $user_id]]) ?>
     <fieldset>
-        <legend><?= __('Add Student') ?></legend>
+        <legend><?= __('Complete Student info') ?></legend>
         <?php
             echo $this->Form->control('admission_number');
             echo $this->Form->control('first_name');

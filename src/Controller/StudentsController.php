@@ -51,20 +51,24 @@ class StudentsController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($user_id = null)
     {
+        //debug($user_id);
+        $this->set('user_id', $user_id);
         $student = $this->Students->newEntity();
-        if ($this->request->is('post')) {
+        
+        if ($this->request->is('post') && isset($user_id)) {
             $student = $this->Students->patchEntity($student, $this->request->getData());
-            $student->user_id = $this->Auth->user('id');
-
+            
+            $student->user_id = $user_id;
+            //debug($student);
             if ($this->Students->save($student)) {
                 $this->Flash->success(__('The student has been saved.'));
-
-                $this->requestAction([
+                $this->redirect([
                     'controller' => 'Users', 
-                    'action' => 'confirmStudent'
+                    'action' => 'confirmStudent', $user_id
                 ]);
+                echo 'test';
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The student could not be saved. Please, try again.'));

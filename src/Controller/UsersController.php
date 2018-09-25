@@ -54,31 +54,36 @@ class UsersController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add()
-    {
-        $logged_user = $this->Users->get($this->Auth->user('id'));
+    {   
+        $logged_user_id = $this->Auth->user('id');
         
-        $this->set('logged_user', $logged_user);
-        
+
+        if(isset($logged_user_id)){
+            $logged_user = $this->Users->get($logged_user_id);
+            $this->set('logged_user', $logged_user);
+        }
 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                
+
+            if(!isset($user['role']))
+                $user['role'] = 'toBeStudent';
+
+            debug($user);
+
+            if ($result = $this->Users->save($user)) {
+                $this->Flash->success(__('The user has been saved.'));
+                $user_id = $result->id;
+                debug($user_id);
 
 
-                //return $this->redirect(['action' => 'index']);
-
-            
-
-                if(!isset($logged_user['role'])){
-                    $logged_user['role'] = 'toBeStudent';
-                }
-
-                if(isset($logged_user['role']) && $logged_user['role'] === 'admin'){
-                    echo 'test admin';
-                    $this->Flash->success(__('The user has been saved.'));
-                    return $this->redirect(['action' => 'index']);
+                if(isset($logged_user)){
+                    if(isset($logged_user['role']) && $logged_user['role'] === 'admin'){
+                        //Admin
+                        echo 'test admin';
+                        
+                    }
                 }else{
 
                     $user = $this->Auth->identify();
@@ -86,16 +91,20 @@ class UsersController extends AppController
                         $this->Auth->setUser($user);
                     }
 
-                    if($user['role'] === 'toBeStudent'){
-                        return $this->redirect([
-                            'controller' => 'Students', 
-                            'action' => 'add'
-                        ]);
-                    }else if($user['role'] === 'toBeEnterprise')
-                        return $this->redirect([
-                            'controller' => 'Enterprises', 
-                            'action' => 'add'
-                        ]);
+                }
+
+
+
+                if($user['role'] === 'toBeStudent'){
+                    return $this->redirect([
+                        'controller' => 'Students', 
+                        'action' => 'add', $user_id
+                    ]);
+                }else if($user['role'] === 'toBeEnterprise'){
+                    return $this->redirect([
+                        'controller' => 'Enterprises', 
+                        'action' => 'add', $user_id
+                    ]);
                 }
 
 
@@ -105,9 +114,9 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    public function confirmStudent(){
-
-        $user = $this->Users->get($this->Auth->user('id'));
+    public function confirmStudent($id = null){
+        echo 'id:'.$id;
+        $user = $this->Users->get($id);
         
         $user->role = 'student';
     
@@ -120,9 +129,9 @@ class UsersController extends AppController
 
     }
 
-    public function confirmEnterprise(){
+    public function confirmEnterprise($user_id = null){
 
-        $user = $this->Users->get($this->Auth->user('id'));
+        $user = $this->Users->get($user_id);
         
         $user->role = 'enterprise';
     
@@ -243,12 +252,7 @@ class UsersController extends AppController
             }    
         }
 
-
-        // Toutes les autres actions nécessitent un slug
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
-            return false;
-        }
+        return parent::isAuthorized($user);
     }
     
 }

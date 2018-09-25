@@ -49,20 +49,24 @@ class EnterprisesController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($user_id = null)
     {
+        //debug($user_id);
+        $this->set('user_id', $user_id);
         $enterprise = $this->Enterprises->newEntity();
-        if ($this->request->is('post')) {
+        
+        if ($this->request->is('post') && isset($user_id)) {
             $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
-            $enterprise->user_id = $this->Auth->user('id');
-
+            
+            $enterprise->user_id = $user_id;
+            //debug($enterprise);
             if ($this->Enterprises->save($enterprise)) {
                 $this->Flash->success(__('The enterprise has been saved.'));
-
-                $this->requestAction([
+                $this->redirect([
                     'controller' => 'Users', 
-                    'action' => 'confirmEnterprise'
+                    'action' => 'confirmEnterprise', $user_id
                 ]);
+                echo 'test';
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));

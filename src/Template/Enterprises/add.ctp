@@ -13,9 +13,9 @@
     </ul>
 </nav>
 <div class="enterprises form large-9 medium-8 columns content">
-    <?= $this->Form->create($enterprise) ?>
+<?= $this->Form->create(null, ['url' => ['controller' => 'Enterprises', 'action' => 'add', $user_id]]) ?>
     <fieldset>
-        <legend><?= __('Add Enterprise') ?></legend>
+        <legend><?= __('Complete enterprise info') ?></legend>
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('adress');
