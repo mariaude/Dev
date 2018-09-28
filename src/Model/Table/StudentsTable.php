@@ -57,8 +57,9 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('admission_number')
-            ->lengthBetween('admission_number',[9,9])
-           // ->numeric('admission_number')
+            ->minLength('admission_number',9)
+            ->maxLength('admission_number',9)
+            ->numeric('admission_number')
             ->requirePresence('admission_number', 'create')
             ->notEmpty('admission_number');
 
@@ -76,8 +77,9 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('phone_number')
-            ->lengthBetween('phone_number',[13,13])
-            //->numeric('phone_number')
+            ->minLength('phone_number',13)
+            ->maxLength('phone_number',13)
+            ->numeric('phone_number')
             ->requirePresence('phone_number', 'create')
             ->notEmpty('phone_number');
 
@@ -86,15 +88,15 @@ class StudentsTable extends Table
             ->requirePresence('informations', 'create')
             ->notEmpty('informations');
 
-        $validator
+        /*$validator
             ->scalar('notes')
             ->requirePresence('notes', 'create')
-            ->notEmpty('notes');
+            //->notEmpty('notes');
 
         $validator
             ->boolean('active')
             ->requirePresence('active', 'create')
-            ->notEmpty('active');
+            //->notEmpty('active');*/
 
         return $validator;
     }
