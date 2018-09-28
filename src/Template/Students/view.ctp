@@ -47,12 +47,4 @@
             <td><?= $student->active ? __('Yes') : __('No'); ?></td>
         </tr>
     </table>
-    <div class="row">
-        <h4><?= __('Informations') ?></h4>
-        <?= $this->Text->autoParagraph(h($student->informations)); ?>
-    </div>
-    <div class="row">
-        <h4><?= __('Notes') ?></h4>
-        <?= $this->Text->autoParagraph(h($student->notes)); ?>
-    </div>
 </div>

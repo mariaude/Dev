@@ -200,12 +200,12 @@ class UsersController extends AppController
                     if($user['role'] === 'toBeStudent'){
                         return $this->redirect([
                             'controller' => 'Students', 
-                            'action' => 'add'
+                            'action' => 'add', $user['id']
                         ]);
                     }else if($user['role'] === 'toBeEnterprise')
                         return $this->redirect([
                             'controller' => 'Enterprises', 
-                            'action' => 'add'
+                            'action' => 'add', $user['id']
                         ]);
                 }
 

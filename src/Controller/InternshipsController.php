@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Internships Controller
@@ -51,10 +52,17 @@ class InternshipsController extends AppController
      */
     public function add()
     {
+
+        $enterprises = TableRegistry::get('Enterprises');
+        $query = $enterprises->find()->select(['id'])->where(['user_id =' => $this->Auth->user('id')])->first();
+        $enterprise_id = $query['id'];
+        //$enterprise_id = $query->where(['user_id' => $this->Auth->user('id')]);
         $internship = $this->Internships->newEntity();
         if ($this->request->is('post')) {
             $internship = $this->Internships->patchEntity($internship, $this->request->getData());
-            $internship->user_id = $this->Auth->user('id');
+            
+            $internship->enterprise_id = $enterprise_id;
+
             if ($this->Internships->save($internship)) {
                 $this->Flash->success(__('The internship has been saved.'));
 

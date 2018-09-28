@@ -23,8 +23,8 @@
             echo $this->Form->control('last_name');
             echo $this->Form->control('phone_number');
             echo $this->Form->control('informations');
-            echo $this->Form->control('notes');
-            echo $this->Form->control('active');
+            /*echo $this->Form->control('notes');
+            echo $this->Form->control('active');*/
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
