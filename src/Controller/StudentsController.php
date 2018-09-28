@@ -24,7 +24,7 @@ class StudentsController extends AppController
             'contain' => ['Users']
         ];
         $students = $this->paginate($this->Students);
-
+        
         $this->set(compact('students'));
     }
 
@@ -59,17 +59,21 @@ class StudentsController extends AppController
         
         if ($this->request->is('post') && isset($user_id)) {
             $student = $this->Students->patchEntity($student, $this->request->getData());
-            
             $student->user_id = $user_id;
+
+            //$this->patchStudentInfos($student);
             //debug($student);
             if ($this->Students->save($student)) {
-                $this->Flash->success(__('The student has been saved.'));
-                $this->redirect([
-                    'controller' => 'Users', 
-                    'action' => 'confirmStudent', $user_id
-                ]);
-                echo 'test';
-                return $this->redirect(['action' => 'index']);
+                $this->patchStudentInfos($student);
+                if ($this->Students->save($student)) {
+                    $this->Flash->success(__('The student has been saved.'));
+                    $this->redirect([
+                        'controller' => 'Users', 
+                        'action' => 'confirmStudent', $user_id
+                    ]);
+                    echo 'test';
+                    return $this->redirect(['action' => 'index']);
+                }
             }
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
         }
@@ -91,15 +95,32 @@ class StudentsController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $student = $this->Students->patchEntity($student, $this->request->getData());
-            if ($this->Students->save($student)) {
-                $this->Flash->success(__('The student has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+            /* Modification */
+            //$this->patchStudentInfos($student);
+            
+            if ($this->Students->save($student)) {
+
+                $this->patchStudentInfos($student);
+                if ($this->Students->save($student)) {
+                    $this->Flash->success(__('The student has been saved.'));
+
+                    return $this->redirect(['action' => 'index']);
+                }
             }
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
         }
         $users = $this->Students->Users->find('list', ['limit' => 200]);
         $this->set(compact('student', 'users'));
+    }
+
+    public function patchStudentInfos($student = null){
+        if($student != null){
+            $student->phone_number = AppController::separatePhoneNumber($student->phone_number);
+            $student->first_name = ucfirst($student->first_name);
+            $student->last_name = ucfirst($student->last_name);
+            $student->informations = ucfirst($student->informations);
+        }
     }
 
     /**
@@ -136,10 +157,10 @@ class StudentsController extends AppController
 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
+
             if(isset($user['role']) && $user['role'] === 'student'){
                 
                 $student_id = (int) $this->request->params['pass'][0];
-                
                 $student = $this->Students->get($student_id);
                 
                 //Si user_id du student correspond au id de l'user courrant

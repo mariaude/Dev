@@ -84,4 +84,15 @@ class AppController extends Controller
         }
         return false;
     }
+
+    public function separatePhoneNumber($phone_number){
+        $phone_number = substr_replace($phone_number, '.', 3, 0);
+        $phone_number = substr_replace($phone_number, '.', 7, 0);
+        $phone_number = substr_replace($phone_number, '.', 12, 0);
+
+        return $phone_number;
+    }
+
+
+
 }

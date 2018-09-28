@@ -55,13 +55,7 @@ class UsersController extends AppController
      */
     public function add()
     {   
-        $logged_user_id = $this->Auth->user('id');
-        
-
-        if(isset($logged_user_id)){
-            $logged_user = $this->Users->get($logged_user_id);
-            $this->set('logged_user', $logged_user);
-        }
+        $loguser = $this->request->getSession()->read('Auth.User');
 
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -78,14 +72,14 @@ class UsersController extends AppController
                 debug($user_id);
 
 
-                if(isset($logged_user)){
-                    if(isset($logged_user['role']) && $logged_user['role'] === 'admin'){
+                if(isset($loguser)){
+                    if(isset($loguser['role']) && $loguser['role'] === 'admin'){
                         //Admin
                         echo 'test admin';
-                        
                     }
                 }else{
-
+                    // Créé par l'user
+                    // Log in automatiquement
                     $user = $this->Auth->identify();
                     if ($user) {
                         $this->Auth->setUser($user);
@@ -93,8 +87,7 @@ class UsersController extends AppController
 
                 }
 
-
-
+                // Redirection
                 if($user['role'] === 'toBeStudent'){
                     return $this->redirect([
                         'controller' => 'Students', 
@@ -117,31 +110,36 @@ class UsersController extends AppController
     public function confirmStudent($id = null){
         echo 'id:'.$id;
         $user = $this->Users->get($id);
-        
         $user->role = 'student';
     
         if ($this->Users->save($user)) {
             $this->Flash->success(__('The user account has been linked to the student.'));
-
+            $loguser = $this->request->getSession()->read('Auth.User');
+            if($loguser['id'] == $id){
+                
+                $this->request->getSession()->write('Auth.User.role', 'student');
+            }
             return $this->redirect(['action' => 'index']);
         }
         $this->Flash->error(__('The user account could not be linked to the student. Please, try again.'));
-
     }
 
     public function confirmEnterprise($user_id = null){
 
         $user = $this->Users->get($user_id);
-        
+    
         $user->role = 'enterprise';
     
         if ($this->Users->save($user)) {
             $this->Flash->success(__('The user account has been linked to the enterprise.'));
-
+            $loguser = $this->request->getSession()->read('Auth.User');
+            if($loguser['id'] == $id){
+                
+                $this->request->getSession()->write('Auth.User.role', 'enterprise');
+            }
             return $this->redirect(['action' => 'index']);
         }
         $this->Flash->error(__('The user account could not be linked to the enterprise. Please, try again.'));
-
     }
 
 

@@ -17,11 +17,11 @@
     <fieldset>
         <legend><?= __('Add User') ?></legend>
         <?php
-
+            $loguser = $this->request->getSession()->read('Auth.User');
             echo $this->Form->control('email');
             echo $this->Form->control('password');
 
-            if(isset($logged_user['role']) && $logged_user['role'] === 'admin'){
+            if(isset($loguser['role']) && $loguser['role'] === 'admin'){
                 $options = [
                     'toBeStudent' => 'Student',
                     'toBeEnterprise' => 'Enterprise',

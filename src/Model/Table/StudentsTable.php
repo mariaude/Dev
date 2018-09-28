@@ -57,12 +57,18 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('admission_number')
-            ->minLength('admission_number',9)
-            ->maxLength('admission_number',9)
+            ->lengthBetween('admission_number', [9, 9])
             ->numeric('admission_number')
             ->requirePresence('admission_number', 'create')
             ->notEmpty('admission_number');
 
+    /*
+        $validator->add('admission_number', 'numerique', [
+            'rule' => 'numeric',
+            'message' => __('Format 9 chiffres')
+        ]);
+*/
+        
         $validator
             ->scalar('first_name')
             ->maxLength('first_name', 255)
@@ -77,8 +83,7 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('phone_number')
-            ->minLength('phone_number',13)
-            ->maxLength('phone_number',13)
+            ->lengthBetween('phone_number', [10, 10])
             ->numeric('phone_number')
             ->requirePresence('phone_number', 'create')
             ->notEmpty('phone_number');
@@ -114,4 +119,5 @@ class StudentsTable extends Table
 
         return $rules;
     }
+
 }
