@@ -117,7 +117,7 @@ class UsersController extends AppController
             $loguser = $this->request->getSession()->read('Auth.User');
             if($loguser['id'] == $id){
                 
-                $this->request->getSession()->write('Auth.User.role', 'student');
+                $this->request->getSession()->write('Auth.User', $user);
             }
             return $this->redirect(['action' => 'index']);
         }
