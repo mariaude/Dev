@@ -62,12 +62,12 @@ class StudentsTable extends Table
             ->requirePresence('admission_number', 'create')
             ->notEmpty('admission_number');
 
-    /*
-        $validator->add('admission_number', 'numerique', [
-            'rule' => 'numeric',
-            'message' => __('Format 9 chiffres')
-        ]);
-*/
+        /*
+                $validator->add('admission_number', 'numerique', [
+                    'rule' => 'numeric',
+                    'message' => __('Format 9 chiffres')
+                ]);
+        */
         
         $validator
             ->scalar('first_name')

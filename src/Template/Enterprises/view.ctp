@@ -47,6 +47,10 @@
             <td><?= h($enterprise->region) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('additional_informations') ?></th>
+            <td><?= h($enterprise->additional_informations) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($enterprise->id) ?></td>
         </tr>

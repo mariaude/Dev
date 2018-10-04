@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.9
--- https://www.phpmyadmin.net
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
 --
--- Client :  localhost
--- Généré le :  Ven 28 Septembre 2018 à 18:18
--- Version du serveur :  5.6.37
--- Version de PHP :  5.6.31
+-- Hôte : localhost:3306
+-- Généré le :  jeu. 04 oct. 2018 à 10:55
+-- Version du serveur :  10.1.35-MariaDB-cll-lve
+-- Version de PHP :  5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,16 +19,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `GestionStage`
+-- Base de données :  `letsgost_GestionStage`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Enterprises`
+-- Structure de la table `enterprises`
 --
 
-CREATE TABLE IF NOT EXISTS `Enterprises` (
+CREATE TABLE `enterprises` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -35,23 +37,24 @@ CREATE TABLE IF NOT EXISTS `Enterprises` (
   `province` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `postal_code` char(6) COLLATE utf8_unicode_ci NOT NULL,
   `region` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `active` tinyint(1) NOT NULL DEFAULT '1',
+  `additional_informations` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `Enterprises`
+-- Déchargement des données de la table `enterprises`
 --
 
-INSERT INTO `Enterprises` (`id`, `user_id`, `name`, `adress`, `city`, `province`, `postal_code`, `region`, `active`) VALUES
-(1, 43, 'brod', '2354 rue Silver', 'Laval', 'Québec', 'J6D6H5', 'voj', 0);
+INSERT INTO `enterprises` (`id`, `user_id`, `name`, `adress`, `city`, `province`, `postal_code`, `region`, `active`, `additional_informations`) VALUES
+(1, 1, '2020 Inc', '1700 Boulevard des laurentides', 'Laval', 'Québec', 'H7M 2Y', 'rive nord', 1, 'Type d\'établissement: Autre');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Internships`
+-- Structure de la table `internships`
 --
 
-CREATE TABLE IF NOT EXISTS `Internships` (
+CREATE TABLE `internships` (
   `id` int(11) NOT NULL,
   `enterprise_id` int(11) NOT NULL,
   `semester` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
@@ -61,22 +64,22 @@ CREATE TABLE IF NOT EXISTS `Internships` (
   `work_hours` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `Internships`
+-- Déchargement des données de la table `internships`
 --
 
-INSERT INTO `Internships` (`id`, `enterprise_id`, `semester`, `start_date`, `end_date`, `available_places`, `work_hours`, `title`, `description`) VALUES
-(4, 1, 'Été', '2014-05-02', '2018-09-28', 1, '30', 'concierge', 'laver des planchers');
+INSERT INTO `internships` (`id`, `enterprise_id`, `semester`, `start_date`, `end_date`, `available_places`, `work_hours`, `title`, `description`) VALUES
+(1, 1, 'automne 2018', '2018-09-24', '2018-09-24', 200, '60', 'prog', 'programmer');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Students`
+-- Structure de la table `students`
 --
 
-CREATE TABLE IF NOT EXISTS `Students` (
+CREATE TABLE `students` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `admission_number` char(9) COLLATE utf8_unicode_ci NOT NULL,
@@ -86,117 +89,117 @@ CREATE TABLE IF NOT EXISTS `Students` (
   `informations` text COLLATE utf8_unicode_ci NOT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
   `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `Students`
+-- Déchargement des données de la table `students`
 --
 
-INSERT INTO `Students` (`id`, `user_id`, `admission_number`, `first_name`, `last_name`, `phone_number`, `informations`, `notes`, `active`) VALUES
-(18, 40, '111111111', '11111111', '11111111', '11111111', '1111111111111111', '1111111111111', 1),
-(19, 42, '123456789', 'Cynthia', 'Boissonneault', '1234567890123', 'Je veux mourir', '', 0),
-(20, 44, '987456321', 'Youcef', 'Bokari', '3216541236541', 'Bonjour', '', 0);
+INSERT INTO `students` (`id`, `user_id`, `admission_number`, `first_name`, `last_name`, `phone_number`, `informations`, `notes`, `active`) VALUES
+(18, 40, '123456789', 'Mathieu', 'Ca marche', '450.474.8282.', 'Étudiant qui marche!', '1111111111111', 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Users`
+-- Structure de la table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `Users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` varchar(40) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `Users`
+-- Déchargement des données de la table `users`
 --
 
-INSERT INTO `Users` (`id`, `email`, `password`, `role`) VALUES
+INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 (1, 'cynt@bidon.com', '$2y$10$zQ0PIni8iLdkPjP.m8RB6.3w5gRufEMSCkZtszELjCATsiTKSxBJO', 'admin'),
-(40, 'camarche@gmail.com', '$2y$10$.m3ZX2uUtm9jQnNeU6h.o.lhzOgmzYn5DqgcjH3fjlVX9z7izpl2m', 'student'),
-(42, 'cynthia@bidon.com', '$2y$10$AiQFbyxjTfVAUDvLS7mYbOHT4Zd432w3xMsT.voe.lSrPgE6PPd9a', 'student'),
-(43, 'brod@bidon.com', '$2y$10$XYW6CU/0G.05oQ.w6s0N5eHtkggFnwXXh/08qw8hwRR6k2Wa3RB0K', 'enterprise'),
-(44, 'youcef@bidon.com', '$2y$10$Md0GSxnTIYTj9nzSBTmp9.xitApt0WNlio5LvbAQW5uw/5z86ie8u', 'student');
+(40, 'camarche@gmail.com', '$2y$10$.m3ZX2uUtm9jQnNeU6h.o.lhzOgmzYn5DqgcjH3fjlVX9z7izpl2m', 'student');
 
 --
--- Index pour les tables exportées
+-- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `Enterprises`
+-- Index pour la table `enterprises`
 --
-ALTER TABLE `Enterprises`
+ALTER TABLE `enterprises`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `Internships`
+-- Index pour la table `internships`
 --
-ALTER TABLE `Internships`
+ALTER TABLE `internships`
   ADD PRIMARY KEY (`id`),
   ADD KEY `enterprise_id` (`enterprise_id`);
 
 --
--- Index pour la table `Students`
+-- Index pour la table `students`
 --
-ALTER TABLE `Students`
+ALTER TABLE `students`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `Users`
+-- Index pour la table `users`
 --
-ALTER TABLE `Users`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT pour la table `Enterprises`
+-- AUTO_INCREMENT pour la table `enterprises`
 --
-ALTER TABLE `Enterprises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+ALTER TABLE `enterprises`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT pour la table `Internships`
+-- AUTO_INCREMENT pour la table `internships`
 --
-ALTER TABLE `Internships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+ALTER TABLE `internships`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT pour la table `Students`
+-- AUTO_INCREMENT pour la table `students`
 --
-ALTER TABLE `Students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+ALTER TABLE `students`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
--- AUTO_INCREMENT pour la table `Users`
+-- AUTO_INCREMENT pour la table `users`
 --
-ALTER TABLE `Users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
 --
--- Contraintes pour les tables exportées
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Contraintes pour la table `Enterprises`
+-- Contraintes pour la table `enterprises`
 --
-ALTER TABLE `Enterprises`
+ALTER TABLE `enterprises`
   ADD CONSTRAINT `enterprises_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Contraintes pour la table `Internships`
+-- Contraintes pour la table `internships`
 --
-ALTER TABLE `Internships`
+ALTER TABLE `internships`
   ADD CONSTRAINT `internships_ibfk_1` FOREIGN KEY (`enterprise_id`) REFERENCES `enterprises` (`id`);
 
 --
--- Contraintes pour la table `Students`
+-- Contraintes pour la table `students`
 --
-ALTER TABLE `Students`
+ALTER TABLE `students`
   ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

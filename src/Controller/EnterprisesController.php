@@ -123,36 +123,37 @@ class EnterprisesController extends AppController
     public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
-        // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
-        // authentifiés sur l'application
+
+        $valide = false;
+
         if (in_array($action, ['view'])) {
-            return true;
+            $valide = true;
         }
 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
             
             if(isset($user['role']) && $user['role'] === 'enterprise'){
-                $enterprise_id = (int) $this->request->params['pass'][0];
+                $enterprise_id = (int) $this->request->getParam('pass.0');
                 
                 $enterprise = $this->Enterprises->get($enterprise_id);
                 
                 //Si user_id de l'entreprise correspond au id de l'user courrant
                 if($enterprise['user_id'] == $user['id']){
-                    return true;
+                    $valide = true;
                 }
-                return false;
+                $valide = false;
             }    
         }
 
         if (in_array($action, ['delete'])) {
-            return false;
+            $valide = false;
         }
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
-             return true;
+             $valide = true;
         }
         
-        return parent::isAuthorized($user);
+        return ($valide) ? $valide : parent::isAuthorized($user);
     }
 }

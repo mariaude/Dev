@@ -94,11 +94,15 @@ class EnterprisesTable extends Table
             ->maxLength('region', 255)
             ->requirePresence('region', 'create')
             ->notEmpty('region');
-
+        
+        $validator
+            ->scalar('additional_informations')
+            ->requirePresence('additional_informations', 'create')
+            ->notEmpty('additional_informations');
+        
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'create')
-            ->notEmpty('active');
+            ->requirePresence('active', 'create');
 
         return $validator;
     }

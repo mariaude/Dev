@@ -117,7 +117,7 @@ class UsersController extends AppController
             $loguser = $this->request->getSession()->read('Auth.User');
             if($loguser['id'] == $id){
                 
-                $this->request->getSession()->write('Auth.User.role', 'student');
+                $this->request->getSession()->write('Auth.User', $user);
             }
             return $this->redirect(['action' => 'index']);
         }
@@ -135,7 +135,7 @@ class UsersController extends AppController
             $loguser = $this->request->getSession()->read('Auth.User');
             if($loguser['id'] == $id){
                 
-                $this->request->getSession()->write('Auth.User.role', 'enterprise');
+                $this->request->getSession()->write('Auth.User', $user);
             }
             return $this->redirect(['action' => 'index']);
         }
@@ -222,35 +222,36 @@ class UsersController extends AppController
      public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
+        $valide = false;
         // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
         // authentifiés sur l'application
         if (in_array($action, ['view'])) {
-            return true;
+            $valide = true;
         }
 
         if (in_array($action, ['confirmStudent']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
-            return true;
+            $valide = true;
         }
 
         if (in_array($action, ['confirmEnterprise']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
-            return true;
+            $valide = true;
         }
 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
             if(isset($user['role']) && $user['role'] === 'student'){
                         
-                $user_id = (int) $this->request->params['pass'][0];
+                $user_id = (int) $this->request->getParam('pass.0');
                     
                 //Si user_id correspond au id de l'user courrant
                 if($user['id'] == $user_id){
-                    return true;
+                    $valide = true;
                 }
-                return false;
+                $valide = false;
             }    
         }
 
-        return parent::isAuthorized($user);
+        return ($valide) ? $valide : parent::isAuthorized($user);
     }
     
 }

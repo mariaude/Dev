@@ -254,9 +254,17 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'root',
+            
+            /* POUR LA BASE DE DONNÉES DISTANCE LETSGOSTAGE.CA 
+            'username' => 'letsgost',
+            'password' => 'equipe1',
+            'database' => 'letsgost_GestionStage',*/
+            
+            /* POUR LA BASE DE DONNÉES LOCALE */
+            'username' => 'root',         
             'password' => 'mysql',
             'database' => 'GestionStage',
+            
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */

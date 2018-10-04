@@ -28,6 +28,7 @@
                 <th scope="col"><?= $this->Paginator->sort('province') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('postal_code') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('region') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('additional_informations') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('active') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -42,6 +43,7 @@
                 <td><?= h($enterprise->province) ?></td>
                 <td><?= h($enterprise->postal_code) ?></td>
                 <td><?= h($enterprise->region) ?></td>
+                <td><?= h($enterprise->additional_informations) ?></td>
                 <td><?= h($enterprise->active) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $enterprise->id]) ?>

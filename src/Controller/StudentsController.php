@@ -150,36 +150,37 @@ class StudentsController extends AppController
         $action = $this->request->getParam('action');
         // View toujour vrai
 
+        $valide = false;
+
         if (in_array($action, ['view'])) {
             
-            return true;
+            $valide = true;
         }
 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
 
             if(isset($user['role']) && $user['role'] === 'student'){
-                
-                $student_id = (int) $this->request->params['pass'][0];
+                $student_id = (int) $this->request->getParam('pass.0');
                 $student = $this->Students->get($student_id);
                 
                 //Si user_id du student correspond au id de l'user courrant
                 if($student['user_id'] == $user['id']){
-                    return true;
+                    $valide = true;
                 }
-                return false;
+                $valide = false;
             }    
         }
 
         if (in_array($action, ['delete'])) {
-            return false;
+            $valide = false;
         }
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
-             return true;
+             $valide = true;
         }
 
-        return parent::isAuthorized($user);
+        return ($valide) ? $valide : parent::isAuthorized($user);
 
 
     }

@@ -39,6 +39,7 @@ class Enterprise extends Entity
         'province' => true,
         'postal_code' => true,
         'region' => true,
+        'additional_informations' => true,
         'active' => true,
         'user' => true,
         'internships' => true
