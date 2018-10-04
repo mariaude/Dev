@@ -107,16 +107,15 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    public function confirmStudent($id = null){
-        echo 'id:'.$id;
-        $user = $this->Users->get($id);
+    public function confirmStudent($user_id = null){
+        $user = $this->Users->get($user_id);
         $user->role = 'student';
     
         if ($this->Users->save($user)) {
             $this->Flash->success(__('The user account has been linked to the student.'));
             $loguser = $this->request->getSession()->read('Auth.User');
-            if($loguser['id'] == $id){
-                
+            if($loguser['id'] == $user_id){
+                // L'utilisateur loggé est le student étant lié
                 $this->request->getSession()->write('Auth.User', $user);
             }
             return $this->redirect(['action' => 'index']);
@@ -125,25 +124,21 @@ class UsersController extends AppController
     }
 
     public function confirmEnterprise($user_id = null){
-
         $user = $this->Users->get($user_id);
-    
         $user->role = 'enterprise';
     
         if ($this->Users->save($user)) {
             $this->Flash->success(__('The user account has been linked to the enterprise.'));
             $loguser = $this->request->getSession()->read('Auth.User');
-            if($loguser['id'] == $id){
-                
+            if($loguser['id'] == $user_id){
+                // L'utilisateur loggé est l'enterprise étant lié
                 $this->request->getSession()->write('Auth.User', $user);
             }
             return $this->redirect(['action' => 'index']);
         }
         $this->Flash->error(__('The user account could not be linked to the enterprise. Please, try again.'));
     }
-
-
-
+    
     /**
      * Edit method
      *

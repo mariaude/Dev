@@ -102,7 +102,7 @@ class EnterprisesTable extends Table
         
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'create');
+            ->requirePresence('active', 'false');
 
         return $validator;
     }
