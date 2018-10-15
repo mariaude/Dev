@@ -18,3 +18,34 @@ Stack Trace:
 #15 {main}
 
 
+2018-10-15 18:03:24 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\EnterprisesControllerTest" test case. SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#1 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#2 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#3 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#4 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-10-15 18:06:28 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\EnterprisesControllerTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#1 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#2 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#3 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#4 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
