@@ -30,6 +30,16 @@
             echo $this->Form->control('province');
             echo $this->Form->control('postal_code');
             echo $this->Form->control('region');
+            $options = [
+                'autre' => 'Autre',
+                'centreHospitalier' => 'Centre hospitalier',
+                'centreReadaptation' => 'Centre de réadaptation',
+                'cliniquePrivee' => 'Clinique privée',
+                'chsld' => 'CHSLD',
+                'clsc'  => 'CLSC'
+            ];
+            echo('Type');
+            echo $this->Form->select('enterprise_type', $options);
             echo $this->Form->control('additional_informations');
             echo $this->Form->control('active');
         ?>

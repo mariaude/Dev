@@ -24,8 +24,15 @@
     <fieldset>
         <legend><?= __('Edit Internship') ?></legend>
         <?php
+
             echo $this->Form->control('enterprise_id', ['options' => $enterprises]);
-            echo $this->Form->control('semester');
+             $options = [
+                'autumn' => 'Autumn',
+                'winter' => 'Winter',
+            ];
+
+            echo('Semester');
+            echo $this->Form->select('semester', $options);
             echo $this->Form->control('start_date');
             echo $this->Form->control('end_date');
             echo $this->Form->control('available_places');
