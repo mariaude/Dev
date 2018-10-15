@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use Cake\Event\Event;
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 
@@ -118,19 +119,71 @@ class InternshipsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->deny('view');
+    }
     
     public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
+
+        $valide = false;
         // authentifiés sur l'application
         if (in_array($action, ['view'])) {
-            return true;
+
+
+            $logged_user = $this->request->getSession()->read('Auth.User');
+
+            if($logged_user["role"] == "student" ){
+                $valide = true;
+            }else if($logged_user["role"] == "enterprise"){
+                //Recherche pour savoir si l'entreprise suivante est propriétaire
+
+                $current_internship = $this->Internships->get((int) $this->request->getParam('pass.0'));
+
+                $this->log('WOLOLO');
+                $this->log($current_internship);
+
+                $enterprises = TableRegistry::get('Enterprises');
+
+                $enteprise_user = $enterprises->find()->where(['user_id' => $logged_user["id"]])->first();
+
+                if($enteprise_user){
+                    //Est entreprise
+                    $this->log($enteprise_user);
+
+                    if($enteprise_user['id'] == $current_internship['enterprise_id'])
+                        $valide = true;
+
+                }else{
+                    $this->log('rien de trouvé');
+                    $valide = false;
+                }
+             
+
+            }
+
+
+
+            
+            
+
+            
+
+
+
+            
+
+
         }
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'enterprise') {
-            return true;
+            $valide = true;
         }
 
-        return parent::isAuthorized($user);
+        return ($valide) ? $valide : parent::isAuthorized($user);
     }
 }
