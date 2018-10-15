@@ -31,6 +31,59 @@ CREATE TABLE IF NOT EXISTS `client_type` (
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `client_type`
+--
+
+INSERT INTO `client_type` (`id`, `name`) VALUES
+(1, 'UTRF'),
+(2, 'Soins de clientèle hébergée et hôpital de jour'),
+(3, 'Soins de clientèle hébergée et externe'),
+(4, 'Soins de clientèle externe, hospitalisée et hébergée, rééducation et renforcement au travail'),
+(5, 'Soins de clientèle externe'),
+(6, 'Soins clientèle hospitalisée'),
+(7, 'Soins clientèle hébergée, soins de clientèle en convalescence'),
+(8, 'Soins clientèle hébergée et hospitalisée'),
+(9, 'Soins clientèle hébergée et externe'),
+(10, 'Soins clientèle hébergé et possibilité de Centre de jour'),
+(11, 'Soins clientèle externe, rééducation au travail'),
+(12, 'Soins clientèle externe et interne'),
+(13, 'Soins clientèle externe et hospitalisée'),
+(14, 'Soins clientèle externe et hébergée'),
+(15, 'Soins clientèle externe et à domicile'),
+(16, 'Soins clientèle externe'),
+(17, 'Soins clientèle à domicile et en hébergement, Centre de jour'),
+(18, 'Soins clientèle à domicile et clientèle externe'),
+(19, 'Soins clientèle à domicile'),
+(20, 'Recherche clinique'),
+(21, "Principalement ortho/rhumato, un peu de perte d'autonomie"),
+(22, "Perte d'autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire"),
+(23, "Perte d'autonomie, orthopédie/rhumatologie, neuro"),
+(24, "Perte d'autonomie, Orthopédie/rhumatologie"),
+(25, "Perte d'autonomie, orthopédie/rhumato, neuro"),
+(26, "Perte d'autonomie, ortho/rhumato, cardiorespiratoire"),
+(27, "Perte d'autonomie, ortho/rhumato"),
+(28, "Perte d'autonomie, ortho, cardio, neuro"),
+(29, "Perte d'autonomie, neurologie (cas séquélaires et évolutifs)"),
+(30, "Perte d'autonomie, neuro et quelques cas ortho"),
+(31, "Perte d'autonomie, cardiorespiratoire, palliatif"),
+(32, "Perte d'autonomie un peu de neuro et d'ortho"),
+(33, "Perte d'autonomie et ortho/rhumato"),
+(34, "Perte d'autonomie"),
+(35, "Perte autonomie fonctionnelle"),
+(36, "Orthopédie/rhumatologie, Perte d'Autonomie"),
+(37, "Orthopédie/rhumatologie principalement"),
+(38, 'Orthopédie/rhumatologie'),
+(39, "Ortho/rhumato et perte d'autonomie"),
+(40, "Ortho/rhumato"),
+(41, "Neurologie, pédiatrie poss d'ortho/rhumato"),
+(42, "Hôpital de jour"),
+(43, "Centre de jour, soins de clientèle hébergée"),
+(44, "Centre de jour et soins à domicile"),
+(45, 'Centre de jour et hôpital de jour'),
+(46, "Centre de jour"),
+(47, "CDJ et soins clientèle hébergée");
+
 -- --------------------------------------------------------
 
 --
@@ -117,6 +170,39 @@ CREATE TABLE IF NOT EXISTS `mission` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `mission`
+--
+
+INSERT INTO `mission` (`id`, `name`) VALUES
+(1, 'UTRF'),
+(2, 'Soins de clientèle hébergée et hôpital de jour'),
+(3, 'Soins de clientèle hébergée et externe'),
+(4, 'Soins de clientèle externe, hospitalisée et hébergée, rééducation et renforcement au travail'),
+(5, 'Soins de clientèle externe'),
+(6, 'Soins clientèle hospitalisée'),
+(7, 'Soins clientèle hébergée, soins de clientèle en convalescence'),
+(8, 'Soins clientèle hébergée et hospitalisée'),
+(9, 'Soins clientèle hébergée et externe'),
+(10, 'Soins clientèle hébergée'),
+(11, 'Soins clientèle hébergé et possibilité de Centre de jour'),
+(12, 'Soins clientèle externe, rééducation au travail'),
+(13, 'Soins clientèle externe et interne'),
+(14, 'Soins clientèle externe et hospitalisée'),
+(15, 'Soins clientèle externe et hébergée'),
+(16, 'Soins clientèle externe et à domicile'),
+(17, 'Soins clientèle externe'),
+(18, 'Soins clientèle à domicile et en hébergement, Centre de jour'),
+(19, 'Soins clientèle à domicile et clientèle externe'),
+(20, 'Soins clientèle à domicile'),
+(21, 'Recherche clinique'),
+(22, "Hôpital de jour"),
+(23, "Centre de jour, soins de clientèle hébergée"),
+(24, "Centre de jour et soins à domicile"),
+(25, 'Centre de jour et hôpital de jour'),
+(26, "Centre de jour"),
+(27, "CDJ et soins clientèle hébergée");
 
 -- --------------------------------------------------------
 
