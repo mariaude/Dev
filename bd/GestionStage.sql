@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Client :  localhost
--- Généré le :  Lun 15 Octobre 2018 à 19:55
--- Version du serveur :  5.6.37
--- Version de PHP :  7.1.8
+-- Host: localhost
+-- Generation Time: Oct 17, 2018 at 06:52 PM
+-- Server version: 5.6.37
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `GestionStage`
+-- Database: `GestionStage`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `client_type`
+-- Table structure for table `candidacies`
+--
+
+CREATE TABLE IF NOT EXISTS `candidacies` (
+  `internship_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_type`
 --
 
 CREATE TABLE IF NOT EXISTS `client_type` (
@@ -32,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `client_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `client_type`
+-- Dumping data for table `client_type`
 --
 
 INSERT INTO `client_type` (`id`, `name`) VALUES
@@ -56,38 +67,38 @@ INSERT INTO `client_type` (`id`, `name`) VALUES
 (18, 'Soins clientèle à domicile et clientèle externe'),
 (19, 'Soins clientèle à domicile'),
 (20, 'Recherche clinique'),
-(21, "Principalement ortho/rhumato, un peu de perte d'autonomie"),
-(22, "Perte d'autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire"),
-(23, "Perte d'autonomie, orthopédie/rhumatologie, neuro"),
-(24, "Perte d'autonomie, Orthopédie/rhumatologie"),
-(25, "Perte d'autonomie, orthopédie/rhumato, neuro"),
-(26, "Perte d'autonomie, ortho/rhumato, cardiorespiratoire"),
-(27, "Perte d'autonomie, ortho/rhumato"),
-(28, "Perte d'autonomie, ortho, cardio, neuro"),
-(29, "Perte d'autonomie, neurologie (cas séquélaires et évolutifs)"),
-(30, "Perte d'autonomie, neuro et quelques cas ortho"),
-(31, "Perte d'autonomie, cardiorespiratoire, palliatif"),
-(32, "Perte d'autonomie un peu de neuro et d'ortho"),
-(33, "Perte d'autonomie et ortho/rhumato"),
-(34, "Perte d'autonomie"),
-(35, "Perte autonomie fonctionnelle"),
-(36, "Orthopédie/rhumatologie, Perte d'Autonomie"),
-(37, "Orthopédie/rhumatologie principalement"),
+(21, 'Principalement ortho/rhumato, un peu de perte d''autonomie'),
+(22, 'Perte d''autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire'),
+(23, 'Perte d''autonomie, orthopédie/rhumatologie, neuro'),
+(24, 'Perte d''autonomie, Orthopédie/rhumatologie'),
+(25, 'Perte d''autonomie, orthopédie/rhumato, neuro'),
+(26, 'Perte d''autonomie, ortho/rhumato, cardiorespiratoire'),
+(27, 'Perte d''autonomie, ortho/rhumato'),
+(28, 'Perte d''autonomie, ortho, cardio, neuro'),
+(29, 'Perte d''autonomie, neurologie (cas séquélaires et évolutifs)'),
+(30, 'Perte d''autonomie, neuro et quelques cas ortho'),
+(31, 'Perte d''autonomie, cardiorespiratoire, palliatif'),
+(32, 'Perte d''autonomie un peu de neuro et d''ortho'),
+(33, 'Perte d''autonomie et ortho/rhumato'),
+(34, 'Perte d''autonomie'),
+(35, 'Perte autonomie fonctionnelle'),
+(36, 'Orthopédie/rhumatologie, Perte d''Autonomie'),
+(37, 'Orthopédie/rhumatologie principalement'),
 (38, 'Orthopédie/rhumatologie'),
-(39, "Ortho/rhumato et perte d'autonomie"),
-(40, "Ortho/rhumato"),
-(41, "Neurologie, pédiatrie poss d'ortho/rhumato"),
-(42, "Hôpital de jour"),
-(43, "Centre de jour, soins de clientèle hébergée"),
-(44, "Centre de jour et soins à domicile"),
+(39, 'Ortho/rhumato et perte d''autonomie'),
+(40, 'Ortho/rhumato'),
+(41, 'Neurologie, pédiatrie poss d''ortho/rhumato'),
+(42, 'Hôpital de jour'),
+(43, 'Centre de jour, soins de clientèle hébergée'),
+(44, 'Centre de jour et soins à domicile'),
 (45, 'Centre de jour et hôpital de jour'),
-(46, "Centre de jour"),
-(47, "CDJ et soins clientèle hébergée");
+(46, 'Centre de jour'),
+(47, 'CDJ et soins clientèle hébergée');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `client_type_enterprise`
+-- Table structure for table `client_type_enterprise`
 --
 
 CREATE TABLE IF NOT EXISTS `client_type_enterprise` (
@@ -99,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `client_type_enterprise` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `enterprises`
+-- Table structure for table `enterprises`
 --
 
 CREATE TABLE IF NOT EXISTS `enterprises` (
@@ -114,19 +125,20 @@ CREATE TABLE IF NOT EXISTS `enterprises` (
   `active` tinyint(1) NOT NULL DEFAULT '1',
   `additional_informations` text COLLATE utf8_unicode_ci NOT NULL,
   `enterprise_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `enterprises`
+-- Dumping data for table `enterprises`
 --
 
 INSERT INTO `enterprises` (`id`, `user_id`, `name`, `adress`, `city`, `province`, `postal_code`, `region`, `active`, `additional_informations`, `enterprise_type`) VALUES
-(1, 1, '2020 Inc', '1700 Boulevard des laurentides', 'Laval', 'Québec', 'H7M 2Y', 'rive nord', 1, 'Type d''établissement: Autre', '');
+(1, 1, '2020 Inc', '1700 Boulevard des laurentides', 'Laval', 'Québec', 'H7M 2Y', 'rive nord', 1, 'Type d''établissement: Autre', ''),
+(2, 43, 'entreprise@gmail.com', '123 rue abc', 'Repentigny', 'Quebec', 'SHALOM', '1', 1, '1', '');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `enterprise_mission`
+-- Table structure for table `enterprise_mission`
 --
 
 CREATE TABLE IF NOT EXISTS `enterprise_mission` (
@@ -138,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `enterprise_mission` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `internships`
+-- Table structure for table `internships`
 --
 
 CREATE TABLE IF NOT EXISTS `internships` (
@@ -151,28 +163,29 @@ CREATE TABLE IF NOT EXISTS `internships` (
   `work_hours` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `internships`
+-- Dumping data for table `internships`
 --
 
 INSERT INTO `internships` (`id`, `enterprise_id`, `semester`, `start_date`, `end_date`, `available_places`, `work_hours`, `title`, `description`) VALUES
-(1, 1, 'automne 2018', '2018-09-24', '2018-09-24', 200, '60', 'prog', 'programmer');
+(1, 1, 'automne 2018', '2018-09-24', '2018-09-24', 200, '60', 'prog', 'programmer'),
+(2, 2, 'winter', '2014-10-17', '2018-10-17', 1, '1', '1', '1');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `mission`
+-- Table structure for table `mission`
 --
 
 CREATE TABLE IF NOT EXISTS `mission` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `mission`
+-- Dumping data for table `mission`
 --
 
 INSERT INTO `mission` (`id`, `name`) VALUES
@@ -197,17 +210,17 @@ INSERT INTO `mission` (`id`, `name`) VALUES
 (19, 'Soins clientèle à domicile et clientèle externe'),
 (20, 'Soins clientèle à domicile'),
 (21, 'Recherche clinique'),
-(22, "Hôpital de jour"),
-(23, "Centre de jour, soins de clientèle hébergée"),
-(24, "Centre de jour et soins à domicile"),
+(22, 'Hôpital de jour'),
+(23, 'Centre de jour, soins de clientèle hébergée'),
+(24, 'Centre de jour et soins à domicile'),
 (25, 'Centre de jour et hôpital de jour'),
-(26, "Centre de jour"),
-(27, "CDJ et soins clientèle hébergée");
+(26, 'Centre de jour'),
+(27, 'CDJ et soins clientèle hébergée');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `students`
+-- Table structure for table `students`
 --
 
 CREATE TABLE IF NOT EXISTS `students` (
@@ -223,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `students` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `students`
+-- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`id`, `user_id`, `admission_number`, `first_name`, `last_name`, `phone_number`, `informations`, `notes`, `active`) VALUES
@@ -232,7 +245,7 @@ INSERT INTO `students` (`id`, `user_id`, `admission_number`, `first_name`, `last
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -240,30 +253,38 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` varchar(40) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 (1, 'cynt@bidon.com', '$2y$10$zQ0PIni8iLdkPjP.m8RB6.3w5gRufEMSCkZtszELjCATsiTKSxBJO', 'admin'),
 (40, 'camarche@gmail.com', '$2y$10$.m3ZX2uUtm9jQnNeU6h.o.lhzOgmzYn5DqgcjH3fjlVX9z7izpl2m', 'student'),
 (41, 'CHSLDMTL@hotmail.com', '$2y$10$e0YwrVYr/1FEUoLtkSWcJedCdKUoA9xGAvUg6OBfDvwZMBymhHALW', 'toBeEnterprise'),
-(42, 'clsclaval@gmail.com', '$2y$10$6nrmvT7lB8WD/6Mgr0dLde3lGAayD9Kg2TOIjycA2fokP0BOsujFK', 'toBeEnterprise');
+(42, 'clsclaval@gmail.com', '$2y$10$6nrmvT7lB8WD/6Mgr0dLde3lGAayD9Kg2TOIjycA2fokP0BOsujFK', 'toBeEnterprise'),
+(43, 'entreprise@gmail.com', '$2y$10$Bs3K51yWZtD5L6ydwwTJ.OU0RZlW.X9zdJY5FgImIpSc4DrGol/CW', 'enterprise');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `client_type`
+-- Indexes for table `candidacies`
+--
+ALTER TABLE `candidacies`
+  ADD PRIMARY KEY (`internship_id`,`student_id`),
+  ADD KEY `student_key` (`student_id`);
+
+--
+-- Indexes for table `client_type`
 --
 ALTER TABLE `client_type`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `client_type_enterprise`
+-- Indexes for table `client_type_enterprise`
 --
 ALTER TABLE `client_type_enterprise`
   ADD PRIMARY KEY (`id`),
@@ -271,14 +292,15 @@ ALTER TABLE `client_type_enterprise`
   ADD KEY `client_id` (`client_id`);
 
 --
--- Index pour la table `enterprises`
+-- Indexes for table `enterprises`
 --
 ALTER TABLE `enterprises`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_id_2` (`user_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `enterprise_mission`
+-- Indexes for table `enterprise_mission`
 --
 ALTER TABLE `enterprise_mission`
   ADD PRIMARY KEY (`id`),
@@ -286,102 +308,110 @@ ALTER TABLE `enterprise_mission`
   ADD KEY `mission_id` (`mission_id`);
 
 --
--- Index pour la table `internships`
+-- Indexes for table `internships`
 --
 ALTER TABLE `internships`
   ADD PRIMARY KEY (`id`),
   ADD KEY `enterprise_id` (`enterprise_id`);
 
 --
--- Index pour la table `mission`
+-- Indexes for table `mission`
 --
 ALTER TABLE `mission`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `students`
+-- Indexes for table `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_id_2` (`user_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `client_type_enterprise`
+-- AUTO_INCREMENT for table `client_type_enterprise`
 --
 ALTER TABLE `client_type_enterprise`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `enterprises`
+-- AUTO_INCREMENT for table `enterprises`
 --
 ALTER TABLE `enterprises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `enterprise_mission`
+-- AUTO_INCREMENT for table `enterprise_mission`
 --
 ALTER TABLE `enterprise_mission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `internships`
+-- AUTO_INCREMENT for table `internships`
 --
 ALTER TABLE `internships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `mission`
+-- AUTO_INCREMENT for table `mission`
 --
 ALTER TABLE `mission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
--- AUTO_INCREMENT pour la table `students`
+-- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
--- Contraintes pour les tables exportées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `client_type_enterprise`
+-- Constraints for table `candidacies`
+--
+ALTER TABLE `candidacies`
+  ADD CONSTRAINT `candidacies_ibfk_1` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`),
+  ADD CONSTRAINT `candidacies_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`);
+
+--
+-- Constraints for table `client_type_enterprise`
 --
 ALTER TABLE `client_type_enterprise`
   ADD CONSTRAINT `client_type_enterprise_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `client_type` (`id`),
   ADD CONSTRAINT `client_type_enterprise_ibfk_2` FOREIGN KEY (`enterprise_id`) REFERENCES `enterprises` (`id`);
 
 --
--- Contraintes pour la table `enterprises`
+-- Constraints for table `enterprises`
 --
 ALTER TABLE `enterprises`
   ADD CONSTRAINT `enterprises_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Contraintes pour la table `enterprise_mission`
+-- Constraints for table `enterprise_mission`
 --
 ALTER TABLE `enterprise_mission`
   ADD CONSTRAINT `enterprise_mission_ibfk_1` FOREIGN KEY (`mission_id`) REFERENCES `mission` (`id`),
   ADD CONSTRAINT `enterprise_mission_ibfk_2` FOREIGN KEY (`enterprise_id`) REFERENCES `enterprises` (`id`);
 
 --
--- Contraintes pour la table `internships`
+-- Constraints for table `internships`
 --
 ALTER TABLE `internships`
   ADD CONSTRAINT `internships_ibfk_1` FOREIGN KEY (`enterprise_id`) REFERENCES `enterprises` (`id`);
 
 --
--- Contraintes pour la table `students`
+-- Constraints for table `students`
 --
 ALTER TABLE `students`
   ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);

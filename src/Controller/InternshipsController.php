@@ -22,10 +22,19 @@ class InternshipsController extends AppController
      */
     public function index()
     {
+
+        $logged_user = $this->request->getSession()->read('Auth.User');
+
         $this->paginate = [
             'contain' => ['Enterprises']
         ];
         $internships = $this->paginate($this->Internships);
+
+        if($logged_user["enterprise"]){
+            
+            $query = $this->Internships->find()->where(['enterprise_id' => $logged_user["enterprise"]["id"]]);
+            $internships = $this->paginate($query);
+        }
 
         $this->set(compact('internships'));
     }
@@ -53,26 +62,25 @@ class InternshipsController extends AppController
      */
     public function add()
     {
-
-        $enterprises = TableRegistry::get('Enterprises');
-        $query = $enterprises->find()->select(['id'])->where(['user_id =' => $this->Auth->user('id')])->first();
-        $enterprise_id = $query['id'];
-        //$enterprise_id = $query->where(['user_id' => $this->Auth->user('id')]);
-        $internship = $this->Internships->newEntity();
-        if ($this->request->is('post')) {
-            $internship = $this->Internships->patchEntity($internship, $this->request->getData());
-            
-            $internship->enterprise_id = $enterprise_id;
-
-            if ($this->Internships->save($internship)) {
-                $this->Flash->success(__('The internship has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+        
+        $enterprise_id = $this->request->getSession()->read('Auth.User.enterprise.id');
+        if($enterprise_id){
+            $internship = $this->Internships->newEntity();
+            if ($this->request->is('post')) {
+                $internship = $this->Internships->patchEntity($internship, $this->request->getData());
+                
+                $internship->enterprise_id = $enterprise_id;
+    
+                if ($this->Internships->save($internship)) {
+                    $this->Flash->success(__('The internship has been saved.'));
+    
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('The internship could not be saved. Please, try again.'));
             }
-            $this->Flash->error(__('The internship could not be saved. Please, try again.'));
+            $enterprises = $this->Internships->Enterprises->find('list', ['limit' => 200]);
+            $this->set(compact('internship', 'enterprises'));
         }
-        $enterprises = $this->Internships->Enterprises->find('list', ['limit' => 200]);
-        $this->set(compact('internship', 'enterprises'));
     }
 
     /**
@@ -136,7 +144,9 @@ class InternshipsController extends AppController
 
 
             $logged_user = $this->request->getSession()->read('Auth.User');
-
+            $logged_user_enter = $this->request->getSession()->read('Auth.User.enterprise');
+            $this->log('$logged_user_enter');
+            $this->log($logged_user_enter);
             if($logged_user["role"] == "student" ){
                 $valide = true;
             }else if($logged_user["role"] == "enterprise"){
@@ -147,9 +157,11 @@ class InternshipsController extends AppController
                 $this->log('WOLOLO');
                 $this->log($current_internship);
 
-                $enterprises = TableRegistry::get('Enterprises');
+                //$enterprises = TableRegistry::get('Enterprises');
 
-                $enteprise_user = $enterprises->find()->where(['user_id' => $logged_user["id"]])->first();
+                //$enteprise_user = $enterprises->find()->where(['user_id' => $logged_user["id"]])->first();
+                $enteprise_user = $this->request->getSession()->read('Auth.User.enterprise');
+                $this->log($enteprise_user);
 
                 if($enteprise_user){
                     //Est entreprise
@@ -165,18 +177,6 @@ class InternshipsController extends AppController
              
 
             }
-
-
-
-            
-            
-
-            
-
-
-
-            
-
 
         }
 
