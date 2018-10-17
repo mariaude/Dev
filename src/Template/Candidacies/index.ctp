@@ -28,9 +28,8 @@
             <?php foreach ($candidacies as $candidacy): ?>
             <tr>
                 <td><?= $candidacy->has('internship') ? $this->Html->link($candidacy->internship->title, ['controller' => 'Internships', 'action' => 'view', $candidacy->internship->id]) : '' ?></td>
-                <td><?= $candidacy->has('student') ? $this->Html->link($candidacy->student->id, ['controller' => 'Students', 'action' => 'view', $candidacy->student->id]) : '' ?></td>
+                <td><?= $candidacy->has('student') ? $this->Html->link($candidacy->student->full_name, ['controller' => 'Students', 'action' => 'view', $candidacy->student->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $candidacy->internship_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $candidacy->internship_id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $candidacy->internship_id], ['confirm' => __('Are you sure you want to delete # {0}?', $candidacy->internship_id)]) ?>
                 </td>
