@@ -26,6 +26,8 @@ class Candidacy extends Entity
      */
     protected $_accessible = [
         'internship' => true,
-        'student' => true
+        'student' => true,
+        'internship_id' => true,
+        'student_id' => true
     ];
 }

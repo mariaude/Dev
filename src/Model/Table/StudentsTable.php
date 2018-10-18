@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Students Model
  *
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
+ * @property |\Cake\ORM\Association\HasMany $Candidacies
  *
  * @method \App\Model\Entity\Student get($primaryKey, $options = [])
  * @method \App\Model\Entity\Student newEntity($data = null, array $options = [])
@@ -41,6 +42,9 @@ class StudentsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->hasMany('Candidacies', [
+            'foreignKey' => 'student_id'
+        ]);
     }
 
     /**
@@ -57,18 +61,10 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('admission_number')
-            ->lengthBetween('admission_number', [9, 9])
-            ->numeric('admission_number')
+            ->maxLength('admission_number', 9)
             ->requirePresence('admission_number', 'create')
             ->notEmpty('admission_number');
 
-        /*
-                $validator->add('admission_number', 'numerique', [
-                    'rule' => 'numeric',
-                    'message' => __('Format 9 chiffres')
-                ]);
-        */
-        
         $validator
             ->scalar('first_name')
             ->maxLength('first_name', 255)
@@ -83,8 +79,7 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('phone_number')
-            ->lengthBetween('phone_number', [10, 10])
-            ->numeric('phone_number')
+            ->maxLength('phone_number', 13)
             ->requirePresence('phone_number', 'create')
             ->notEmpty('phone_number');
 
@@ -93,15 +88,15 @@ class StudentsTable extends Table
             ->requirePresence('informations', 'create')
             ->notEmpty('informations');
 
-        /*$validator
+        $validator
             ->scalar('notes')
             ->requirePresence('notes', 'create')
-            //->notEmpty('notes');
+            ->notEmpty('notes');
 
         $validator
             ->boolean('active')
             ->requirePresence('active', 'create')
-            //->notEmpty('active');*/
+            ->notEmpty('active');
 
         return $validator;
     }
@@ -119,5 +114,4 @@ class StudentsTable extends Table
 
         return $rules;
     }
-
 }

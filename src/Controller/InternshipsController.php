@@ -48,11 +48,35 @@ class InternshipsController extends AppController
      */
     public function view($id = null)
     {
+
         $internship = $this->Internships->get($id, [
             'contain' => ['Enterprises']
         ]);
 
+        $data[] = $internship;
+        
+        $student_user = $this->request->getSession()->read('Auth.User.student');
+        if($student_user){
+            $already_applied = $this->Internships
+            ->Candidacies->find()
+            ->where(['internship_id' => $id, 'student_id' => $student_user['id']])
+            ->first();
+
+            if(!$already_applied){
+
+                $Candidacies = $this->loadModel('Candidacies');
+                $candidacy = $Candidacies->newEntity();
+
+                $candidacy->student_id = $student_user['id'];
+                $candidacy->internship_id = $id;
+                $this->set('candidacy', $candidacy);
+            }
+
+            $this->set(['student_user'=> $student_user, 'already_applied'=> $already_applied]);
+            
+        }
         $this->set('internship', $internship);
+        
     }
 
     /**
@@ -145,8 +169,6 @@ class InternshipsController extends AppController
 
             $logged_user = $this->request->getSession()->read('Auth.User');
             $logged_user_enter = $this->request->getSession()->read('Auth.User.enterprise');
-            $this->log('$logged_user_enter');
-            $this->log($logged_user_enter);
             if($logged_user["role"] == "student" ){
                 $valide = true;
             }else if($logged_user["role"] == "enterprise"){

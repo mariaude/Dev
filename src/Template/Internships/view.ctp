@@ -55,4 +55,20 @@
         <h4><?= __('Description') ?></h4>
         <?= $this->Text->autoParagraph(h($internship->description)); ?>
     </div>
+
+    <?php if($student_user): // Student, possibilité de mettre une candidature
+            if($already_applied): //Déja appliqué ?>
+                <legend><?=__('Candidature déjà laissée')?>
+            <?php else: //Jamais appliqué?>
+                <?= $this->Form->create($candidacy, ['url' => ['controller' => 'Candidacies', 'action' => 'add']]) ?>
+            <fieldset>
+                <?php
+                    echo $this->Form->hidden('student_id');
+                    echo $this->Form->hidden('internship_id');
+                ?>
+            </fieldset>
+            <?= $this->Form->button(__('Envoyer candidature')) ?>
+            <?= $this->Form->end() ?>
+        <?php endif;
+        endif;?>
 </div>

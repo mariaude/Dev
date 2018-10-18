@@ -25,7 +25,8 @@ class InternshipsTableTest extends TestCase
      */
     public $fixtures = [
         'app.internships',
-        'app.enterprises'
+        'app.enterprises',
+        'app.candidacies'
     ];
 
     /**

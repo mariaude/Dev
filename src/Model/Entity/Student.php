@@ -39,7 +39,8 @@ class Student extends Entity
         'informations' => true,
         'notes' => true,
         'active' => true,
-        'user' => true
+        'user' => true,
+        'candidacies' => true
     ];
 
     protected $_virtual = [

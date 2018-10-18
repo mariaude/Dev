@@ -53,15 +53,23 @@ class CandidaciesController extends AppController
      */
     public function add()
     {
-        $candidacy = $this->Candidacies->newEntity();
-        if ($this->request->is('post')) {
-            $candidacy = $this->Candidacies->patchEntity($candidacy, $this->request->getData());
+
+        $student = $this->request->getSession()->read('Auth.User.student');
+
+
+        if ($student && $this->request->is('post')) {
+            debug($this->request->getData());
+
+            $candidacy = $this->Candidacies->newEntity($this->request->getData());
+        
+            debug($candidacy);
+
             if ($this->Candidacies->save($candidacy)) {
                 $this->Flash->success(__('The candidacy has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'internships', 'action' => 'index']);
             }
             $this->Flash->error(__('The candidacy could not be saved. Please, try again.'));
+            return $this->redirect(['controller' => 'internships', 'action' => 'index']);
         }
         $internships = $this->Candidacies->Internships->find('list', ['limit' => 200]);
         $students = $this->Candidacies->Students->find('list', ['limit' => 200]);
@@ -86,5 +94,19 @@ class CandidaciesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+
+        $valide = false;
+
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'student') {
+            $valide = true;
+        }
+
+        return ($valide) ? $valide : parent::isAuthorized($user);
     }
 }

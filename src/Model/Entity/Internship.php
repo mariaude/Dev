@@ -17,6 +17,7 @@ use Cake\ORM\Entity;
  * @property string $description
  *
  * @property \App\Model\Entity\Enterprise $enterprise
+ * @property \App\Model\Entity\Candidacy[] $candidacies
  */
 class Internship extends Entity
 {
@@ -39,6 +40,7 @@ class Internship extends Entity
         'work_hours' => true,
         'title' => true,
         'description' => true,
-        'enterprise' => true
+        'enterprise' => true,
+        'candidacies' => true
     ];
 }
