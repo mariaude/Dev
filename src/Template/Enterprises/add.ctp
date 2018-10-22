@@ -34,6 +34,21 @@
             ];
             echo('Type');
             echo $this->Form->select('enterprise_type', $options);
+            
+            echo $this->Form->control('client_types._ids', [
+                'type' => 'select', 
+                'multiple'=> 'checkbox', 
+                'label' => "Type de clientèle",
+                'options' => $client_types
+            ]);
+
+            echo $this->Form->control('missions._ids', [
+                'type' => 'select', 
+                'multiple'=> 'checkbox',
+                'label' => "Missions du milieu",
+                'options' => $missions
+            ]);
+            
             echo $this->Form->control('additional_informations');
             echo $this->Form->control('active');
         ?>

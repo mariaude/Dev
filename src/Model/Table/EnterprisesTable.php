@@ -10,7 +10,9 @@ use Cake\Validation\Validator;
  * Enterprises Model
  *
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
- * @property \App\Model\Table\InternshipsTable|\Cake\ORM\Association\HasMany $Internships
+ * @property |\Cake\ORM\Association\HasMany $Internships
+ * @property |\Cake\ORM\Association\BelongsToMany $ClientTypes
+ * @property |\Cake\ORM\Association\BelongsToMany $Missions
  *
  * @method \App\Model\Entity\Enterprise get($primaryKey, $options = [])
  * @method \App\Model\Entity\Enterprise newEntity($data = null, array $options = [])
@@ -44,6 +46,16 @@ class EnterprisesTable extends Table
         ]);
         $this->hasMany('Internships', [
             'foreignKey' => 'enterprise_id'
+        ]);
+        $this->belongsToMany('ClientTypes', [
+            'foreignKey' => 'enterprise_id',
+            'targetForeignKey' => 'client_type_id',
+            'joinTable' => 'enterprises_client_types'
+        ]);
+        $this->belongsToMany('Missions', [
+            'foreignKey' => 'enterprise_id',
+            'targetForeignKey' => 'mission_id',
+            'joinTable' => 'enterprises_missions'
         ]);
     }
 

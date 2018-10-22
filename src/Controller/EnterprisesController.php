@@ -60,7 +60,37 @@ class EnterprisesController extends AppController
             
             $enterprise->user_id = $user_id;
             //debug($enterprise);
+            //$client_id = $this->request->getData()['client_id'];
+            //$mission_id = $this->request->getData()['mission_id'];
+            //debug($enterprise);
+
+            $this->log('$enterprise');
+            $this->log($enterprise);
+            $this->log('$this->request->getData()');
+            $this->log($this->request->getData());
             if ($this->Enterprises->save($enterprise)) {
+
+                /*if($client_id) {
+                    $client_type_enterprise = TableRegistry::get('client_type_enterprise');
+                    foreach ($client_id as $value) {
+                        $ref = $client_type_enterprise->newEntity([
+                            'enterprise_id' => $enterprise['id'],
+                            'client_id' => $value
+                        ]);
+                        $client_type_enterprise->save($ref);
+                    }
+                }
+                if($mission_id) {
+                    $enterprise_mission = TableRegistry::get('enterprise_mission');
+                    foreach ($mission_id as $value) {
+                        $ref = $enterprise_mission->newEntity([
+                            'enterprise_id' => $enterprise['id'],
+                            'mission_id' => $value
+                        ]);
+                        $enterprise_mission->save($ref);
+                    }
+                }*/
+
                 $this->Flash->success(__('The enterprise has been saved.'));
                 $this->redirect([
                     'controller' => 'Users', 
@@ -72,7 +102,10 @@ class EnterprisesController extends AppController
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));
         }
         $users = $this->Enterprises->Users->find('list', ['limit' => 200]);
-        $this->set(compact('enterprise', 'users'));
+        $client_types = $this->Enterprises->ClientTypes->find('list', ['limit' => 200]);
+        $missions = $this->Enterprises->Missions->find('list', ['limit' => 200]);
+        
+        $this->set(compact('enterprise', 'users', 'client_types', 'missions'));
     }
 
     /**
@@ -83,12 +116,25 @@ class EnterprisesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
+
     {
+        /*
         $enterprise = $this->Enterprises->get($id, [
-            'contain' => []
-        ]);
+            'contain' => ['client_types', 'missions']
+        ]);*/
+
+        $enterprise = $this->Enterprises
+        ->findById($id)
+        ->contain('ClientTypes', 'Missions') // charge les Tags associés
+        ->firstOrFail();
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+
+            $this->log('$enterprise');
+            $this->log($enterprise);
+            $this->log('$this->request->getData()');
+            $this->log($this->request->getData());
             if ($this->Enterprises->save($enterprise)) {
                 $this->Flash->success(__('The enterprise has been saved.'));
 
@@ -97,7 +143,10 @@ class EnterprisesController extends AppController
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));
         }
         $users = $this->Enterprises->Users->find('list', ['limit' => 200]);
-        $this->set(compact('enterprise', 'users'));
+        $client_types = $this->Enterprises->ClientTypes->find('list', ['limit' => 200]);
+        $missions = $this->Enterprises->Missions->find('list', ['limit' => 200]);
+        
+        $this->set(compact('enterprise', 'users', 'client_types', 'missions'));
     }
 
     /**
