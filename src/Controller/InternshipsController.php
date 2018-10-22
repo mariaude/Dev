@@ -94,11 +94,11 @@ class InternshipsController extends AppController
                 $internship = $this->Internships->patchEntity($internship, $this->request->getData());
                 
                 $internship->enterprise_id = $enterprise_id;
-    
+
                 if ($this->Internships->save($internship)) {
                     $this->Flash->success(__('The internship has been saved.'));
-    
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['controller' => 'Emails', 'action' => 'notifierEtudiantsNouvelleOffreStage', $internship->id]);
+                    //return $this->redirect(['action' => 'index']);
                 }
                 $this->Flash->error(__('The internship could not be saved. Please, try again.'));
             }

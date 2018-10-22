@@ -3,6 +3,7 @@
    use App\Controller\AppController;
    use Cake\Mailer\Email;
    use Cake\ORM\Entity;
+   use Cake\ORM\TableRegistry;
 
    class EmailsController extends AppController{
 
@@ -14,19 +15,41 @@
       }
 
 
-      // Notifier employeur candidature
-      public function notifierEmployeur_nouvelleCandidature($user = null){
+      // Notifier etudiant candidature
+      public function notifierEtudiantsNouvelleOffreStage($id = null){
         // Le code ci dessous n'est pas fonctionnel.
-        $email = new Email('default');
-        //$email->viewVars(['user' => $user]);
+        if($id != null){
+          $name = null;
+          $users = TableRegistry::get('Users')->find();
+          $loguser = $this->request->getSession()->read('Auth.User');
+          $internships = TableRegistry::get('Internships')->find(); 
+          
+          foreach($internships as $internship){
+            if($internship->id = $id){
+               $name = $internship->title;
+            }
+          }
+          foreach($users as $user){
+            if($user->role = 'student'){
+              $enterprise = $this->request->getSession()->read('Auth.User.enterprise.name');
+              $email = new Email('default');
+              $email ->to($user['email'])
+                     ->subject('Nouvelle offre de stage')
+                     ->send($enterprise . ' a créé une nouvelle offre de stage, ' . $name. '. Visitez le site pour en savoir plus.');
+            }
+            
+          }
+
+        }
         
-        $email
-        ->template('employeur_nouvelleCandidature', 'default')
-        ->emailFormat('html')
-        ->to($user['email'])
-        ->subject('Nouvelle candidature')
-        ->send();
+          return $this->redirect([
+            'controller' => 'Internships', 
+             'action' => 'index'
+         ]);
+
       }
+        
+      
       // Notifier employeur mettre à jour informations
       public function notifierEmployeur_miseAJourInformations(){
 
@@ -42,7 +65,13 @@
 
       }
 
-
+      public function isAuthorized($user){
+          if(isset($user['role']) && $user['role'] === 'enterprise' ) {
+            return true;  
+        }
+        
+      }
+    
    }
    
 ?>
