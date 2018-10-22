@@ -57,52 +57,24 @@ class EnterprisesController extends AppController
         
         if ($this->request->is('post') && isset($user_id)) {
             $logged_user = $this->request->getSession()->read('Auth.User');
+
+            $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            $est_valide = ( $enterprise->errors() == null) ? 1 : 0;
+
+
             if($logged_user['role'] == 'admin'){
                 $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData(), ['validate'=> 'admin']);
             } else {
                 $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
             }
             
-            
+            $enterprise->active = $est_valide;
             $enterprise->user_id = $user_id;
-            //debug($enterprise);
-            //$client_id = $this->request->getData()['client_id'];
-            //$mission_id = $this->request->getData()['mission_id'];
-            //debug($enterprise);
 
-            $this->log('$enterprise');
-            $this->log($enterprise);
-            $this->log('$this->request->getData()');
-            $this->log($this->request->getData());
             if ($this->Enterprises->save($enterprise)) {
 
-                /*if($client_id) {
-                    $client_type_enterprise = TableRegistry::get('client_type_enterprise');
-                    foreach ($client_id as $value) {
-                        $ref = $client_type_enterprise->newEntity([
-                            'enterprise_id' => $enterprise['id'],
-                            'client_id' => $value
-                        ]);
-                        $client_type_enterprise->save($ref);
-                    }
-                }
-                if($mission_id) {
-                    $enterprise_mission = TableRegistry::get('enterprise_mission');
-                    foreach ($mission_id as $value) {
-                        $ref = $enterprise_mission->newEntity([
-                            'enterprise_id' => $enterprise['id'],
-                            'mission_id' => $value
-                        ]);
-                        $enterprise_mission->save($ref);
-                    }
-                }*/
 
                 $this->Flash->success(__('The enterprise has been saved.'));
-                $this->redirect([
-                    'controller' => 'Users', 
-                    'action' => 'confirmEnterprise', $user_id
-                ]);
-                echo 'test';
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));
@@ -135,12 +107,21 @@ class EnterprisesController extends AppController
         ->firstOrFail();
 
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
 
-            $this->log('$enterprise');
-            $this->log($enterprise);
-            $this->log('$this->request->getData()');
-            $this->log($this->request->getData());
+
+            $logged_user = $this->request->getSession()->read('Auth.User');
+
+            $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            $est_valide = ( $enterprise->errors() == null) ? 1 : 0;
+
+            if($logged_user['role'] == 'admin'){
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData(), ['validate'=> 'admin']);
+            } else {
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            }
+
+            $enterprise->active = $est_valide;
+
             if ($this->Enterprises->save($enterprise)) {
                 $this->Flash->success(__('The enterprise has been saved.'));
 
@@ -188,16 +169,14 @@ class EnterprisesController extends AppController
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
             
-            if(isset($user['role']) && $user['role'] === 'enterprise'){
-                $enterprise_id = (int) $this->request->getParam('pass.0');
+
+            $enterprise_id = (int) $this->request->getParam('pass.0');
+            $this->log($user['enterprise']['id']);
+            
+            //Si user_id de l'entreprise correspond au id de l'user courrant
+            if(isset($user['role']) && $user['role'] === 'enterprise' && $user['enterprise']['id'] == $enterprise_id){
                 
-                $enterprise = $this->Enterprises->get($enterprise_id);
-                
-                //Si user_id de l'entreprise correspond au id de l'user courrant
-                if($enterprise['user_id'] == $user['id']){
-                    $valide = true;
-                }
-                $valide = false;
+                $valide = true;
             }    
         }
 
@@ -205,7 +184,7 @@ class EnterprisesController extends AppController
             $valide = false;
         }
 
-        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'enterprise' && !$user['enterprise']) {
              $valide = true;
         }
         

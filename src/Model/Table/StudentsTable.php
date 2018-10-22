@@ -90,13 +90,13 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('notes')
-            ->requirePresence('notes', 'create')
-            ->notEmpty('notes');
+            ->requirePresence('notes', false)
+            ->allowEmpty('notes');
 
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'create')
-            ->notEmpty('active');
+            ->requirePresence('active', false)
+            ->allowEmpty('active');
 
         return $validator;
     }
@@ -145,12 +145,12 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('notes')
-            ->requirePresence('notes', 'create')
+            ->requirePresence('notes', false)
             ->allowEmpty('notes');
 
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'create')
+            ->requirePresence('active', false)
             ->allowEmpty('active');
 
         return $validator;

@@ -115,7 +115,8 @@ class EnterprisesTable extends Table
         
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'false');
+            ->requirePresence('active', false)
+            ->allowEmpty('active');
 
         return $validator;
     }
@@ -176,7 +177,7 @@ class EnterprisesTable extends Table
         
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'false')
+            ->requirePresence('active', false)
             ->allowEmpty('active');
 
         return $validator;

@@ -62,7 +62,7 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->getData());
 
             if(!isset($user['role']))
-                $user['role'] = 'toBeStudent';
+                $user['role'] = 'student';
 
             debug($user);
 
@@ -88,12 +88,12 @@ class UsersController extends AppController
                 }
 
                 // Redirection
-                if($user['role'] === 'toBeStudent'){
+                if($user['role'] === 'student'){
                     return $this->redirect([
                         'controller' => 'Students', 
                         'action' => 'add', $user_id
                     ]);
-                }else if($user['role'] === 'toBeEnterprise'){
+                }else if($user['role'] === 'student'){
                     return $this->redirect([
                         'controller' => 'Enterprises', 
                         'action' => 'add', $user_id
@@ -105,38 +105,6 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
-    }
-
-    public function confirmStudent($user_id = null){
-        $user = $this->Users->get($user_id);
-        $user->role = 'student';
-    
-        if ($this->Users->save($user)) {
-            $this->Flash->success(__('The user account has been linked to the student.'));
-            $loguser = $this->request->getSession()->read('Auth.User');
-            if($loguser['id'] == $user_id){
-                // L'utilisateur loggé est le student étant lié
-                $this->request->getSession()->write('Auth.User', $user);
-            }
-            return $this->redirect(['action' => 'index']);
-        }
-        $this->Flash->error(__('The user account could not be linked to the student. Please, try again.'));
-    }
-
-    public function confirmEnterprise($user_id = null){
-        $user = $this->Users->get($user_id);
-        $user->role = 'enterprise';
-    
-        if ($this->Users->save($user)) {
-            $this->Flash->success(__('The user account has been linked to the enterprise.'));
-            $loguser = $this->request->getSession()->read('Auth.User');
-            if($loguser['id'] == $user_id){
-                // L'utilisateur loggé est l'enterprise étant lié
-                $this->request->getSession()->write('Auth.User', $user);
-            }
-            return $this->redirect(['action' => 'index']);
-        }
-        $this->Flash->error(__('The user account could not be linked to the enterprise. Please, try again.'));
     }
     
     /**
@@ -190,16 +158,41 @@ class UsersController extends AppController
             if ($user) {
                 $this->Auth->setUser($user);
                 if(isset($user['role'])){
-                    if($user['role'] === 'toBeStudent'){
-                        return $this->redirect([
-                            'controller' => 'Students', 
-                            'action' => 'add', $user['id']
-                        ]);
-                    }else if($user['role'] === 'toBeEnterprise')
-                        return $this->redirect([
-                            'controller' => 'Enterprises', 
-                            'action' => 'add', $user['id']
-                        ]);
+
+                    if($user['role'] === 'student'){
+                        if($user['student']){
+                            if($user['student']['active'] == 0)
+                                return $this->redirect([
+                                    'controller' => 'Students', 
+                                    'action' => 'edit', $user['student']['id']
+                                ]);
+                        }else{
+                            return $this->redirect([
+                                'controller' => 'Students', 
+                                'action' => 'add', $user['id']
+                            ]);
+                        }
+                    }else if($user['role'] === 'enterprise'){
+                        debug($user);
+                        $this->log($user);
+                        if($user['enterprise']){
+                            $this->log($user['enterprise']);
+                            if($user['enterprise']['active'] == 0){
+                                $this->log('REDIRECT:enterprise-edit');
+                                return $this->redirect([
+                                    'controller' => 'Enterprises', 
+                                    'action' => 'edit', $user['enterprise']['id']
+                                ]);
+                            }
+
+                        }else{
+                            $this->log('REDIRECT:enterprise-add');
+                            return $this->redirect([
+                                'controller' => 'Enterprises', 
+                                'action' => 'add', $user['id']
+                            ]);
+                        }
+                    }
                 }
 
                 return $this->redirect($this->Auth->redirectUrl());
@@ -221,14 +214,6 @@ class UsersController extends AppController
         // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
         // authentifiés sur l'application
         if (in_array($action, ['view'])) {
-            $valide = true;
-        }
-
-        if (in_array($action, ['confirmStudent']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
-            $valide = true;
-        }
-
-        if (in_array($action, ['confirmEnterprise']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
             $valide = true;
         }
 

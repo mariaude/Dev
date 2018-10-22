@@ -56,7 +56,7 @@
             ]);
                 
             echo $this->Form->control('additional_informations');
-            echo $this->Form->control('active');
+            //echo $this->Form->control('active');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

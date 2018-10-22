@@ -20,6 +20,7 @@ class StudentsController extends AppController
      */
     public function index()
     {
+        
         $this->paginate = [
             'contain' => ['Users']
         ];
@@ -59,31 +60,35 @@ class StudentsController extends AppController
         
         if ($this->request->is('post') && isset($user_id)) {
             $student->user_id = $user_id;
+
             $logged_user = $this->request->getSession()->read('Auth.User');
+            $student = $this->Students->patchEntity($student, $this->request->getData());
+
+            $est_valide = ( $student->errors() == null) ? 1 : 0;
+            $this->log($student->errors());
+            
             if($logged_user['role'] == 'admin'){
                 $student = $this->Students->patchEntity($student, $this->request->getData(), ['validate'=> 'admin']);
             } else {
                 $student = $this->Students->patchEntity($student, $this->request->getData());
             }
             
+            $student->active = $est_valide;
 
-            $this->log('student');
-            $this->log($student->errors());
+            //$this->log('student');
+            //$this->log($student->errors());
 
             //$this->patchStudentInfos($student);
             //debug($student);
             $res = $this->Students->save($student);
 
             $this->log($res);
+            $this->patchStudentInfos($student);
             if ($res) {
-                $this->patchStudentInfos($student);
+                //$this->patchStudentInfos($student);
                 if ($this->Students->save($student)) {
                     $this->Flash->success(__('The student has been saved.'));
-                    $this->redirect([
-                        'controller' => 'Users', 
-                        'action' => 'confirmStudent', $user_id
-                    ]);
-                    echo 'test';
+
                     return $this->redirect(['action' => 'index']);
                 }
             }
@@ -106,14 +111,26 @@ class StudentsController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+
+            $logged_user = $this->request->getSession()->read('Auth.User');
             $student = $this->Students->patchEntity($student, $this->request->getData());
 
+            $est_valide = ( $student->errors() == null) ? 1 : 0;
+
+            if($logged_user['role'] == 'admin'){
+                $student = $this->Students->patchEntity($student, $this->request->getData(), ['validate'=> 'admin']);
+            } else {
+                $student = $this->Students->patchEntity($student, $this->request->getData());
+            }
+            
+            $student->active = $est_valide;
+
             /* Modification */
-            //$this->patchStudentInfos($student);
+            $this->patchStudentInfos($student);
             
             if ($this->Students->save($student)) {
 
-                $this->patchStudentInfos($student);
+                //$this->patchStudentInfos($student);
                 if ($this->Students->save($student)) {
                     $this->Flash->success(__('The student has been saved.'));
 
@@ -172,15 +189,13 @@ class StudentsController extends AppController
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
 
-            if(isset($user['role']) && $user['role'] === 'student'){
-                $student_id = (int) $this->request->getParam('pass.0');
-                $student = $this->Students->get($student_id);
+
+            $student_id = (int) $this->request->getParam('pass.0');
+
+            //Si user_id du student correspond au id de l'user courrant
+            if(isset($user['role']) && $user['role'] === 'student' && $user['student']['id'] == $student_id){
                 
-                //Si user_id du student correspond au id de l'user courrant
-                if($student['user_id'] == $user['id']){
-                    $valide = true;
-                }
-                $valide = false;
+                $valide = true;
             }    
         }
 
@@ -188,7 +203,7 @@ class StudentsController extends AppController
             $valide = false;
         }
 
-        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeStudent') {
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'student' && !$user['student']) {
              $valide = true;
         }
 

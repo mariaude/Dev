@@ -23,12 +23,11 @@
 
             if(isset($loguser['role']) && $loguser['role'] === 'admin'){
                 $options = [
-                    'toBeStudent' => 'Student',
-                    'toBeEnterprise' => 'Enterprise',
+                    'student' => 'Student',
+                    'enterprise' => 'Enterprise',
                 ];
 
-                echo 'Account type:';
-                echo $this->Form->select('role', $options);
+                echo $this->Form->select('role', $options, [ 'label' => "Account type"]);
             }else{
                 echo 'Account type: Student';
             }

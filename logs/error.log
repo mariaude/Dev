@@ -1,316 +1,8 @@
-2018-10-22 15:59:35 Error: [RuntimeException] Table "App\Model\Table\EnterprisesTable" is not associated with "request"
-Request URL: /enterprises/add/45
-Referer URL: http://localhost/Dev/enterprises/add/45
-Stack Trace:
-#0 C:\Program Files (x86)\Ampps\www\Dev\src\Model\Table\EnterprisesTable.php(71): Cake\ORM\Table->__get('request')
-#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(178): App\Model\Table\EnterprisesTable->validationDefault(Object(Cake\Validation\Validator))
-#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(151): Cake\ORM\Table->createValidator('default')
-#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Marshaller.php(247): Cake\ORM\Table->getValidator()
-#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Marshaller.php(570): Cake\ORM\Marshaller->_validate(Array, Array, true)
-#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(2705): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\Enterprise), Array, Array)
-#6 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\EnterprisesController.php(59): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\Enterprise), Array)
-#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\EnterprisesController->add('45')
-#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EnterprisesController))
-#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#24 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
-#25 {main}
-
-
-2018-10-22 16:09:18 Error: [BadMethodCallException] Unknown method "log"
-Request URL: /enterprises/add/45
-Referer URL: http://localhost/Dev/enterprises/add/45
-Stack Trace:
-#0 C:\Program Files (x86)\Ampps\www\Dev\src\Model\Table\EnterprisesTable.php(131): Cake\ORM\Table->__call('log', Array)
-#1 C:\Program Files (x86)\Ampps\www\Dev\src\Model\Table\EnterprisesTable.php(131): App\Model\Table\EnterprisesTable->log('Bonjout')
-#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(178): App\Model\Table\EnterprisesTable->validationAdmin(Object(Cake\Validation\Validator))
-#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(151): Cake\ORM\Table->createValidator('admin')
-#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Marshaller.php(249): Cake\ORM\Table->getValidator('admin')
-#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Marshaller.php(570): Cake\ORM\Marshaller->_validate(Array, Array, true)
-#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(2705): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\Enterprise), Array, Array)
-#7 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\EnterprisesController.php(61): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\Enterprise), Array, Array)
-#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\EnterprisesController->add('45')
-#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EnterprisesController))
-#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#25 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
-#26 {main}
-
-
-2018-10-22 16:09:51 Error: $enterprise
-2018-10-22 16:09:51 Error: {
-    "name": "bob",
-    "city": "rio",
-    "enterprise_type": "autre",
-    "client_types": [
-        {
-            "id": 20,
-            "name": "Centre de jour et soins à domicile"
-        }
-    ],
-    "missions": [],
-    "active": false,
-    "user_id": "45"
-}
-2018-10-22 16:09:51 Error: $this->request->getData()
-2018-10-22 16:09:51 Error: Array
-(
-    [name] => bob
-    [adress] => 
-    [city] => rio
-    [province] => 
-    [postal_code] => 
-    [region] => 
-    [enterprise_type] => autre
-    [client_types] => Array
-        (
-            [_ids] => Array
-                (
-                    [0] => 20
-                )
-
-        )
-
-    [missions] => Array
-        (
-            [_ids] => 
-        )
-
-    [additional_informations] => 
-    [active] => 0
-)
-
-2018-10-22 16:11:55 Error: $enterprise
-2018-10-22 16:11:55 Error: {
-    "name": "bob",
-    "adress": "",
-    "city": "rio",
-    "province": "",
-    "postal_code": "",
-    "region": "",
-    "enterprise_type": "autre",
-    "client_types": [
-        {
-            "id": 20,
-            "name": "Centre de jour et soins à domicile"
-        }
-    ],
-    "missions": [],
-    "additional_informations": "",
-    "active": false,
-    "user_id": "45"
-}
-2018-10-22 16:11:55 Error: $this->request->getData()
-2018-10-22 16:11:55 Error: Array
-(
-    [name] => bob
-    [adress] => 
-    [city] => rio
-    [province] => 
-    [postal_code] => 
-    [region] => 
-    [enterprise_type] => autre
-    [client_types] => Array
-        (
-            [_ids] => Array
-                (
-                    [0] => 20
-                )
-
-        )
-
-    [missions] => Array
-        (
-            [_ids] => 
-        )
-
-    [additional_informations] => 
-    [active] => 0
-)
-
-2018-10-22 16:16:14 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/users/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-22 16:16:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 149]
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/users/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 149
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-22 16:16:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/users/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-22 16:16:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/users/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-22 16:18:12 Error: [BadMethodCallException] Unknown method "log"
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/students/add/46
-Stack Trace:
-#0 C:\Program Files (x86)\Ampps\www\Dev\src\Model\Table\StudentsTable.php(112): Cake\ORM\Table->__call('log', Array)
-#1 C:\Program Files (x86)\Ampps\www\Dev\src\Model\Table\StudentsTable.php(112): App\Model\Table\StudentsTable->log('papate')
-#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(178): App\Model\Table\StudentsTable->validationAdmin(Object(Cake\Validation\Validator))
-#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(151): Cake\ORM\Table->createValidator('admin')
-#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Marshaller.php(249): Cake\ORM\Table->getValidator('admin')
-#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Marshaller.php(570): Cake\ORM\Marshaller->_validate(Array, Array, true)
-#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(2705): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\Student), Array, Array)
-#7 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\StudentsController.php(63): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\Student), Array, Array)
-#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\StudentsController->add('46')
-#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\StudentsController))
-#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#25 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
-#26 {main}
-
-
-2018-10-22 16:20:07 Error: {
-    "user_id": "46",
-    "admission_number": "000055689",
-    "first_name": "",
-    "last_name": "",
-    "phone_number": "",
-    "informations": "",
-    "full_name": null
-}
-2018-10-22 16:22:51 Error: student
-2018-10-22 16:22:51 Error: {
-    "user_id": "46",
-    "admission_number": "000055689",
-    "first_name": "",
-    "last_name": "",
-    "phone_number": "",
-    "informations": "",
-    "full_name": null
-}
-2018-10-22 16:22:51 Error: 
-2018-10-22 16:23:27 Error: student
-2018-10-22 16:23:27 Error: {
-    "user_id": "46",
-    "admission_number": "000055689",
-    "first_name": "",
-    "last_name": "",
-    "phone_number": "",
-    "informations": "",
-    "full_name": null
-}
-2018-10-22 16:23:27 Error: 
-2018-10-22 16:26:13 Error: student
-2018-10-22 16:26:13 Error: {
-    "user_id": "46",
-    "admission_number": "000055689",
-    "first_name": "",
-    "last_name": "",
-    "phone_number": "",
-    "informations": "",
-    "full_name": null
-}
-2018-10-22 16:26:13 Error: [BadMethodCallException] Unknown method "set"
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/students/add/46
-Stack Trace:
-#0 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\StudentsController.php(73): Cake\ORM\Table->__call('set', Array)
-#1 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\StudentsController.php(73): App\Model\Table\StudentsTable->set(Object(App\Model\Entity\Student))
-#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\StudentsController->add('46')
-#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\StudentsController))
-#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#19 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
-#20 {main}
-
-
-2018-10-22 16:29:41 Error: student
-2018-10-22 16:29:41 Error: Array
+2018-10-22 19:43:41 Error: SELECT Students.id AS `Students__id` FROM students Students LEFT JOIN users Users ON Users.id = (Students.user_id) WHERE Students.active = :c0
+2018-10-22 19:43:41 Error: 18
+2018-10-22 19:44:10 Error: SELECT Students.id AS `Students__id` FROM students Students LEFT JOIN users Users ON Users.id = (Students.user_id) WHERE Students.active = :c0
+2018-10-22 19:46:35 Error: 
+2018-10-22 19:46:59 Error: Array
 (
     [notes] => Array
         (
@@ -324,47 +16,94 @@ Stack Trace:
 
 )
 
-2018-10-22 16:29:41 Error: [BadMethodCallException] Unknown method "validates"
-Request URL: /students/add/46
-Referer URL: http://localhost/Dev/students/add/46
-Stack Trace:
-#0 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\StudentsController.php(73): Cake\ORM\Table->__call('validates', Array)
-#1 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\StudentsController.php(73): App\Model\Table\StudentsTable->validates()
-#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\StudentsController->add('46')
-#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\StudentsController))
-#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#19 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
-#20 {main}
+2018-10-22 19:46:59 Error: 
+2018-10-22 19:47:01 Error: Array
+(
+    [notes] => Array
+        (
+            [_required] => This field is required
+        )
 
+    [active] => Array
+        (
+            [_required] => This field is required
+        )
 
-2018-10-22 16:32:55 Error: student
-2018-10-22 16:32:55 Error: Array
+)
+
+2018-10-22 19:47:01 Error: 
+2018-10-22 19:48:42 Error: Array
+(
+    [notes] => Array
+        (
+            [_required] => This field is required
+        )
+
+    [active] => Array
+        (
+            [_required] => This field is required
+        )
+
+)
+
+2018-10-22 19:48:42 Error: 
+2018-10-22 19:48:43 Error: Array
+(
+    [notes] => Array
+        (
+            [_required] => This field is required
+        )
+
+    [active] => Array
+        (
+            [_required] => This field is required
+        )
+
+)
+
+2018-10-22 19:48:43 Error: 
+2018-10-22 19:49:03 Error: Array
+(
+    [notes] => Array
+        (
+            [_required] => This field is required
+        )
+
+    [active] => Array
+        (
+            [_required] => This field is required
+        )
+
+)
+
+2018-10-22 19:49:03 Error: 
+2018-10-22 19:49:05 Error: Array
+(
+    [notes] => Array
+        (
+            [_required] => This field is required
+        )
+
+    [active] => Array
+        (
+            [_required] => This field is required
+        )
+
+)
+
+2018-10-22 19:49:05 Error: 
+2018-10-22 19:51:22 Error: Array
 (
 )
 
-2018-10-22 16:32:55 Error: {
-    "user_id": "46",
-    "admission_number": "",
-    "first_name": "",
-    "last_name": "",
-    "phone_number": "",
-    "informations": "",
-    "notes": "",
-    "active": false,
+2018-10-22 19:51:22 Error: {
+    "user_id": "43",
+    "admission_number": "123123123",
+    "first_name": "Mathieu",
+    "last_name": "Allard",
+    "phone_number": "450.450.4500.",
+    "informations": "test",
+    "active": 1,
     "id": 19,
-    "full_name": " "
+    "full_name": "Mathieu Allard"
 }
