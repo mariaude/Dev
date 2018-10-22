@@ -83,10 +83,13 @@ class CandidaciesController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function delete($student_id = null, $internship_id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $candidacy = $this->Candidacies->get($id);
+        $candidacy = $this->Candidacies->find()
+        ->where(['student_id' => $student_id, 'internship_id' => $internship_id])
+        ->firstOrFail();
+
         if ($this->Candidacies->delete($candidacy)) {
             $this->Flash->success(__('The candidacy has been deleted.'));
         } else {
@@ -104,6 +107,8 @@ class CandidaciesController extends AppController
         $valide = false;
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'student') {
+            $valide = true;
+        }else if (in_array($action, ['delete']) && $user['student']) {
             $valide = true;
         }
 
