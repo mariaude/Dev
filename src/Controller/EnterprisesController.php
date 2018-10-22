@@ -56,7 +56,13 @@ class EnterprisesController extends AppController
         $enterprise = $this->Enterprises->newEntity();
         
         if ($this->request->is('post') && isset($user_id)) {
-            $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            $logged_user = $this->request->getSession()->read('Auth.User');
+            if($logged_user['role'] == 'admin'){
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData(), ['validate'=> 'admin']);
+            } else {
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            }
+            
             
             $enterprise->user_id = $user_id;
             //debug($enterprise);

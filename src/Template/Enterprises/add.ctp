@@ -50,7 +50,7 @@
             ]);
             
             echo $this->Form->control('additional_informations');
-            echo $this->Form->control('active');
+            echo $this->Form->control('active', ['label'=> "Active", 'type'=>"checkbox"]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

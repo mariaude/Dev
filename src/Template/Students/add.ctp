@@ -23,8 +23,10 @@
             echo $this->Form->control('last_name');
             echo $this->Form->control('phone_number');
             echo $this->Form->control('informations');
-            /*echo $this->Form->control('notes');
-            echo $this->Form->control('active');*/
+            if($this->request->getSession()->read('Auth.User.role') == "admin"){
+                echo $this->Form->control('notes');
+                echo $this->Form->control('active', ['label'=> "Active", 'type'=>"checkbox"]);
+            }
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

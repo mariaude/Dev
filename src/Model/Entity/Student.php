@@ -49,7 +49,10 @@ class Student extends Entity
 
     protected function _getFullName()
     {
-        return $this->_properties['first_name'] . ' ' .$this->_properties['last_name'];
+        if(!$this->isNew()){
+            return $this->_properties['first_name'] . ' ' .$this->_properties['last_name'];
+        }
+        return null;
     }
 
 

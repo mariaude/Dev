@@ -58,12 +58,24 @@ class StudentsController extends AppController
         $student = $this->Students->newEntity();
         
         if ($this->request->is('post') && isset($user_id)) {
-            $student = $this->Students->patchEntity($student, $this->request->getData());
             $student->user_id = $user_id;
+            $logged_user = $this->request->getSession()->read('Auth.User');
+            if($logged_user['role'] == 'admin'){
+                $student = $this->Students->patchEntity($student, $this->request->getData(), ['validate'=> 'admin']);
+            } else {
+                $student = $this->Students->patchEntity($student, $this->request->getData());
+            }
+            
+
+            $this->log('student');
+            $this->log($student->errors());
 
             //$this->patchStudentInfos($student);
             //debug($student);
-            if ($this->Students->save($student)) {
+            $res = $this->Students->save($student);
+
+            $this->log($res);
+            if ($res) {
                 $this->patchStudentInfos($student);
                 if ($this->Students->save($student)) {
                     $this->Flash->success(__('The student has been saved.'));

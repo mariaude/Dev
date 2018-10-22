@@ -67,6 +67,7 @@ class EnterprisesTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
@@ -115,6 +116,68 @@ class EnterprisesTable extends Table
         $validator
             ->boolean('active')
             ->requirePresence('active', 'false');
+
+        return $validator;
+    }
+
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationAdmin(Validator $validator)
+    {
+
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('name')
+            ->maxLength('name', 255)
+            ->requirePresence('name', 'create')
+            ->allowEmpty('name');
+
+        $validator
+            ->scalar('adress')
+            ->maxLength('adress', 255)
+            ->requirePresence('adress', 'create')
+            ->allowEmpty('adress');
+
+        $validator
+            ->scalar('city')
+            ->maxLength('city', 255)
+            ->requirePresence('city', 'create')
+            ->allowEmpty('city');
+
+        $validator
+            ->scalar('province')
+            ->maxLength('province', 255)
+            ->requirePresence('province', 'create')
+            ->allowEmpty('province');
+
+        $validator
+            ->scalar('postal_code')
+            ->maxLength('postal_code', 6)
+            ->requirePresence('postal_code', 'create')
+            ->allowEmpty('postal_code');
+
+        $validator
+            ->scalar('region')
+            ->maxLength('region', 255)
+            ->requirePresence('region', 'create')
+            ->allowEmpty('region');
+        
+        $validator
+            ->scalar('additional_informations')
+            ->requirePresence('additional_informations', 'create')
+            ->allowEmpty('additional_informations');
+        
+        $validator
+            ->boolean('active')
+            ->requirePresence('active', 'false')
+            ->allowEmpty('active');
 
         return $validator;
     }

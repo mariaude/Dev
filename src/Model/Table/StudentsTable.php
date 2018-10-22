@@ -101,6 +101,61 @@ class StudentsTable extends Table
         return $validator;
     }
 
+        /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationAdmin(Validator $validator)
+    {
+
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('admission_number')
+            ->maxLength('admission_number', 9)
+            ->requirePresence('admission_number', 'create')
+            ->allowEmpty('admission_number');
+
+        $validator
+            ->scalar('first_name')
+            ->maxLength('first_name', 255)
+            ->requirePresence('first_name', 'create')
+            ->allowEmpty('first_name');
+
+        $validator
+            ->scalar('last_name')
+            ->maxLength('last_name', 255)
+            ->requirePresence('last_name', 'create')
+            ->allowEmpty('last_name');
+
+        $validator
+            ->scalar('phone_number')
+            ->maxLength('phone_number', 13)
+            ->requirePresence('phone_number', 'create')
+            ->allowEmpty('phone_number');
+
+        $validator
+            ->scalar('informations')
+            ->requirePresence('informations', 'create')
+            ->allowEmpty('informations');
+
+        $validator
+            ->scalar('notes')
+            ->requirePresence('notes', 'create')
+            ->allowEmpty('notes');
+
+        $validator
+            ->boolean('active')
+            ->requirePresence('active', 'create')
+            ->allowEmpty('active');
+
+        return $validator;
+    }
+
     /**
      * Returns a rules checker object that will be used for validating
      * application integrity.
