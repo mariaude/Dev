@@ -19,26 +19,38 @@
       public function notifierEtudiantsNouvelleOffreStage($id = null){
         // Le code ci dessous n'est pas fonctionnel.
         if($id != null){
-          $name = null;
           $users = TableRegistry::get('Users')->find();
-          $loguser = $this->request->getSession()->read('Auth.User');
-          $internships = TableRegistry::get('Internships')->find(); 
+          $internship = TableRegistry::get('Internships')->findById($id)->first();
           
-          foreach($internships as $internship){
-            if($internship->id = $id){
-               $name = $internship->title;
+          if($internship){
+            $entreprise = TableRegistry::get('Enterprises')->findById($internship['enterprise_id'])->first();
+            if($entreprise){
+
+              $entreprise_name = $entreprise["name"];
+              $enter_id = $entreprise["id"];
+              foreach($users as $user){
+                if($user->student){
+                  
+                  $full_name = $user->student->full_name;
+                  $this->set(['full_name' => $full_name, 'enter_id' => $enter_id, 'entreprise_name' => $entreprise_name]);
+                  
+                  $email = new Email('default');
+                  $email->to($user['email'])
+                        ->template('etudiant_nouvelleOffre', 'default')
+                        ->emailFormat('html')
+                        ->viewVars(['full_name' => $full_name, 'enter_id' => $enter_id, 'entreprise_name' => $entreprise_name])
+                        ->subject('Nouvelle offre de stage')
+                        ->send();
+                }
+                
+              }
             }
           }
-          foreach($users as $user){
-            if($user->role = 'student'){
-              $enterprise = $this->request->getSession()->read('Auth.User.enterprise.name');
-              $email = new Email('default');
-              $email ->to($user['email'])
-                     ->subject('Nouvelle offre de stage')
-                     ->send($enterprise . ' a créé une nouvelle offre de stage, ' . $name. '. Visitez le site pour en savoir plus.');
-            }
-            
-          }
+          
+          
+
+
+
 
         }
         
@@ -66,9 +78,13 @@
       }
 
       public function isAuthorized($user){
-          if(isset($user['role']) && $user['role'] === 'enterprise' ) {
-            return true;  
+
+        $valide = false;
+        if(isset($user['role']) && $user['role'] === 'enterprise' && $user['enterprise'] ) {
+            $valide =  true;  
         }
+
+        return ($valide) ? $valide : parent::isAuthorized($user);
         
       }
     
