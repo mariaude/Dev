@@ -84,7 +84,7 @@
                   $email->to($user['email'])
                         ->template('enterprise_nouvelle_postulation', 'default')
                         ->emailFormat('html')
-                        //->viewVars(['full_name' => $full_name, 'enter_id' => $enter_id, 'entreprise_name' => $entreprise_name])
+                        ->viewVars(['full_name' => $full_name, 'enter_id' => $enter_id, 'entreprise_name' => $entreprise_name])
                         ->subject('Nouvelle application sur une offre de stage')
                         ->send();
                 }       
@@ -114,24 +114,35 @@
         if($id != null){
           $users = TableRegistry::get('Users')->find();
           $student = TableRegistry::get('Students')->findById($id)->first();
+          $candidacy = TableRegistry::get('Candidacies')->findByStudentId($id)->first();
+          
+          if($candidacy){
+            $internship = TableRegistry::get('Internships')->findById($candidacy->internship_id)->first();
+          
+            if($internship){
+              $enterprise = TableRegistry::get('Enterprises')->findById($internship['enterprise_id'])->first();
+              $enterprise_name = $enterprise["name"];
+              $enterprise_user = TableRegistry::get('Users')->findById($enterprise['user_id'])->first();
+              $enterprise_email = $enterprise_user['email'];
+              
 
-          if($student){
-            $user = TableRegistry::get('Users')->findById($student['user_id'])->first();
-            if($user){
+              if($student){
+                $user = TableRegistry::get('Users')->findById($student['user_id'])->first();
+                if($user){
 
-              $student_name = $student["name"];
-              $email = new Email('default');
-              $email->to($user['email'])
-                    ->template('convocation', 'default')
-                    ->emailFormat('html')
-                    ->viewVars(['name' => $student_name])
-                    ->subject('Convocation')
-                    ->send();
-                }       
+                  $student_name = $student["first_name"]. $user["last_name"];
+                  $email = new Email('default');
+                  $email->to($user['email'])
+                        ->template('convocation', 'default')
+                        ->emailFormat('html')
+                        ->viewVars(['student_name' => $student_name, 'enterprise_name' => $enterprise_name, 'enterprise_email' => $enterprise_email])
+                        ->subject('Convocation')
+                        ->send();
+                    }       
+                  }
+                }
               }
             }
-    
-      
           return $this->redirect([
             'controller' => 'Internships', 
              'action' => 'index'
