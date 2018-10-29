@@ -93,7 +93,7 @@ class UsersController extends AppController
                         'controller' => 'Students', 
                         'action' => 'add', $user_id
                     ]);
-                }else if($user['role'] === 'student'){
+                }else if($user['role'] === 'enterprise'){
                     return $this->redirect([
                         'controller' => 'Enterprises', 
                         'action' => 'add', $user_id
