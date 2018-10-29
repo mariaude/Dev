@@ -51,19 +51,26 @@ class ConvocationsController extends AppController
      */
     public function add()
     {
-        $convocation = $this->Convocations->newEntity();
+        $this->log('Convoc-ADD');
+
+        $this->log($this->request->is('post'));
         if ($this->request->is('post')) {
-            $convocation = $this->Convocations->patchEntity($convocation, $this->request->getData());
+            $this->log('Convoc-ADD');
+            $convocation = $this->Convocations->newEntity($this->request->getData());
+
             if ($this->Convocations->save($convocation)) {
                 $this->Flash->success(__('The convocation has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->request->referer());
             }
             $this->Flash->error(__('The convocation could not be saved. Please, try again.'));
+            return $this->redirect($this->request->referer());
         }
+        return $this->redirect($this->request->referer());
         $internships = $this->Convocations->Internships->find('list', ['limit' => 200]);
         $students = $this->Convocations->Students->find('list', ['limit' => 200]);
         $this->set(compact('convocation', 'internships', 'students'));
+
     }
 
     /**

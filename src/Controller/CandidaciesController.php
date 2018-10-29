@@ -39,19 +39,15 @@ class CandidaciesController extends AppController
 
             $this->log($query );
             
-            $convocs = TableRegistry::get('Convocations');
-            foreach ($query as $candidacy){
-                
-                $this->log($convocs);
-                $candidacy->convoc = TableRegistry::get('Convocations')->find()
+            $candidacies = $this->paginate($query);
+
+            foreach ($candidacies as $candidacy){
+            
+                $candidacy->convocation = TableRegistry::get('Convocations')->find()
                 ->where(['internship_id =' => $candidacy->internship_id ])
                 ->andWhere(['student_id =' => $candidacy->student_id ])
                 ->first();
-
-                $this->log($candidacy);
             }
-
-            $candidacies = $this->paginate($query);
 
         }else if($logged_user["student"]){
             $query = $this->Candidacies->find()->where(['student_id' => $logged_user["student"]["id"]]);
@@ -82,10 +78,10 @@ class CandidaciesController extends AppController
 
             if ($this->Candidacies->save($candidacy)) {
                 $this->Flash->success(__('The candidacy has been saved.'));
-                return $this->redirect(['controller' => 'internships', 'action' => 'index']);
+                return $this->redirect($this->request->referer());
             }
             $this->Flash->error(__('The candidacy could not be saved. Please, try again.'));
-            return $this->redirect(['controller' => 'internships', 'action' => 'index']);
+            return $this->redirect($this->request->referer());
         }
         $internships = $this->Candidacies->Internships->find('list', ['limit' => 200]);
         $students = $this->Candidacies->Students->find('list', ['limit' => 200]);

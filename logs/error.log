@@ -1,569 +1,207 @@
-2018-10-23 18:57:24 Error: SELECT Internships.id AS `Internships__id`, Internships.enterprise_id AS `Internships__enterprise_id`, Internships.semester AS `Internships__semester`, Internships.start_date AS `Internships__start_date`, Internships.end_date AS `Internships__end_date`, Internships.available_places AS `Internships__available_places`, Internships.work_hours AS `Internships__work_hours`, Internships.title AS `Internships__title`, Internships.description AS `Internships__description` FROM internships Internships WHERE Internships.id = :c0
-2018-10-23 18:57:41 Error: SELECT Internships.id AS `Internships__id`, Internships.enterprise_id AS `Internships__enterprise_id`, Internships.semester AS `Internships__semester`, Internships.start_date AS `Internships__start_date`, Internships.end_date AS `Internships__end_date`, Internships.available_places AS `Internships__available_places`, Internships.work_hours AS `Internships__work_hours`, Internships.title AS `Internships__title`, Internships.description AS `Internships__description` FROM internships Internships WHERE Internships.id = :c0
-2018-10-23 18:57:50 Error: SELECT Internships.id AS `Internships__id`, Internships.enterprise_id AS `Internships__enterprise_id`, Internships.semester AS `Internships__semester`, Internships.start_date AS `Internships__start_date`, Internships.end_date AS `Internships__end_date`, Internships.available_places AS `Internships__available_places`, Internships.work_hours AS `Internships__work_hours`, Internships.title AS `Internships__title`, Internships.description AS `Internships__description` FROM internships Internships WHERE Internships.id = :c0
-2018-10-23 18:58:39 Error: {
-    "id": 6,
-    "enterprise_id": 1,
-    "semester": "autumn",
-    "start_date": "2018-04-23T00:00:00+00:00",
-    "end_date": "2022-10-23T00:00:00+00:00",
-    "available_places": 1,
-    "work_hours": "1",
-    "title": "1",
-    "description": "1"
-}
-2018-10-23 19:04:10 Error: {
-    "id": 7,
-    "enterprise_id": 1,
-    "semester": "winter",
-    "start_date": "2018-10-23T00:00:00+00:00",
-    "end_date": "2018-10-23T00:00:00+00:00",
-    "available_places": 1,
-    "work_hours": "1",
-    "title": "1",
-    "description": "1"
-}
-2018-10-23 19:04:10 Error: [Cake\View\Exception\MissingTemplateException] Template file "Email\html\etudiant_nouvelle_offre.ctp" is missing.
+2018-10-29 17:18:21 Error: Convoc-ADD
+2018-10-29 17:18:21 Error: 
+2018-10-29 17:18:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Convocations\add.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Email\\html\\etudiant_nouvelle_offre.ctp',
+  'file' => 'Convocations\\add.ctp',
 )
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/7
-Referer URL: http://localhost/GestionDesStages/internships/add
+Request URL: /convocations/add/18
+Referer URL: http://localhost/GestionDesStages/candidacies
 Stack Trace:
-#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Email\\html\\etud...')
-#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Mailer\Email.php(2756): Cake\View\View->render()
-#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Mailer\Email.php(2622): Cake\Mailer\Email->_renderTemplates('')
-#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Mailer\Email.php(2162): Cake\Mailer\Email->_render('')
-#4 E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php(41): Cake\Mailer\Email->send()
-#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\EmailsController->notifierEtudiantsNouvelleOffreStage('7')
-#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EmailsController))
-#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#22 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
-#23 {main}
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Convocations\\ad...')
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ConvocationsController))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
 
 
-2018-10-23 19:04:27 Error: {
-    "id": 8,
-    "enterprise_id": 1,
-    "semester": "winter",
-    "start_date": "2018-10-23T00:00:00+00:00",
-    "end_date": "2018-10-23T00:00:00+00:00",
-    "available_places": 1,
-    "work_hours": "1",
-    "title": "1",
-    "description": "1"
-}
-2018-10-23 19:04:27 Error: [Cake\View\Exception\MissingTemplateException] Template file "Email\html\etudiant_nouvelle_offre.ctp" is missing.
+2018-10-29 17:19:38 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:19:41 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:20:34 Error: Convoc-ADD
+2018-10-29 17:20:34 Error: 
+2018-10-29 17:20:34 Error: [Cake\View\Exception\MissingTemplateException] Template file "Convocations\add.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Email\\html\\etudiant_nouvelle_offre.ctp',
+  'file' => 'Convocations\\add.ctp',
 )
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/8
-Referer URL: http://localhost/GestionDesStages/internships/add
+Request URL: /convocations/add/18
+Referer URL: http://localhost/GestionDesStages/candidacies
 Stack Trace:
-#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Email\\html\\etud...')
-#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Mailer\Email.php(2756): Cake\View\View->render()
-#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Mailer\Email.php(2622): Cake\Mailer\Email->_renderTemplates('')
-#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Mailer\Email.php(2162): Cake\Mailer\Email->_render('')
-#4 E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php(41): Cake\Mailer\Email->send()
-#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\EmailsController->notifierEtudiantsNouvelleOffreStage('8')
-#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
-#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EmailsController))
-#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
-#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
-#22 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
-#23 {main}
-
-
-2018-10-23 19:04:57 Error: {
-    "id": 9,
-    "enterprise_id": 1,
-    "semester": "winter",
-    "start_date": "2018-10-23T00:00:00+00:00",
-    "end_date": "2018-10-23T00:00:00+00:00",
-    "available_places": 1,
-    "work_hours": "1",
-    "title": "1",
-    "description": "1"
-}
-2018-10-23 19:14:34 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/10
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:14:34 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/10
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:14:34 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/10
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:14:34 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/10
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:14:34 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/10
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Attempt to assign property of non-object in [E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php, line 37]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-App\Controller\EmailsController::notifierEtudiantsNouvelleOffreStage() - APP/Controller\EmailsController.php, line 37
-Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
-Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
-Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
-Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 107
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
-Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Attempt to assign property of non-object in [E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php, line 37]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-App\Controller\EmailsController::notifierEtudiantsNouvelleOffreStage() - APP/Controller\EmailsController.php, line 37
-Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
-Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
-Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
-Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 107
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
-Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Attempt to assign property of non-object in [E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php, line 37]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-App\Controller\EmailsController::notifierEtudiantsNouvelleOffreStage() - APP/Controller\EmailsController.php, line 37
-Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
-Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
-Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
-Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 107
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
-Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Attempt to assign property of non-object in [E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php, line 37]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-App\Controller\EmailsController::notifierEtudiantsNouvelleOffreStage() - APP/Controller\EmailsController.php, line 37
-Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
-Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
-Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
-Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 107
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
-Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Attempt to assign property of non-object in [E:\Ampps\www\GestionDesStages\src\Controller\EmailsController.php, line 37]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-App\Controller\EmailsController::notifierEtudiantsNouvelleOffreStage() - APP/Controller\EmailsController.php, line 37
-Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
-Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
-Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
-Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 107
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
-Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
-Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
-Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:15:46 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/11
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:09 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/12
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/12
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/12
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/12
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/12
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:23 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/13
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/13
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/13
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/13
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/13
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:47 Warning: Warning (512): Unable to emit headers. Headers sent in file=E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php line=952 in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/14
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/14
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/14
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/14
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
-
-
-2018-10-23 19:16:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Debugger.php:952) in [E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
-Request URL: /emails/notifier-etudiants-nouvelle-offre-stage/14
-Referer URL: http://localhost/GestionDesStages/internships/add
-Trace:
-Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
-Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
-header - [internal], line ??
-Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
-Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
-Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
-[main] - ROOT\webroot\index.php, line 40
-
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Convocations\\ad...')
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ConvocationsController))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+
+2018-10-29 17:20:39 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:21:50 Error: Convoc-ADD
+2018-10-29 17:21:50 Error: 
+2018-10-29 17:21:50 Error: [Cake\View\Exception\MissingTemplateException] Template file "Convocations\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Convocations\\add.ctp',
+)
+Request URL: /convocations/add/18
+Referer URL: http://localhost/GestionDesStages/candidacies
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Convocations\\ad...')
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ConvocationsController))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+
+2018-10-29 17:22:15 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:22:16 Error: Convoc-ADD
+2018-10-29 17:22:16 Error: 
+2018-10-29 17:22:16 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:22:20 Error: Convoc-ADD
+2018-10-29 17:22:20 Error: 1
+2018-10-29 17:22:20 Error: Convoc-ADD
+2018-10-29 17:22:20 Error: [RuntimeException] Cannot insert row, some of the primary key values are missing. Got (19, ), expecting (student_id, enterprise_id)
+Request URL: /convocations/add
+Referer URL: http://localhost/GestionDesStages/candidacies
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(2001): Cake\ORM\Table->_insert(Object(App\Model\Entity\Convocation), Array)
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1914): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Convocation), Object(ArrayObject))
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1627): Cake\ORM\Table->Cake\ORM\{closure}()
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Database\Connection.php(726): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1628): Cake\Database\Connection->transactional(Object(Closure))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1915): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#6 E:\Ampps\www\GestionDesStages\src\Controller\ConvocationsController.php(61): Cake\ORM\Table->save(Object(App\Model\Entity\Convocation))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\ConvocationsController->add()
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ConvocationsController))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#25 {main}
+
+
+2018-10-29 17:22:30 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:22:37 Error: Convoc-ADD
+2018-10-29 17:22:37 Error: 1
+2018-10-29 17:22:37 Error: Convoc-ADD
+2018-10-29 17:22:38 Error: [RuntimeException] Cannot insert row, some of the primary key values are missing. Got (19, ), expecting (student_id, enterprise_id)
+Request URL: /convocations/add
+Referer URL: http://localhost/GestionDesStages/candidacies
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(2001): Cake\ORM\Table->_insert(Object(App\Model\Entity\Convocation), Array)
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1914): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Convocation), Object(ArrayObject))
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1627): Cake\ORM\Table->Cake\ORM\{closure}()
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Database\Connection.php(726): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1628): Cake\Database\Connection->transactional(Object(Closure))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1915): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#6 E:\Ampps\www\GestionDesStages\src\Controller\ConvocationsController.php(61): Cake\ORM\Table->save(Object(App\Model\Entity\Convocation))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\ConvocationsController->add()
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ConvocationsController))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#25 {main}
+
+
+2018-10-29 17:22:56 Error: SELECT Candidacies.internship_id AS `Candidacies__internship_id`, Candidacies.student_id AS `Candidacies__student_id` FROM candidacies Candidacies LEFT JOIN internships Internships ON Internships.id = (Candidacies.internship_id) LEFT JOIN students Students ON Students.id = (Candidacies.student_id) WHERE Internships.enterprise_id = :c0
+2018-10-29 17:23:02 Error: Convoc-ADD
+2018-10-29 17:23:02 Error: 1
+2018-10-29 17:23:02 Error: Convoc-ADD
+2018-10-29 17:23:02 Error: [RuntimeException] Cannot insert row, some of the primary key values are missing. Got (19, ), expecting (student_id, enterprise_id)
+Request URL: /convocations/add
+Referer URL: http://localhost/GestionDesStages/candidacies
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(2001): Cake\ORM\Table->_insert(Object(App\Model\Entity\Convocation), Array)
+#1 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1914): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Convocation), Object(ArrayObject))
+#2 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1627): Cake\ORM\Table->Cake\ORM\{closure}()
+#3 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Database\Connection.php(726): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#4 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1628): Cake\Database\Connection->transactional(Object(Closure))
+#5 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\ORM\Table.php(1915): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#6 E:\Ampps\www\GestionDesStages\src\Controller\ConvocationsController.php(61): Cake\ORM\Table->save(Object(App\Model\Entity\Convocation))
+#7 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\ConvocationsController->add()
+#8 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#9 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ConvocationsController))
+#10 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 E:\Ampps\www\GestionDesStages\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 E:\Ampps\www\GestionDesStages\webroot\index.php(40): Cake\Http\Server->run()
+#25 {main}
 
 
