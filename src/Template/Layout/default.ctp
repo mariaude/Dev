@@ -14,6 +14,7 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
+$loguser = $this->request->getSession()->read('Auth.User');
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,10 +42,35 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </li>
         </ul>
         <div class="top-bar-section">
+
+            <ul class="left">
+                <?php if($loguser['role'] == 'admin'):
+                    
+                    ?>
+                <li><?= $this->Html->link(__('Offres de stage'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Étudiants'), ['controller' => 'Students', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Entreprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Candidatures'), ['controller' => 'Candidacies', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Convocations'), ['controller' => 'Convocations', 'action' => 'index']) ?></li>
+                <?php elseif($loguser['enterprise']['active'] == 1):?>
+                    <li><?= $this->Html->link(__('Offres de stage'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Candidatures'), ['controller' => 'Candidacies', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Convocations'), ['controller' => 'Convocations', 'action' => 'index']) ?></li>
+
+                <?php elseif($loguser['enterprise']['student'] == 1):?>
+                    <li><?= $this->Html->link(__('Offres de stage'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Entreprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Candidatures'), ['controller' => 'Candidacies', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Convocations'), ['controller' => 'Convocations', 'action' => 'index']) ?></li>
+
+                <?php endif;?>
+
+
+            </ul>
             <ul class="right">
             <?php
                         
-                        $loguser = $this->request->getSession()->read('Auth.User');
+                        
                         if ($loguser) {
                             $user = $loguser['email'];
                             echo '<li>'.$this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']).'</li>';

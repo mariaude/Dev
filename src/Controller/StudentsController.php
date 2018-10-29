@@ -88,6 +88,11 @@ class StudentsController extends AppController
                 //$this->patchStudentInfos($student);
                 if ($this->Students->save($student)) {
                     $this->Flash->success(__('The student has been saved.'));
+                    
+                    if($this->request->getSession()->read('Auth.User.id') == $res['user_id']){
+
+                        $this->request->getSession()->write('Auth.User.student', $student);
+                    }
 
                     return $this->redirect(['action' => 'index']);
                 }
@@ -131,9 +136,12 @@ class StudentsController extends AppController
             if ($this->Students->save($student)) {
 
                 //$this->patchStudentInfos($student);
-                if ($this->Students->save($student)) {
+                if ($res = $this->Students->save($student)) {
                     $this->Flash->success(__('The student has been saved.'));
+                    if($this->request->getSession()->read('Auth.User.id') == $res['user_id']){
 
+                        $this->request->getSession()->write('Auth.User.student', $student);
+                    }
                     return $this->redirect(['action' => 'index']);
                 }
             }

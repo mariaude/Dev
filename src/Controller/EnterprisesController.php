@@ -71,9 +71,12 @@ class EnterprisesController extends AppController
             $enterprise->active = $est_valide;
             $enterprise->user_id = $user_id;
 
-            if ($this->Enterprises->save($enterprise)) {
+            if ($res = $this->Enterprises->save($enterprise)) {
 
+                if($this->request->getSession()->read('Auth.User.id') == $res['user_id']){
 
+                    $this->request->getSession()->write('Auth.User.enterprise', $enterprise);
+                }
                 $this->Flash->success(__('The enterprise has been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
@@ -122,9 +125,13 @@ class EnterprisesController extends AppController
 
             $enterprise->active = $est_valide;
 
-            if ($this->Enterprises->save($enterprise)) {
+            if ($res = $this->Enterprises->save($enterprise)) {
                 $this->Flash->success(__('The enterprise has been saved.'));
 
+                if($this->request->getSession()->read('Auth.User.id') == $res['user_id']){
+
+                    $this->request->getSession()->write('Auth.User.enterprise', $enterprise);
+                }
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));

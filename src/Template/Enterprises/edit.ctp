@@ -40,21 +40,35 @@
             ];
             echo('Type');
             echo $this->Form->select('enterprise_type', $options);
+?>
+        <table>
+            <tr>
+                <th>Type de clientèle</th>
+                <th>Missions du milieu</th> 
+            </tr>
+            <tr>
+                <td>
+                    <?=$this->Form->control('client_types._ids', [
+                        'type' => 'select', 
+                        'multiple'=> 'checkbox', 
+                        'label' => "Type de clientèle",
+                        'options' => $client_types,
+                        'label' => ""
+                    ]);?>
+                </td>
+                <td>
+                    <?= $this->Form->control('missions._ids', [
+                        'type' => 'select', 
+                        'multiple'=> 'checkbox',
+                        'label' => "Missions du milieu",
+                        'options' => $missions,
+                        'label' => ""
+                    ]);?>
+                </td> 
+            </tr>
+        </table>
 
-            echo $this->Form->control('client_types._ids', [
-                'type' => 'select', 
-                'multiple'=> 'checkbox', 
-                'label' => "Type de clientèle",
-                'options' => $client_types
-            ]);
-
-            echo $this->Form->control('missions._ids', [
-                'type' => 'select', 
-                'multiple'=> 'checkbox',
-                'label' => "Missions du milieu",
-                'options' => $missions
-            ]);
-                
+<?php
             echo $this->Form->control('additional_informations');
             //echo $this->Form->control('active');
         ?>
