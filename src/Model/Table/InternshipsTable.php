@@ -11,6 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\EnterprisesTable|\Cake\ORM\Association\BelongsTo $Enterprises
  * @property \App\Model\Table\CandidaciesTable|\Cake\ORM\Association\HasMany $Candidacies
+ * @property |\Cake\ORM\Association\HasMany $Convocations
  *
  * @method \App\Model\Entity\Internship get($primaryKey, $options = [])
  * @method \App\Model\Entity\Internship newEntity($data = null, array $options = [])
@@ -45,9 +46,12 @@ class InternshipsTable extends Table
         $this->hasMany('Candidacies', [
             'foreignKey' => 'internship_id'
         ]);
+        $this->hasMany('Convocations', [
+            'foreignKey' => 'internship_id'
+        ]);
     }
 
-/**
+    /**
      * Default validation rules.
      *
      * @param \Cake\Validation\Validator $validator Validator instance.

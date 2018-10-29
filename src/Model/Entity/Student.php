@@ -17,6 +17,7 @@ use Cake\ORM\Entity;
  * @property bool $active
  *
  * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Candidacy[] $candidacies
  */
 class Student extends Entity
 {
@@ -54,6 +55,4 @@ class Student extends Entity
         }
         return null;
     }
-
-
 }

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Candidacies Controller
@@ -33,10 +34,25 @@ class CandidaciesController extends AppController
         if($logged_user["enterprise"]){
         
             $query = $this->Candidacies->find()
-            ->leftJoinWith('Internships')
+            ->leftJoinWith('Internships')->leftJoinWith('Students')
             ->where(['Internships.enterprise_id =' => $logged_user["enterprise"]["id"]]);
 
+            $this->log($query );
+            
+            $convocs = TableRegistry::get('Convocations');
+            foreach ($query as $candidacy){
+                
+                $this->log($convocs);
+                $candidacy->convoc = TableRegistry::get('Convocations')->find()
+                ->where(['internship_id =' => $candidacy->internship_id ])
+                ->andWhere(['student_id =' => $candidacy->student_id ])
+                ->first();
+
+                $this->log($candidacy);
+            }
+
             $candidacies = $this->paginate($query);
+
         }else if($logged_user["student"]){
             $query = $this->Candidacies->find()->where(['student_id' => $logged_user["student"]["id"]]);
             $candidacies = $this->paginate($query);

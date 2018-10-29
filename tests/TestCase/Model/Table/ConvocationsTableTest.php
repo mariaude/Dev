@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\StudentsTable;
+use App\Model\Table\ConvocationsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\StudentsTable Test Case
+ * App\Model\Table\ConvocationsTable Test Case
  */
-class StudentsTableTest extends TestCase
+class ConvocationsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\StudentsTable
+     * @var \App\Model\Table\ConvocationsTable
      */
-    public $Students;
+    public $Convocations;
 
     /**
      * Fixtures
@@ -24,9 +24,9 @@ class StudentsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
+        'app.convocations',
         'app.students',
-        'app.users',
-        'app.candidacies'
+        'app.enterprises'
     ];
 
     /**
@@ -37,8 +37,8 @@ class StudentsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Students') ? [] : ['className' => StudentsTable::class];
-        $this->Students = TableRegistry::getTableLocator()->get('Students', $config);
+        $config = TableRegistry::getTableLocator()->exists('Convocations') ? [] : ['className' => ConvocationsTable::class];
+        $this->Convocations = TableRegistry::getTableLocator()->get('Convocations', $config);
     }
 
     /**
@@ -48,7 +48,7 @@ class StudentsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Students);
+        unset($this->Convocations);
 
         parent::tearDown();
     }
@@ -59,26 +59,6 @@ class StudentsTableTest extends TestCase
      * @return void
      */
     public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationAdmin method
-     *
-     * @return void
-     */
-    public function testValidationAdmin()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
