@@ -64,19 +64,20 @@ class CandidaciesController extends AppController
     public function add()
     {
 
+       /*$query = $this->Candidacies->find()
+         ->leftJoinWith('Internships')->where(['Internships.id =' => $candidacy->internship_id]);*/
+
         $student = $this->request->getSession()->read('Auth.User.student');
 
 
         if ($student && $this->request->is('post')) {
-            debug($this->request->getData());
 
             $candidacy = $this->Candidacies->newEntity($this->request->getData());
             
-            debug($candidacy);
-
             if ($this->Candidacies->save($candidacy)) {
                 $this->Flash->success(__('The candidacy has been saved.'));
-                return $this->redirect($this->request->referer());
+                return $this->redirect(['controller' => 'Emails', 'action' => 'notifierEmployeurPostulationEtudiant', $candidacy->internship_id]);
+                //return $this->redirect($this->request->referer());
             }
             $this->Flash->error(__('The candidacy could not be saved. Please, try again.'));
             return $this->redirect($this->request->referer());

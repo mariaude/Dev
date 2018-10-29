@@ -14,7 +14,7 @@
     </ul>
 </nav>
 <div class="internships form large-9 medium-8 columns content">
-    <?= $this->Form->create($internship) ?>
+    <?= $this->Form->create($internship)?>
     <fieldset>
         <legend><?= __('Add Internship') ?></legend>
         <?php

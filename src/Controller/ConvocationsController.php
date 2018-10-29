@@ -13,6 +13,15 @@ use App\Controller\AppController;
 class ConvocationsController extends AppController
 {
 
+    public function isAuthorized($user){
+
+        //$action = $this->­request->­getParam('action');
+
+        $valide = true;
+        return ($valide) ? $valide : parent::isAuthorized($user);
+        
+      }
+
     /**
      * Index method
      *
@@ -57,8 +66,8 @@ class ConvocationsController extends AppController
 
             if ($this->Convocations->save($convocation)) {
                 $this->Flash->success(__('La convocation a été envoyée'));
-
-                return $this->redirect($this->request->referer());
+                return $this->redirect(['controller' => 'Emails', 'action' => 'notifierEtudiantConvocation', $convocation->student_id]);
+                //return $this->redirect($this->request->referer());
             }
             $this->Flash->error(__("La convocation n'a pas pu être envoyée. Réessayer, s'il vous plaît."));
             return $this->redirect($this->request->referer());
