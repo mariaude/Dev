@@ -32,7 +32,7 @@
                 <td class="actions">
 
                     <?php if($this->request->getSession()->read('Auth.User.enterprise')):?>
-                        <?= $this->Form->create($candidacy->convocation, ['url' => ['controller' => 'Convocations', 'action' => 'add']]) ?>
+                        <?= $this->Form->create($candidacy->convocation, ['url' => ['controller' => 'Convocations', 'action' => ($candidacy->convocation) ? 'edit' : 'add']]) ?>
                                 <?php
                                     echo $this->Form->hidden('student_id', [
                                         'value' => $candidacy->student->id

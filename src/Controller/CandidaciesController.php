@@ -37,8 +37,6 @@ class CandidaciesController extends AppController
             ->leftJoinWith('Internships')->leftJoinWith('Students')
             ->where(['Internships.enterprise_id =' => $logged_user["enterprise"]["id"]]);
 
-            $this->log($query );
-            
             $candidacies = $this->paginate($query);
 
             foreach ($candidacies as $candidacy){
@@ -73,7 +71,7 @@ class CandidaciesController extends AppController
             debug($this->request->getData());
 
             $candidacy = $this->Candidacies->newEntity($this->request->getData());
-        
+            
             debug($candidacy);
 
             if ($this->Candidacies->save($candidacy)) {

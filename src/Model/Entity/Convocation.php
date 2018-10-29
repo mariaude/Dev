@@ -30,7 +30,7 @@ class Convocation extends Entity
         'created' => true,
         'modified' => true,
         'student' => true,
-        'enterprise' => true,
+        'internship' => true,
         'internship_id' => true,
         'student_id' => true
     ];

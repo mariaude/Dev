@@ -37,8 +37,8 @@ class ConvocationsTable extends Table
         parent::initialize($config);
 
         $this->setTable('convocations');
-        $this->setDisplayField('student_id');
-        $this->setPrimaryKey(['student_id', 'enterprise_id']);
+        $this->setDisplayField(['internship_id', 'student_id']);
+        $this->setPrimaryKey(['internship_id', 'student_id']);
 
         $this->addBehavior('Timestamp');
 
