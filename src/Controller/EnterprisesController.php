@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-
+use Cake\Event\Event;
 use App\Controller\AppController;
 
 /**
@@ -162,6 +162,12 @@ class EnterprisesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->deny('index', 'view');
+    }
     
     public function isAuthorized($user)
     {
@@ -169,9 +175,14 @@ class EnterprisesController extends AppController
 
         $valide = false;
 
+        if (in_array($action, ['index'])) {
+
+            $valide = !$user["enterprise"];
+        }else
+
         if (in_array($action, ['view'])) {
             $valide = true;
-        }
+        }else
 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
@@ -185,11 +196,11 @@ class EnterprisesController extends AppController
                 
                 $valide = true;
             }    
-        }
+        }else
 
         if (in_array($action, ['delete'])) {
             $valide = false;
-        }
+        }else
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'enterprise' && !$user['enterprise']) {
              $valide = true;

@@ -1,7 +1,7 @@
 <!--EXAMPLE-->
 <?php
-echo $full_name. ',<br/>';
-echo "L'entreprise ". $entreprise_name ." ont ouvert une nouvelle offre de stage.<br/>";
+echo 'Bonjour, '. $student->full_name . ',<br/>';
+echo sprintf("L'entreprise %s ont ouvert une nouvelle offre de stage.<br/>", $internship->enterprise->name);
 
-echo $this->Html->link("Consulter l'offre", ['controller' => 'Enterprises', 'action' => 'view', $enter_id, '_full' => true]);
+echo $this->Html->link("Consulter l'offre", ['controller' => 'Internships', 'action' => 'view', $internship->id, '_full' => true]);
 

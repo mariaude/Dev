@@ -56,7 +56,7 @@
         <?= $this->Text->autoParagraph(h($internship->description)); ?>
     </div>
 
-    <?php if($student_user): // Student, possibilité de mettre une candidature
+    <?php if(isset($student_user)): // Student, possibilité de mettre une candidature
             if($already_applied): //Déja appliqué ?>
                 <legend><?=__('Candidature déjà laissée')?>
             <?php else: //Jamais appliqué?>
