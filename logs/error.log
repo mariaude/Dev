@@ -370,3 +370,676 @@ Stack Trace:
 #17 {main}
 
 
+2018-10-29 20:36:09 Error: Array
+(
+    [id] => 44
+    [email] => cynthiaboissonneault@hotmail.com
+    [role] => enterprise
+    [enterprise] => Array
+        (
+            [id] => 2
+            [user_id] => 44
+            [name] => bob
+            [adress] => 6523 teg gsdfg
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7C1R7
+            [region] => bob
+            [active] => 1
+            [additional_informations] => Rien à foutre
+            [enterprise_type] => cliniquePrivee
+        )
+
+    [student] => 
+)
+
+2018-10-29 20:36:09 Error: Array
+(
+    [id] => 2
+    [user_id] => 44
+    [name] => bob
+    [adress] => 6523 teg gsdfg
+    [city] => Laval
+    [province] => Québec
+    [postal_code] => H7C1R7
+    [region] => bob
+    [active] => 1
+    [additional_informations] => Rien à foutre
+    [enterprise_type] => cliniquePrivee
+)
+
+2018-10-29 20:36:21 Error: [Cake\Database\Exception] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>users' at line 1
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', '>users', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('>users', Array)
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('>users')
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Query.php(271): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(1758): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(1350): Cake\ORM\Table->query()
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(2478): Cake\ORM\Table->find('all', Array)
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(2499): Cake\ORM\Table->_dynamicFinder('find_by_id', Array)
+#9 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\EmailsController.php(125): Cake\ORM\Table->__call('findById', Array)
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\EmailsController->notifierEtudiantConvocation('19')
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EmailsController))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#28 {main}
+
+
+2018-10-29 20:36:36 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:36:36 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:36:36 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:36:36 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:36:36 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:39:11 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:39:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:39:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:39:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:39:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:20 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:51 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:41:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:42:41 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:42:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:42:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:42:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:42:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:44:10 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:44:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:44:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:44:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:44:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:45:21 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:45:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:45:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:45:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:45:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:46:14 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:46:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:46:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:46:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:46:14 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:28 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:56 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:56 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:56 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:56 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-10-29 20:47:56 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /emails/notifier-etudiant-convocation/19
+Referer URL: http://localhost/Dev/candidacies
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+

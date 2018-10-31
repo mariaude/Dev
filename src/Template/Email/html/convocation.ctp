@@ -1,6 +1,5 @@
 <?php
-echo $name. ',<br/>';
-echo "Une entreprsie souhaite rentrer en contact avec vous.<br/>";
+echo $student_name. ',<br/>';
+echo "L'entreprise " . $entreprise_name . " souhaite rentrer en contact avec vous, veuillez la contacter à ce courriel:". $enterprise_email;
 
-//echo $this->Html->link("Consulter l'offre", ['controller' => 'Enterprises', 'action' => 'view', $enter_id, '_full' => true]);
 
