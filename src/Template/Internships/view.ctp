@@ -32,10 +32,6 @@
             <td><?= h($internship->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($internship->id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Available Places') ?></th>
             <td><?= $this->Number->format($internship->available_places) ?></td>
         </tr>

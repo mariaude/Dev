@@ -57,7 +57,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
                     <li><?= $this->Html->link(__('Candidatures'), ['controller' => 'Candidacies', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('Convocations'), ['controller' => 'Convocations', 'action' => 'index']) ?></li>
 
-                <?php elseif($loguser['enterprise']['student'] == 1):?>
+                <?php elseif($loguser['student']['active'] == 1):?>
                     <li><?= $this->Html->link(__('Offres de stage'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('Entreprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('Candidatures'), ['controller' => 'Candidacies', 'action' => 'index']) ?></li>

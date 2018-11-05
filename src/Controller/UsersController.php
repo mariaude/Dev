@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 use Cake\Core\App;
+use Cake\Event\Event;
 
 use App\Controller\AppController;
 /**
@@ -206,8 +207,14 @@ class UsersController extends AppController
         $this->Flash->success('Vous avez été déconnecté.');
         return $this->redirect($this->Auth->logout());
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->deny(['index', 'view']);
+    }
     
-     public function isAuthorized($user)
+    public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
         $valide = false;
