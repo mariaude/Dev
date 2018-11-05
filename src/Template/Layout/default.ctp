@@ -36,7 +36,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
+        <ul class="title-area large-2 medium-4 columns">
             <li class="name">
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
@@ -68,19 +68,23 @@ $loguser = $this->request->getSession()->read('Auth.User');
 
             </ul>
             <ul class="right">
-            <?php
-                        
-                        
-                        if ($loguser) {
-                            $user = $loguser['email'];
-                            echo '<li>'.$this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']).'</li>';
-                        } else {
-                            echo '<li>'.$this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']).'</li>';
-                            echo '<li>'.$this->Html->link('Register', ['controller' => 'Users', 'action' => 'add']).'</li>';
-                        }
-                        ?>
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+
+            <?php if ($loguser):?>
+                <li>
+                    <?= $this->Html->link(sprintf('%s %s',__('Logged in as') , $loguser['email']), ['controller' => 'Users', 'action' => 'view', $loguser['id']]) ?>
+                </li>
+                <li>
+                    <?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
+                
+                </li>
+            <?php else:?>
+                <li>
+                    <?= $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']) ?>
+                </li>
+                <li>
+                    <?= $this->Html->link('Register', ['controller' => 'Users', 'action' => 'add']) ?>
+                </li>
+                <?php endif;?>
             </ul>
         </div>
     </nav>

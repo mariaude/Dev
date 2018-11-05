@@ -4,15 +4,7 @@
  * @var \App\Model\Entity\Enterprise $enterprise
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Enterprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="enterprises form large-9 medium-8 columns content">
+<div class="enterprises form columns content">
 <?= $this->Form->create(null, ['url' => ['controller' => 'Enterprises', 'action' => 'add', $user_id]]) ?>
     <fieldset>
         <legend><?= __('Complete enterprise info') ?></legend>

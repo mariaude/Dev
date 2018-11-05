@@ -4,15 +4,6 @@
  * @var \App\Model\Entity\Internship $internship
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <br/>
-        <li><?= $this->Html->link(__('List Enterprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
-    </ul>
-</nav>
 <div class="internships form large-9 medium-8 columns content">
     <?= $this->Form->create($internship)?>
     <fieldset>

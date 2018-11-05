@@ -4,15 +4,7 @@
  * @var \App\Model\Entity\Internship[]|\Cake\Collection\CollectionInterface $internships
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Enterprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="internships index large-9 medium-8 columns content">
+<div class="internships index columns content">
     <h3><?= __('Internships') ?></h3>
     <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add']) ?>
     <table cellpadding="0" cellspacing="0">
