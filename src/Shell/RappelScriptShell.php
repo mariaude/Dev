@@ -3,7 +3,7 @@ namespace App\Shell;
 use Cake\Console\Shell;
 use Cake\Mailer\Email;
 use Cake\ORM\TableRegistry;
-class ScriptShell extends Shell
+class RappelScriptShell extends Shell
 {
     public function main()
     {
