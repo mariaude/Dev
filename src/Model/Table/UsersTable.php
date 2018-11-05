@@ -39,10 +39,12 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->hasMany('Enterprises', [
-            'foreignKey' => 'user_id'
+            'foreignKey' => 'user_id',
+            'dependent' => true
         ]);
         $this->hasMany('Students', [
-            'foreignKey' => 'user_id'
+            'foreignKey' => 'user_id',
+            'dependent' => true
         ]);
     }
 

@@ -17,6 +17,7 @@ use Cake\ORM\Entity;
  * @property bool $active
  *
  * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Candidacy[] $candidacies
  */
 class Student extends Entity
 {
@@ -39,6 +40,19 @@ class Student extends Entity
         'informations' => true,
         'notes' => true,
         'active' => true,
-        'user' => true
+        'user' => true,
+        'candidacies' => true
     ];
+
+    protected $_virtual = [
+        'full_name'
+    ];
+
+    protected function _getFullName()
+    {
+        if(!$this->isNew()){
+            return $this->_properties['first_name'] . ' ' .$this->_properties['last_name'];
+        }
+        return null;
+    }
 }

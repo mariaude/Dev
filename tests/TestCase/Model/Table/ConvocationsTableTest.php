@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\InternshipsTable;
+use App\Model\Table\ConvocationsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\InternshipsTable Test Case
+ * App\Model\Table\ConvocationsTable Test Case
  */
-class InternshipsTableTest extends TestCase
+class ConvocationsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\InternshipsTable
+     * @var \App\Model\Table\ConvocationsTable
      */
-    public $Internships;
+    public $Convocations;
 
     /**
      * Fixtures
@@ -24,9 +24,9 @@ class InternshipsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.internships',
-        'app.enterprises',
-        'app.candidacies'
+        'app.convocations',
+        'app.students',
+        'app.enterprises'
     ];
 
     /**
@@ -37,8 +37,8 @@ class InternshipsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Internships') ? [] : ['className' => InternshipsTable::class];
-        $this->Internships = TableRegistry::getTableLocator()->get('Internships', $config);
+        $config = TableRegistry::getTableLocator()->exists('Convocations') ? [] : ['className' => ConvocationsTable::class];
+        $this->Convocations = TableRegistry::getTableLocator()->get('Convocations', $config);
     }
 
     /**
@@ -48,7 +48,7 @@ class InternshipsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Internships);
+        unset($this->Convocations);
 
         parent::tearDown();
     }
@@ -59,16 +59,6 @@ class InternshipsTableTest extends TestCase
      * @return void
      */
     public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

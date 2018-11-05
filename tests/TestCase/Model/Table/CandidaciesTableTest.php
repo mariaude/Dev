@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\InternshipsTable;
+use App\Model\Table\CandidaciesTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\InternshipsTable Test Case
+ * App\Model\Table\CandidaciesTable Test Case
  */
-class InternshipsTableTest extends TestCase
+class CandidaciesTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\InternshipsTable
+     * @var \App\Model\Table\CandidaciesTable
      */
-    public $Internships;
+    public $Candidacies;
 
     /**
      * Fixtures
@@ -24,9 +24,9 @@ class InternshipsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
+        'app.candidacies',
         'app.internships',
-        'app.enterprises',
-        'app.candidacies'
+        'app.students'
     ];
 
     /**
@@ -37,8 +37,8 @@ class InternshipsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Internships') ? [] : ['className' => InternshipsTable::class];
-        $this->Internships = TableRegistry::getTableLocator()->get('Internships', $config);
+        $config = TableRegistry::getTableLocator()->exists('Candidacies') ? [] : ['className' => CandidaciesTable::class];
+        $this->Candidacies = TableRegistry::getTableLocator()->get('Candidacies', $config);
     }
 
     /**
@@ -48,7 +48,7 @@ class InternshipsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Internships);
+        unset($this->Candidacies);
 
         parent::tearDown();
     }
@@ -59,16 +59,6 @@ class InternshipsTableTest extends TestCase
      * @return void
      */
     public function testInitialize()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

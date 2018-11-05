@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\InternshipsTable;
+use App\Model\Table\MissionsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\InternshipsTable Test Case
+ * App\Model\Table\MissionsTable Test Case
  */
-class InternshipsTableTest extends TestCase
+class MissionsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\InternshipsTable
+     * @var \App\Model\Table\MissionsTable
      */
-    public $Internships;
+    public $Missions;
 
     /**
      * Fixtures
@@ -24,9 +24,8 @@ class InternshipsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.internships',
-        'app.enterprises',
-        'app.candidacies'
+        'app.missions',
+        'app.enterprises'
     ];
 
     /**
@@ -37,8 +36,8 @@ class InternshipsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Internships') ? [] : ['className' => InternshipsTable::class];
-        $this->Internships = TableRegistry::getTableLocator()->get('Internships', $config);
+        $config = TableRegistry::getTableLocator()->exists('Missions') ? [] : ['className' => MissionsTable::class];
+        $this->Missions = TableRegistry::getTableLocator()->get('Missions', $config);
     }
 
     /**
@@ -48,7 +47,7 @@ class InternshipsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Internships);
+        unset($this->Missions);
 
         parent::tearDown();
     }
@@ -69,16 +68,6 @@ class InternshipsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-
+use Cake\Event\Event;
 use App\Controller\AppController;
 
 /**
@@ -56,23 +56,37 @@ class EnterprisesController extends AppController
         $enterprise = $this->Enterprises->newEntity();
         
         if ($this->request->is('post') && isset($user_id)) {
+            $logged_user = $this->request->getSession()->read('Auth.User');
+
             $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            $est_valide = ( $enterprise->errors() == null) ? 1 : 0;
+
+
+            if($logged_user['role'] == 'admin'){
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData(), ['validate'=> 'admin']);
+            } else {
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            }
             
+            $enterprise->active = $est_valide;
             $enterprise->user_id = $user_id;
-            //debug($enterprise);
-            if ($this->Enterprises->save($enterprise)) {
+
+            if ($res = $this->Enterprises->save($enterprise)) {
+
+                if($this->request->getSession()->read('Auth.User.id') == $res['user_id']){
+
+                    $this->request->getSession()->write('Auth.User.enterprise', $enterprise);
+                }
                 $this->Flash->success(__('The enterprise has been saved.'));
-                $this->redirect([
-                    'controller' => 'Users', 
-                    'action' => 'confirmEnterprise', $user_id
-                ]);
-                echo 'test';
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));
         }
         $users = $this->Enterprises->Users->find('list', ['limit' => 200]);
-        $this->set(compact('enterprise', 'users'));
+        $client_types = $this->Enterprises->ClientTypes->find('list', ['limit' => 200]);
+        $missions = $this->Enterprises->Missions->find('list', ['limit' => 200]);
+        
+        $this->set(compact('enterprise', 'users', 'client_types', 'missions'));
     }
 
     /**
@@ -83,21 +97,50 @@ class EnterprisesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
+
     {
+        /*
         $enterprise = $this->Enterprises->get($id, [
-            'contain' => []
-        ]);
+            'contain' => ['client_types', 'missions']
+        ]);*/
+
+        $enterprise = $this->Enterprises
+        ->findById($id)
+        ->contain('ClientTypes', 'Missions') // charge les Tags associés
+        ->firstOrFail();
+
         if ($this->request->is(['patch', 'post', 'put'])) {
+
+
+            $logged_user = $this->request->getSession()->read('Auth.User');
+
             $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
-            if ($this->Enterprises->save($enterprise)) {
+            $est_valide = ( $enterprise->errors() == null) ? 1 : 0;
+
+            if($logged_user['role'] == 'admin'){
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData(), ['validate'=> 'admin']);
+            } else {
+                $enterprise = $this->Enterprises->patchEntity($enterprise, $this->request->getData());
+            }
+
+            $enterprise->active = $est_valide;
+
+            if ($res = $this->Enterprises->save($enterprise)) {
                 $this->Flash->success(__('The enterprise has been saved.'));
 
+                if($this->request->getSession()->read('Auth.User.id') == $res['user_id']){
+
+                    $this->request->getSession()->write('Auth.User.enterprise', $enterprise);
+                }
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The enterprise could not be saved. Please, try again.'));
         }
         $users = $this->Enterprises->Users->find('list', ['limit' => 200]);
-        $this->set(compact('enterprise', 'users'));
+        $client_types = $this->Enterprises->ClientTypes->find('list', ['limit' => 200]);
+        $missions = $this->Enterprises->Missions->find('list', ['limit' => 200]);
+        
+        $this->set(compact('enterprise', 'users', 'client_types', 'missions'));
     }
 
     /**
@@ -119,6 +162,12 @@ class EnterprisesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->deny('index', 'view');
+    }
     
     public function isAuthorized($user)
     {
@@ -126,31 +175,34 @@ class EnterprisesController extends AppController
 
         $valide = false;
 
+        if (in_array($action, ['index'])) {
+
+            $valide = !$user["enterprise"];
+        }else
+
         if (in_array($action, ['view'])) {
             $valide = true;
-        }
+        }else
 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
             
-            if(isset($user['role']) && $user['role'] === 'enterprise'){
-                $enterprise_id = (int) $this->request->getParam('pass.0');
+
+            $enterprise_id = (int) $this->request->getParam('pass.0');
+            $this->log($user['enterprise']['id']);
+            
+            //Si user_id de l'entreprise correspond au id de l'user courrant
+            if(isset($user['role']) && $user['role'] === 'enterprise' && $user['enterprise']['id'] == $enterprise_id){
                 
-                $enterprise = $this->Enterprises->get($enterprise_id);
-                
-                //Si user_id de l'entreprise correspond au id de l'user courrant
-                if($enterprise['user_id'] == $user['id']){
-                    $valide = true;
-                }
-                $valide = false;
+                $valide = true;
             }    
-        }
+        }else
 
         if (in_array($action, ['delete'])) {
             $valide = false;
-        }
+        }else
 
-        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'toBeEnterprise') {
+        if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'enterprise' && !$user['enterprise']) {
              $valide = true;
         }
         

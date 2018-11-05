@@ -15,9 +15,13 @@ use Cake\ORM\Entity;
  * @property string $postal_code
  * @property string $region
  * @property bool $active
+ * @property string $additional_informations
+ * @property string $enterprise_type
  *
  * @property \App\Model\Entity\User $user
  * @property \App\Model\Entity\Internship[] $internships
+ * @property \App\Model\Entity\ClientType[] $client_types
+ * @property \App\Model\Entity\Mission[] $missions
  */
 class Enterprise extends Entity
 {
@@ -39,9 +43,12 @@ class Enterprise extends Entity
         'province' => true,
         'postal_code' => true,
         'region' => true,
-        'additional_informations' => true,
         'active' => true,
+        'additional_informations' => true,
+        'enterprise_type' => true,
         'user' => true,
-        'internships' => true
+        'internships' => true,
+        'client_types' => true,
+        'missions' => true
     ];
 }

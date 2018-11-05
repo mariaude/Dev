@@ -25,7 +25,8 @@ class StudentsTableTest extends TestCase
      */
     public $fixtures = [
         'app.students',
-        'app.users'
+        'app.users',
+        'app.candidacies'
     ];
 
     /**
@@ -68,6 +69,16 @@ class StudentsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test validationAdmin method
+     *
+     * @return void
+     */
+    public function testValidationAdmin()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

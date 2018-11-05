@@ -3,6 +3,7 @@ namespace App\Model\Entity;
 
 use Cake\Auth\DefaultPasswordHasher; 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * User Entity
@@ -51,6 +52,32 @@ class User extends Entity
 
             return $hasher->hash($value);
         }
+    }
+
+    protected $_virtual = [
+        'enterprise', 
+        'student'
+    ];
+
+    protected function _getEnterprise()
+    {   
+        if(!$this->isNew()){
+            $enterprises = TableRegistry::get('Enterprises');
+            $enterprise = $enterprises->find()->where(['user_id' => $this->_properties['id']])->first();
+            return $enterprise;
+        }
+        return null;
+
+    }
+
+    protected function _getStudent()
+    {   
+        if(!$this->isNew()){
+            $students = TableRegistry::get('Students');
+            $student = $students->find()->where(['user_id' => $this->_properties['id']])->first();
+            return $student;
+        }
+        return null;
     }
     
 }

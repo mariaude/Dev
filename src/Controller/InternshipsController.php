@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use Cake\Event\Event;
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 
@@ -21,10 +22,19 @@ class InternshipsController extends AppController
      */
     public function index()
     {
+
+        $logged_user = $this->request->getSession()->read('Auth.User');
+
         $this->paginate = [
             'contain' => ['Enterprises']
         ];
         $internships = $this->paginate($this->Internships);
+
+        if($logged_user["enterprise"]){
+            
+            $query = $this->Internships->find()->where(['enterprise_id' => $logged_user["enterprise"]["id"]]);
+            $internships = $this->paginate($query);
+        }
 
         $this->set(compact('internships'));
     }
@@ -38,11 +48,35 @@ class InternshipsController extends AppController
      */
     public function view($id = null)
     {
+
         $internship = $this->Internships->get($id, [
             'contain' => ['Enterprises']
         ]);
 
+        $data[] = $internship;
+        
+        $student_user = $this->request->getSession()->read('Auth.User.student');
+        if($student_user){
+            $already_applied = $this->Internships
+            ->Candidacies->find()
+            ->where(['internship_id' => $id, 'student_id' => $student_user['id']])
+            ->first();
+
+            if(!$already_applied){
+
+                $Candidacies = $this->loadModel('Candidacies');
+                $candidacy = $Candidacies->newEntity();
+
+                $candidacy->student_id = $student_user['id'];
+                $candidacy->internship_id = $id;
+                $this->set('candidacy', $candidacy);
+            }
+
+            $this->set(['student_user'=> $student_user, 'already_applied'=> $already_applied]);
+            
+        }
         $this->set('internship', $internship);
+        
     }
 
     /**
@@ -52,26 +86,25 @@ class InternshipsController extends AppController
      */
     public function add()
     {
+        
+        $enterprise_id = $this->request->getSession()->read('Auth.User.enterprise.id');
+        if($enterprise_id){
+            $internship = $this->Internships->newEntity();
+            if ($this->request->is('post')) {
+                $internship = $this->Internships->patchEntity($internship, $this->request->getData());
+                
+                $internship->enterprise_id = $enterprise_id;
 
-        $enterprises = TableRegistry::get('Enterprises');
-        $query = $enterprises->find()->select(['id'])->where(['user_id =' => $this->Auth->user('id')])->first();
-        $enterprise_id = $query['id'];
-        //$enterprise_id = $query->where(['user_id' => $this->Auth->user('id')]);
-        $internship = $this->Internships->newEntity();
-        if ($this->request->is('post')) {
-            $internship = $this->Internships->patchEntity($internship, $this->request->getData());
-            
-            $internship->enterprise_id = $enterprise_id;
-
-            if ($this->Internships->save($internship)) {
-                $this->Flash->success(__('The internship has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                if ($this->Internships->save($internship)) {
+                    $this->Flash->success(__('The internship has been saved.'));
+                    return $this->redirect(['controller' => 'Emails', 'action' => 'notifierEtudiantsNouvelleOffreStage', $internship->id]);
+                    //return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('The internship could not be saved. Please, try again.'));
             }
-            $this->Flash->error(__('The internship could not be saved. Please, try again.'));
+            $enterprises = $this->Internships->Enterprises->find('list', ['limit' => 200]);
+            $this->set(compact('internship', 'enterprises'));
         }
-        $enterprises = $this->Internships->Enterprises->find('list', ['limit' => 200]);
-        $this->set(compact('internship', 'enterprises'));
     }
 
     /**
@@ -118,19 +151,61 @@ class InternshipsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->deny('view');
+    }
     
     public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
+
+        $valide = false;
         // authentifiés sur l'application
         if (in_array($action, ['view'])) {
-            return true;
+
+
+            $logged_user = $this->request->getSession()->read('Auth.User');
+            $logged_user_enter = $this->request->getSession()->read('Auth.User.enterprise');
+            if($logged_user["role"] == "student" ){
+                $valide = true;
+            }else if($logged_user["role"] == "enterprise"){
+                //Recherche pour savoir si l'entreprise suivante est propriétaire
+
+                $current_internship = $this->Internships->get((int) $this->request->getParam('pass.0'));
+
+                $this->log('WOLOLO');
+                $this->log($current_internship);
+
+                //$enterprises = TableRegistry::get('Enterprises');
+
+                //$enteprise_user = $enterprises->find()->where(['user_id' => $logged_user["id"]])->first();
+                $enteprise_user = $this->request->getSession()->read('Auth.User.enterprise');
+                $this->log($enteprise_user);
+
+                if($enteprise_user){
+                    //Est entreprise
+                    $this->log($enteprise_user);
+
+                    if($enteprise_user['id'] == $current_internship['enterprise_id'])
+                        $valide = true;
+
+                }else{
+                    $this->log('rien de trouvé');
+                    $valide = false;
+                }
+             
+
+            }
+
         }
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'enterprise') {
-            return true;
+            $valide = true;
         }
 
-        return parent::isAuthorized($user);
+        return ($valide) ? $valide : parent::isAuthorized($user);
     }
 }

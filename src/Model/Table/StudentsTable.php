@@ -10,6 +10,8 @@ use Cake\Validation\Validator;
  * Students Model
  *
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
+ * @property \App\Model\Table\CandidaciesTable|\Cake\ORM\Association\HasMany $Candidacies
+ * @property |\Cake\ORM\Association\HasMany $Convocations
  *
  * @method \App\Model\Entity\Student get($primaryKey, $options = [])
  * @method \App\Model\Entity\Student newEntity($data = null, array $options = [])
@@ -41,6 +43,12 @@ class StudentsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->hasMany('Candidacies', [
+            'foreignKey' => 'student_id'
+        ]);
+        $this->hasMany('Convocations', [
+            'foreignKey' => 'student_id'
+        ]);
     }
 
     /**
@@ -57,18 +65,10 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('admission_number')
-            ->lengthBetween('admission_number', [9, 9])
-            ->numeric('admission_number')
+            ->maxLength('admission_number', 9)
             ->requirePresence('admission_number', 'create')
             ->notEmpty('admission_number');
 
-        /*
-                $validator->add('admission_number', 'numerique', [
-                    'rule' => 'numeric',
-                    'message' => __('Format 9 chiffres')
-                ]);
-        */
-        
         $validator
             ->scalar('first_name')
             ->maxLength('first_name', 255)
@@ -83,8 +83,7 @@ class StudentsTable extends Table
 
         $validator
             ->scalar('phone_number')
-            ->lengthBetween('phone_number', [10, 10])
-            ->numeric('phone_number')
+            ->maxLength('phone_number', 13)
             ->requirePresence('phone_number', 'create')
             ->notEmpty('phone_number');
 
@@ -93,15 +92,70 @@ class StudentsTable extends Table
             ->requirePresence('informations', 'create')
             ->notEmpty('informations');
 
-        /*$validator
+        $validator
             ->scalar('notes')
-            ->requirePresence('notes', 'create')
-            //->notEmpty('notes');
+            ->requirePresence('notes', false)
+            ->allowEmpty('notes');
 
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'create')
-            //->notEmpty('active');*/
+            ->requirePresence('active', false)
+            ->allowEmpty('active');
+
+        return $validator;
+    }
+
+        /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationAdmin(Validator $validator)
+    {
+
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('admission_number')
+            ->maxLength('admission_number', 9)
+            ->requirePresence('admission_number', 'create')
+            ->allowEmpty('admission_number');
+
+        $validator
+            ->scalar('first_name')
+            ->maxLength('first_name', 255)
+            ->requirePresence('first_name', 'create')
+            ->allowEmpty('first_name');
+
+        $validator
+            ->scalar('last_name')
+            ->maxLength('last_name', 255)
+            ->requirePresence('last_name', 'create')
+            ->allowEmpty('last_name');
+
+        $validator
+            ->scalar('phone_number')
+            ->maxLength('phone_number', 13)
+            ->requirePresence('phone_number', 'create')
+            ->allowEmpty('phone_number');
+
+        $validator
+            ->scalar('informations')
+            ->requirePresence('informations', 'create')
+            ->allowEmpty('informations');
+
+        $validator
+            ->scalar('notes')
+            ->requirePresence('notes', false)
+            ->allowEmpty('notes');
+
+        $validator
+            ->boolean('active')
+            ->requirePresence('active', false)
+            ->allowEmpty('active');
 
         return $validator;
     }
@@ -119,5 +173,4 @@ class StudentsTable extends Table
 
         return $rules;
     }
-
 }

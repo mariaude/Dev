@@ -31,7 +31,7 @@ class InternshipsFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'internships_ibfk_1' => ['type' => 'foreign', 'columns' => ['enterprise_id'], 'references' => ['Enterprises', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'internships_ibfk_1' => ['type' => 'foreign', 'columns' => ['enterprise_id'], 'references' => ['enterprises', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -52,8 +52,8 @@ class InternshipsFixture extends TestFixture
                 'id' => 1,
                 'enterprise_id' => 1,
                 'semester' => 'Lorem ipsum dolor sit amet',
-                'start_date' => '2018-09-10',
-                'end_date' => '2018-09-10',
+                'start_date' => '2018-10-29',
+                'end_date' => '2018-10-29',
                 'available_places' => 1,
                 'work_hours' => 'Lorem ipsum dolor sit amet',
                 'title' => 'Lorem ipsum dolor sit amet',

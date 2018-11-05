@@ -522,3 +522,10 @@ table td {
     vertical-align: top;
     word-break: break-all;
 }
+.petitbtn{
+    font-size: 80%;
+    border-radius: 3px;
+    padding:3px;
+    margin:3px;
+
+}
