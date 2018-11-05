@@ -44,10 +44,12 @@ class InternshipsTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Candidacies', [
-            'foreignKey' => 'internship_id'
+            'foreignKey' => 'internship_id',
+            'dependent' => true
         ]);
         $this->hasMany('Convocations', [
-            'foreignKey' => 'internship_id'
+            'foreignKey' => 'internship_id',
+            'dependent' => true
         ]);
     }
 

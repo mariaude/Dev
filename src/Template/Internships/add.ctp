@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Internship $internship
  */
 ?>
-<div class="internships form large-9 medium-8 columns content">
+<div class="internships form columns content">
     <?= $this->Form->create($internship)?>
     <fieldset>
         <legend><?= __('Add Internship') ?></legend>

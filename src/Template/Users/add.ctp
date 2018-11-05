@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="users form columns content">
+<div class="users form large-6 medium-2 columns content" style="width: 100%; padding-right: 25%;padding-left: 25%;">
     <?= $this->Form->create($user) ?>
     <fieldset>
         <legend><?= __('Add User') ?></legend>

@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-
+use Cake\Event\Event;
 use App\Controller\AppController;
 
 /**
@@ -179,6 +179,12 @@ class StudentsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->deny(['index', 'view']);
+    }
     
     public function isAuthorized($user)
     {
@@ -188,12 +194,16 @@ class StudentsController extends AppController
         // View toujour vrai
 
         $valide = false;
-
         if (in_array($action, ['view'])) {
-            
-            $valide = true;
-        }
 
+            if($user['enterprise']){
+                $valide = true;
+            }else if($user['student']){
+                $student_id = (int) $this->request->getParam('pass.0');
+
+                $valide = ($user['student']['id'] == $student_id);
+            }
+        }else 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
 
@@ -205,11 +215,11 @@ class StudentsController extends AppController
                 
                 $valide = true;
             }    
-        }
+        }else
 
         if (in_array($action, ['delete'])) {
             $valide = false;
-        }
+        }else
 
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'student' && !$user['student']) {
              $valide = true;

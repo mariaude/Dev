@@ -211,12 +211,17 @@ class UsersController extends AppController
     {
         $action = $this->request->getParam('action');
         $valide = false;
+
+        
         // Les actions 'add' et 'tags' sont toujours autorisés pour les utilisateur
         // authentifiés sur l'application
-        if (in_array($action, ['view'])) {
-            $valide = true;
-        }
 
+        if (in_array($action, ['view'])) {
+            $user_id = (int) $this->request->getParam('pass.0');
+                    
+            //Si user_id correspond au id de l'user courrant
+            $valide = ($user['id'] == $user_id);
+        }else 
         // Autorisations pour l'action edit
         if (in_array($action, ['edit'])) {
             if(isset($user['role']) && $user['role'] === 'student'){
@@ -224,10 +229,7 @@ class UsersController extends AppController
                 $user_id = (int) $this->request->getParam('pass.0');
                     
                 //Si user_id correspond au id de l'user courrant
-                if($user['id'] == $user_id){
-                    $valide = true;
-                }
-                $valide = false;
+                $valide = ($user['id'] == $user_id);
             }    
         }
 

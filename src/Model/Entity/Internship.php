@@ -43,4 +43,9 @@ class Internship extends Entity
         'enterprise' => true,
         'candidacies' => true
     ];
+
+    public function beforeDelete() {
+        
+        //$this->Internships->Candidacies->deleteAll(['internship_id' => $this->_properties['id']]);
+    }
 }
