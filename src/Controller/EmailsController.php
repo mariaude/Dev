@@ -5,6 +5,7 @@
    use Cake\ORM\Entity;
    use Cake\ORM\TableRegistry;
    use Cake\I18n;
+   use Cake\Event\Event;
 
    class EmailsController extends AppController{
 
@@ -66,13 +67,25 @@
       }
       
       // Notifier employeur mettre à jour informations
-      public function notifierEmployeur_miseAJourInformations(){
-     
-      if((time() - 3600*24*15) >= Time::now()){
-
-      }
-
-
+      public function envoyerRappelsEmployeurs($token = null){
+        
+        if($token == 'ee-22-211-3'){
+          $this->log('envoyerRappelsEmployeurs');
+          $query = TableRegistry::get('Enterprises')->find()->where(['active' => 0])->contain(['Users']);
+          foreach ($query as $enterprise){
+              //Soyons certains que le user n'est pas effacé
+              if($enterprise->user->email){
+  
+                  $email = new Email('default');
+                  $email->setTo($enterprise->user->email)
+                  ->setTemplate('entreprise_rappel_mise_a_jour', 'default')
+                  ->setEmailFormat('html')
+                  ->setViewVars(['enterprise' => $enterprise])
+                  ->setSubject('Mettez a jour vos informations');
+              }
+          }
+        }
+        return $this->redirect($this->request->referer());
       }
 
       // Notifier candidat rencontre
@@ -112,6 +125,12 @@
          ]);
       }
 
+      public function beforeFilter(Event $event)
+      {
+          parent::beforeFilter($event);
+          $this->Auth->allow('envoyerRappelsEmployeurs');
+      }
+
       public function isAuthorized($user){
 
         //$action = $this->­request->­getParam('action');
@@ -119,9 +138,7 @@
         $valide = false;
         if(isset($user['role']) && $user['role'] === 'enterprise' && $user['enterprise']) {
             $valide =  true;  
-        } /*else if (in_array($action, ['notifier-employeur-postulation-etudiant']) && isset($user['role']) && $user['role'] === 'student' && $user['student']){
-          $valide = true;
-        }*/
+        }
         $valide = true;
         return ($valide) ? $valide : parent::isAuthorized($user);
         
