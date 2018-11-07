@@ -73,15 +73,29 @@
           $this->log('envoyerRappelsEmployeurs');
           $query = TableRegistry::get('Enterprises')->find()->where(['active' => 0])->contain(['Users']);
           foreach ($query as $enterprise){
+                              $this->log($enterprise->user->email);
               //Soyons certains que le user n'est pas effacé
               if($enterprise->user->email){
-  
                   $email = new Email('default');
                   $email->setTo($enterprise->user->email)
                   ->setTemplate('entreprise_rappel_mise_a_jour', 'default')
                   ->setEmailFormat('html')
                   ->setViewVars(['enterprise' => $enterprise])
                   ->setSubject('Mettez a jour vos informations');
+                  try {
+                      if ( $email->send() ) {
+                          // Success
+                          $this->log(sprintf("L'envoi d'un courriel à l'adresse %s (entreprise : %s) a été un succès.", $enterprise->user->email, $enterprise->name));
+                          
+                      } else {
+                          $this->log(sprintf("L'envoi d'un courriel à l'adresse %s (entreprise : %s) a échoué.", $enterprise->user->email, $enterprise->name));
+                          
+                      }
+                      
+                  } catch ( Exception $e ) {
+                      // Failure, with exception
+                      $this->log($e);
+                }
               }
           }
         }

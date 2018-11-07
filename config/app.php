@@ -215,6 +215,13 @@ return [
             'username' => 'letsgostage@gmail.com',
             'password' => 'hhjyacfdqhqmjlsm',
             'className' => 'Smtp'
+        ],
+        'letsgostage' => [
+            'host' => 'mail.letsgostage.ca',
+            'port' => 25,
+            'username' => 'no-reply@letsgostage.ca',
+            'password' => '%y^ofJ4%9f=F',
+            'className' => 'Smtp'
         ]
     ],
 
@@ -229,8 +236,8 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'gmail',
-            'from' => 'letsgostage@gmail.com',
+            'transport' => 'letsgostage',
+            'from' => 'no-reply@letsgostage.ca',
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],
