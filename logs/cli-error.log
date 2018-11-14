@@ -18,3 +18,236 @@ Stack Trace:
 #15 {main}
 
 
+2018-10-15 18:03:24 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\EnterprisesControllerTest" test case. SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#1 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#2 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#3 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#4 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-10-15 18:06:28 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\EnterprisesControllerTest" test case. SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 E:\Ampps\www\GestionDesStages\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#1 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#2 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#3 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#4 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 E:\Ampps\www\GestionDesStages\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-11-05 19:06:07 Error: [Cake\Core\Exception\Exception] Unable to insert fixtures for "App\Test\TestCase\Controller\CandidaciesControllerTest" test case. SQLSTATE[HY000] [1049] Unknown database 'gestionstage_test' in C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 356
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(98): Cake\TestSuite\Fixture\FixtureManager->load(Object(App\Test\TestCase\Controller\CandidaciesControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\CandidaciesControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\CandidaciesControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\CandidaciesControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#10 {main}
+
+
+2018-11-05 19:08:14 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\ClientTypesEnterprisesFixture" not found. Fixture "app.client_types_enterprises" was referenced in test case "App\Test\TestCase\Model\Table\EnterprisesTableTest". in C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-05 19:09:36 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\EnterprisesMissionsFixture" not found. Fixture "app.enterprises_missions" was referenced in test case "App\Test\TestCase\Model\Table\EnterprisesTableTest". in C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Model\Table\EnterprisesTableTest))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-05 19:15:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Interships could not be found.
+Exception Attributes: array (
+  'class' => 'Interships',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /interships
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/interships', 'GET')
+#17 C:\Program Files (x86)\Ampps\www\Dev\tests\TestCase\Controller\InternshipsControllerTest.php(30): Cake\TestSuite\IntegrationTestCase->get('/interships')
+#18 [internal function]: App\Test\TestCase\Controller\InternshipsControllerTest->testIndex()
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\InternshipsControllerTest), Array)
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\InternshipsControllerTest))
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#25 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#26 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#27 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#28 {main}
+
+
+2018-11-05 19:21:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Nternships could not be found.
+Exception Attributes: array (
+  'class' => 'Nternships',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /nternships/view/1
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/nternships/vie...', 'GET')
+#17 C:\Program Files (x86)\Ampps\www\Dev\tests\TestCase\Controller\InternshipsControllerTest.php(43): Cake\TestSuite\IntegrationTestCase->get('/nternships/vie...')
+#18 [internal function]: App\Test\TestCase\Controller\InternshipsControllerTest->testView()
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\InternshipsControllerTest), Array)
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\InternshipsControllerTest))
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#25 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#26 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#27 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#28 {main}
+
+
+2018-11-05 19:41:08 Error: [Cake\Http\Exception\InvalidCsrfTokenException] Missing CSRF token cookie
+Request URL: /internships/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(119): Cake\Http\Middleware\CsrfProtectionMiddleware->_validateToken(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(105): Cake\Http\Middleware\CsrfProtectionMiddleware->_validateAndUnsetTokenField(Object(Cake\Http\ServerRequest))
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(392): Cake\TestSuite\IntegrationTestCase->_sendRequest('/internships/ad...', 'POST', Array)
+#14 C:\Program Files (x86)\Ampps\www\Dev\tests\TestCase\Controller\InternshipsControllerTest.php(98): Cake\TestSuite\IntegrationTestCase->post('internships/add', Array)
+#15 [internal function]: App\Test\TestCase\Controller\InternshipsControllerTest->testAdd()
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\InternshipsControllerTest), Array)
+#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\InternshipsControllerTest))
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#25 {main}
+
+
+2018-11-05 20:05:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstage_test.missions' doesn't exist
+Request URL: /enterprises/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'missions', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('missions', Array)
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('missions')
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Query.php(271): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MissionsTable))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(1758): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MissionsTable))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Table.php(1350): Cake\ORM\Table->query()
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(1105): Cake\ORM\Table->find('list', Array)
+#8 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\EnterprisesController.php(87): Cake\ORM\Association\BelongsToMany->find('list', Array)
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\EnterprisesController->add()
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\EnterprisesController))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#25 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#26 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/enterprises/ad...', 'GET')
+#27 C:\Program Files (x86)\Ampps\www\Dev\tests\TestCase\Controller\EnterprisesControllerTest.php(88): Cake\TestSuite\IntegrationTestCase->get('/enterprises/ad...')
+#28 [internal function]: App\Test\TestCase\Controller\EnterprisesControllerTest->testAdd()
+#29 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\EnterprisesControllerTest), Array)
+#30 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#31 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#32 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\EnterprisesControllerTest))
+#33 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#34 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#35 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#36 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#37 C:\Program Files (x86)\Ampps\www\Dev\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#38 {main}
+
+

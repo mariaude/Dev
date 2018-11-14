@@ -28,7 +28,20 @@ class EnterprisesControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->session([
+            'Auth' => [
+                'User' => [
+                    'id' => 1,
+                    'email' => 'bob',
+                    'password' => 'bob',
+                    'role' => 'admin'
+                ]
+            ]
+        ]);
+
+        $this->get('/enterprises');
+
+        $this->assertResponseOk();
     }
 
     /**
@@ -38,7 +51,20 @@ class EnterprisesControllerTest extends IntegrationTestCase
      */
     public function testView()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->session([
+            'Auth' => [
+                'User' => [
+                    'id' => 1,
+                    'email' => 'bob',
+                    'password' => 'bob',
+                    'role' => 'admin'
+                ]
+            ]
+        ]);
+
+        $this->get('/enterprises/view/1');
+        
+        $this->assertResponseOk();
     }
 
     /**
