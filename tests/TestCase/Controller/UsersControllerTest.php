@@ -67,7 +67,7 @@ class UsersControllerTest extends IntegrationTestCase
         
         $data = [   
             'id' => 2,
-                'email' => 'gaga',
+                'email' => 'gaga@gmail.com',
                 'password' => 'lady',
                 'role' => 'student'
             ];
@@ -77,7 +77,7 @@ class UsersControllerTest extends IntegrationTestCase
         $this->post("users/add", $data);
         $this->assertResponseSuccess();
         $users = TableRegistry::get('Users');
-        $query = $users->find('all', ['condtions' =>['id' => $data['id']]]);
+        $query = $users->find('all', ['conditions' =>['id' => $data['id']]]);
         $this->assertEquals(1, $query->count());
     }
 
@@ -106,7 +106,7 @@ class UsersControllerTest extends IntegrationTestCase
         
         $data = [   
             'id' => 1,
-                'email' => 'gaga',
+                'email' => 'gaga@app.com',
                 'password' => 'lady',
                 'role' => 'student'
             ];
@@ -116,7 +116,7 @@ class UsersControllerTest extends IntegrationTestCase
         $this->post("users/edit/1", $data);
         $this->assertResponseSuccess();
         $users = TableRegistry::get('Users');
-        $query = $users->find('all', ['condtions' =>['email' => $data['email']]]);
+        $query = $users->find('all', ['conditions' =>['email' => $data['email']]]);
         $this->assertEquals(1, $query->count());
     }
 
@@ -143,7 +143,7 @@ class UsersControllerTest extends IntegrationTestCase
         $this->post("users/delete/1");
         $this->assertResponseSuccess();
         $users = TableRegistry::get('Users');
-        $query = $users->find('all', ['condtions' =>['id' => 1]])->first();
+        $query = $users->find('all', ['conditions' =>['id' => 1]])->first();
         $this->assertEmpty($query);
 
     }
