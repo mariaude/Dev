@@ -65,12 +65,10 @@ class UsersController extends AppController
             if(!isset($user['role']))
                 $user['role'] = 'student';
 
-            debug($user);
 
             if ($result = $this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                 $user_id = $result->id;
-                debug($user_id);
 
 
                 if(isset($loguser)){
@@ -174,7 +172,6 @@ class UsersController extends AppController
                             ]);
                         }
                     }else if($user['role'] === 'enterprise'){
-                        debug($user);
                         $this->log($user);
                         if($user['enterprise']){
                             $this->log($user['enterprise']);
