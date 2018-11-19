@@ -43,5 +43,39 @@
             <th scope="row"><?= __('Active') ?></th>
             <td><?= $student->active ? __('Yes') : __('No'); ?></td>
         </tr>
+       
     </table>
+    <div class="related">
+        <h4><?= __('Related Files') ?></h4>
+        <?php if (!empty($student->files)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+            
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Name') ?></th>
+                <th scope="col"><?= __('Path') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col"><?= __('Status') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($student->files as $file): ?>
+            <tr>
+                <td><?= h($file->id) ?></td>
+                <td><?= h($file->name) ?></td>
+                <td><?= h($file->path) ?></td>
+                <td><?= h($file->created) ?></td>
+                <td><?= h($file->modified) ?></td>
+                <td><?= h($file->status) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Files', 'action' => 'view', $file->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Files', 'action' => 'edit', $file->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Files', 'action' => 'delete', $file->id], ['confirm' => __('Are you sure you want to delete # {0}?', $file->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
 </div>
+

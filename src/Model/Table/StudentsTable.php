@@ -49,6 +49,11 @@ class StudentsTable extends Table
         $this->hasMany('Convocations', [
             'foreignKey' => 'student_id'
         ]);
+        $this->hasMany('Files', [
+            'foreignKey' => 'student_id'
+        ]);
+
+        
     }
 
     /**

@@ -22,7 +22,7 @@ class StudentsController extends AppController
     {
         
         $this->paginate = [
-            'contain' => ['Users']
+            'contain' => ['Users', 'Files']
         ];
         $students = $this->paginate($this->Students);
         
@@ -40,7 +40,7 @@ class StudentsController extends AppController
     {
 
         $student = $this->Students->get($id, [
-            'contain' => ['Users']
+            'contain' => ['Users', 'Files']
         ]);
         
 
@@ -54,6 +54,9 @@ class StudentsController extends AppController
      */
     public function add($user_id = null)
     {
+        /*$student = $this->Students->get($id, [
+            'contain' => ['Files']
+        ]);*/
         //debug($user_id);
         $this->set('user_id', $user_id);
         $student = $this->Students->newEntity();
@@ -100,7 +103,9 @@ class StudentsController extends AppController
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
         }
         $users = $this->Students->Users->find('list', ['limit' => 200]);
-        $this->set(compact('student', 'users'));
+        $files = $this->Students->Files->find('list', ['limit' => 200]);
+        $this->set(compact('student', 'users', 'files'));
+        
     }
 
     /**
@@ -113,12 +118,15 @@ class StudentsController extends AppController
     public function edit($id = null)
     {
         $student = $this->Students->get($id, [
-            'contain' => []
+            'contain' => ['Files']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-
+        
             $logged_user = $this->request->getSession()->read('Auth.User');
             $student = $this->Students->patchEntity($student, $this->request->getData());
+
+        
+           
 
             $est_valide = ( $student->errors() == null) ? 1 : 0;
 
@@ -148,7 +156,8 @@ class StudentsController extends AppController
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
         }
         $users = $this->Students->Users->find('list', ['limit' => 200]);
-        $this->set(compact('student', 'users'));
+        $files = $this->Students->Files->find('list', ['limit' => 200]);
+        $this->set(compact('student', 'users','files'));
     }
 
     public function patchStudentInfos($student = null){
