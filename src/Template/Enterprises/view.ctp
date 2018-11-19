@@ -57,7 +57,7 @@
             <ul>
                 <?php foreach ($enterprise->client_types as $clientTypes): ?>
                     <li>
-                        <?= $this->Html->link(h($clientTypes->name), ['controller' => 'ClientTypes', 'action' => 'view', $clientTypes->id]) ?>
+                        <?= h($clientTypes->name) ?>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -70,7 +70,7 @@
             <ul>
                 <?php foreach ($enterprise->missions as $missions): ?>
                     <li>
-                        <?= $this->Html->link(h($missions->name), ['controller' => 'Missions', 'action' => 'view', $missions->id]) ?>
+                        <?= ($missions->name) ?>
                     </li>
                 <?php endforeach; ?>
             </ul>

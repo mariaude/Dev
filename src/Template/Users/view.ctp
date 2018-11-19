@@ -18,13 +18,17 @@
             <th scope="row"><?= __('Role') ?></th>
             <td><?= h($user->role) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Enterprise') ?></th>
-            <td><?= $user->has('enterprise') ? $this->Html->link($user->enterprise->name, ['controller' => 'Enterprises', 'action' => 'view', $user->enterprise->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Student') ?></th>
-            <td><?= $user->has('student') ? $this->Html->link($user->student->full_name, ['controller' => 'Students', 'action' => 'view', $user->student->id]) : '' ?></td>
-        </tr>
+        <?php if($user->has('enterprise')):?>
+            <tr>
+                <th scope="row"><?= __('Enterprise') ?></th>
+                <td><?= $user->has('enterprise') ? $this->Html->link($user->enterprise->name, ['controller' => 'Enterprises', 'action' => 'view', $user->enterprise->id]) : '' ?></td>
+            </tr>
+        <?php endif;?>
+        <?php if($user->has('student')):?>
+            <tr>
+                <th scope="row"><?= __('Student') ?></th>
+                <td><?= $user->has('student') ? $this->Html->link($user->student->full_name, ['controller' => 'Students', 'action' => 'view', $user->student->id]) : '' ?></td>
+            </tr>
+        <?php endif;?>
     </table>
 </div>
