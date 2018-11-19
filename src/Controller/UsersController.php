@@ -2,6 +2,7 @@
 namespace App\Controller;
 use Cake\Core\App;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 use App\Controller\AppController;
 /**
@@ -123,11 +124,51 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+    }
+
+    public function resetPassword($uuid = null)
+    {
+
+        $password_link = TableRegistry::get('PasswordLinks')->find()->where(['uuid' => $uuid])->contain(['Users'])->first();
+        if(isset($password_link) && $password_link->user != null){
+            echo 'test';
+            $user = $password_link->user;
+            if(!$password_link->used){
+                if ($this->request->is(['patch', 'post', 'put'])) {
+
+                    if($this->request->getData('password') === $this->request->getData('password_confirm')){
+                        $user = $this->Users->patchEntity($user, $this->request->getData());
+                        if ($this->Users->save($user)) {
+                            
+                            $passwordLinksModel = $this->loadModel('PasswordLinks');
+                            $password_link->used = true;
+                            if($passwordLinksModel->save($password_link)){
+                                $this->Flash->success(__('Your password has been reset.'));
+                            }
+        
+                            return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
+                        }
+                    }
+                    $this->Flash->error(__('The password could not be reset. Please, try again.'));
+                }
+            }else{
+                echo 'test';
+                //Déja utilisé
+                $this->Flash->error(__('This password reset link is expired. Please request an other.'));
+                return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
+            }
+            $this->set(compact('user'));
+        }else{
+            $this->Flash->error(__('This password reset link is invalid. Please request an other.'));
+            return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
+        }
+
+        
     }
 
     /**
@@ -208,7 +249,9 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
+        $this->log('beforeFilter');
         $this->Auth->deny(['index', 'view']);
+        $this->Auth->allow('resetPassword');
     }
     
     public function isAuthorized($user)
@@ -235,8 +278,14 @@ class UsersController extends AppController
                 //Si user_id correspond au id de l'user courrant
                 $valide = ($user['id'] == $user_id);
             }    
-        }
+        }else
 
+        if (in_array($action, ['resetPassword'])) {
+            $uuid = (int) $this->request->getParam('pass.0');
+            $valide = true;
+
+        }
+        $this->log($action);
         return ($valide) ? $valide : parent::isAuthorized($user);
     }
     
