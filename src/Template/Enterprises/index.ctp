@@ -10,6 +10,25 @@
     
     $this->Html->link(__('New Enterprise'), ['controller' => 'Users', 'action' => 'add']) 
     ?>
+    <br/>
+    <br/>
+    <?= $this->Form->create()?>
+
+        <h6 id="actionLabel">Options de filtrage</h6>
+        <?= $this->Form->radio('active', 
+            [
+                ['value' => -1, 'text' => 'Toutes'],
+                ['value' => 1, 'text' => 'Actives'],
+                ['value' => 0, 'text' => 'Inactives'],
+            ],
+            ['multiple' => false,
+            'value' => -1,
+            'hiddenField' => false,
+            'label' => 'Filtrer les entreprises...']
+            );?>
+        <?=  $this->Form->button(__('Filtrer'));?>
+    <?= $this->Form->end() ?>
+    
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

@@ -23,8 +23,21 @@ class EnterprisesController extends AppController
         $this->paginate = [
             'contain' => ['Users']
         ];
-        $enterprises = $this->paginate($this->Enterprises);
+        
+        $enterprises_query = $this->Enterprises;
 
+        if ($this->request->is('post')) {
+            $enterprises_query = $this->Enterprises;
+
+            $this->log($this->request->getData());
+            $active = $this->request->getData('active');
+            $this->log($active);
+            if($active != -1){
+                $enterprises_query = $enterprises_query->find()->where(['active' => $active]);
+            }
+        }
+
+        $enterprises = $this->paginate($enterprises_query);
         $this->set(compact('enterprises'));
     }
 
@@ -177,7 +190,7 @@ class EnterprisesController extends AppController
 
         if (in_array($action, ['index'])) {
 
-            $valide = !$user["enterprise"];
+            $valide = false;
         }else
 
         if (in_array($action, ['view'])) {
