@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 19, 2018 at 06:37 PM
+-- Generation Time: Nov 20, 2018 at 04:15 PM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `enterprises` (
 
 INSERT INTO `enterprises` (`id`, `user_id`, `name`, `adress`, `city`, `province`, `postal_code`, `region`, `active`, `additional_informations`, `enterprise_type`) VALUES
 (4, 49, 'Advanced Progress', '2639 rue Pavot', 'Laval', 'Quebec', 'H8F5D6', 'Laval', 1, 'Clientèle jeune', 'cliniquePrivee'),
-(6, 50, 'Hôpital Soleil', '7193 avenue Papineau', 'Montreal', 'Quebec', 'H52R6G', 'Montreal', 1, 'Hôpital récemment rénové ', 'centreHospitalier');
+(6, 50, 'Hôpital Soleil', '7193 avenue Papineau', 'Montreal', 'Quebec', 'H52R6G', 'Montreal', 0, 'Hôpital récemment rénové ', 'centreHospitalier');
 
 -- --------------------------------------------------------
 
@@ -197,6 +197,22 @@ INSERT INTO `enterprises_missions` (`enterprise_id`, `mission_id`) VALUES
 (6, 6),
 (4, 7),
 (4, 11);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `files`
+--
+
+CREATE TABLE IF NOT EXISTS `files` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `path` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `student_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -273,6 +289,27 @@ INSERT INTO `missions` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `password_links`
+--
+
+CREATE TABLE IF NOT EXISTS `password_links` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `uuid` char(36) COLLATE utf8mb4_bin NOT NULL,
+  `created` date NOT NULL,
+  `used` tinyint(4) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Dumping data for table `password_links`
+--
+
+INSERT INTO `password_links` (`id`, `user_id`, `uuid`, `created`, `used`) VALUES
+(1, 52, '485fc381-e790-47a3-9794-1337c0a8fe68', '2018-11-19', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `students`
 --
 
@@ -286,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `students` (
   `informations` text COLLATE utf8_unicode_ci NOT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
   `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `students`
@@ -307,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` varchar(40) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -318,7 +355,8 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 (47, 'etudiant1.letsgostage@gmail.com', '$2y$10$bOMDMMTN2.bXoddIB3vfeet48uw2r3SDRrsVYJBMAKyCqeQkVC6L2', 'student'),
 (48, 'etudiant2.letsgostage@gmail.com', '$2y$10$lEY1n.pSlXQepI4BLDBZge1FzaThoVfRHL0WTsCijFiXUS3zWMUei', 'student'),
 (49, 'entreprise1.letsgostage@gmail.com', '$2y$10$pPVkMXnPRHsA5x6W.HWMiekXtrvnuiBWSDfOqYOY6mQrN1.l23mfO', 'enterprise'),
-(50, 'entreprise2.letsgostage@gmail.com', '$2y$10$pPVkMXnPRHsA5x6W.HWMiekXtrvnuiBWSDfOqYOY6mQrN1.l23mfO', 'enterprise');
+(50, 'entreprise2.letsgostage@gmail.com', '$2y$10$pPVkMXnPRHsA5x6W.HWMiekXtrvnuiBWSDfOqYOY6mQrN1.l23mfO', 'enterprise'),
+(52, 'resetmeup@gmail.com', '$2y$10$LiU2U6YoSlnjEuV.ejV5hOJ42aetByq2Idnbf.xJsfAjzwedScMMS', 'student');
 
 --
 -- Indexes for dumped tables
@@ -366,6 +404,13 @@ ALTER TABLE `enterprises_missions`
   ADD KEY `mission_key` (`mission_id`);
 
 --
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_id` (`student_id`);
+
+--
 -- Indexes for table `internships`
 --
 ALTER TABLE `internships`
@@ -377,6 +422,13 @@ ALTER TABLE `internships`
 --
 ALTER TABLE `missions`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `password_links`
+--
+ALTER TABLE `password_links`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_user` (`user_id`);
 
 --
 -- Indexes for table `students`
@@ -401,6 +453,11 @@ ALTER TABLE `users`
 ALTER TABLE `enterprises`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `internships`
 --
 ALTER TABLE `internships`
@@ -411,15 +468,20 @@ ALTER TABLE `internships`
 ALTER TABLE `missions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
 --
+-- AUTO_INCREMENT for table `password_links`
+--
+ALTER TABLE `password_links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=53;
 --
 -- Constraints for dumped tables
 --
@@ -458,10 +520,22 @@ ALTER TABLE `enterprises_missions`
   ADD CONSTRAINT `enterprises_missions_ibfk_2` FOREIGN KEY (`enterprise_id`) REFERENCES `enterprises` (`id`);
 
 --
+-- Constraints for table `files`
+--
+ALTER TABLE `files`
+  ADD CONSTRAINT `files_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`);
+
+--
 -- Constraints for table `internships`
 --
 ALTER TABLE `internships`
   ADD CONSTRAINT `internships_ibfk_1` FOREIGN KEY (`enterprise_id`) REFERENCES `enterprises` (`id`);
+
+--
+-- Constraints for table `password_links`
+--
+ALTER TABLE `password_links`
+  ADD CONSTRAINT `FK_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `students`
