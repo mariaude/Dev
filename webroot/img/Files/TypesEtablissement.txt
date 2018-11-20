@@ -1,0 +1,6 @@
+CHSLD
+CLSC
+Centre hospitalier
+Centre réadapation
+Clinique privée
+Autre (précisez dans Remarques)
