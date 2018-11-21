@@ -3,7 +3,7 @@ namespace App\Controller;
 use Cake\Core\App;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
-
+use Cake\Routing\Router;
 use App\Controller\AppController;
 /**
  * Users Controller
@@ -133,10 +133,8 @@ class UsersController extends AppController
 
     public function resetPassword($uuid = null)
     {
-
         $password_link = TableRegistry::get('PasswordLinks')->find()->where(['uuid' => $uuid])->contain(['Users'])->first();
         if(isset($password_link) && $password_link->user != null){
-            echo 'test';
             $user = $password_link->user;
             if(!$password_link->used){
                 if ($this->request->is(['patch', 'post', 'put'])) {
@@ -168,6 +166,25 @@ class UsersController extends AppController
             return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
         }
 
+        
+    }
+
+    public function sendPasswordLink()
+    {
+        if ($this->request->is('post')) {
+            $email = $this->request->getData('email');
+            $user = $this->Users->find()->where(['email' => $email])->first();
+
+            $this->log($user);
+
+            if($user == null){
+                // Courriel pas trouvé
+                $this->Flash->error(__('Cette adresse courriel ne correspond à aucun utilisateur.'));
+            }else{
+                return $this->redirect(['controller' => 'Emails', 'action' => 'sendPasswordLink', $user->id]);
+            }
+
+        }
         
     }
 
@@ -249,9 +266,8 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->log('beforeFilter');
         $this->Auth->deny(['index', 'view']);
-        $this->Auth->allow('resetPassword');
+        $this->Auth->allow(['resetPassword', 'sendPasswordLink']);
     }
     
     public function isAuthorized($user)

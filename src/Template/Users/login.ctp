@@ -5,5 +5,8 @@
 <?= $this->Form->control('email') ?>
 <?= $this->Form->control('password') ?>
 <?= $this->Form->button('Connexion') ?>
+
+
+<?= $this->Html->link(__('Reset password'), ['controller' => 'Users', 'action' => 'sendPasswordLink']) ?>
 <?= $this->Form->end() ?>
 </div>

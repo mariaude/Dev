@@ -236,8 +236,8 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'letsgostage',
-            'from' => 'no-reply@letsgostage.ca',
+            'transport' => 'gmail',
+            'from' => 'letsgostage@gmail.com',
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],

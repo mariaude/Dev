@@ -2,6 +2,7 @@
 namespace App\Controller;
 use Cake\Event\Event;
 use App\Controller\AppController;
+use Cake\Routing\Router;
 
 /**
  * Students Controller
@@ -97,7 +98,7 @@ class StudentsController extends AppController
                         $this->request->getSession()->write('Auth.User.student', $student);
                     }
 
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(Router::url('/', true));
                 }
             }
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
@@ -125,9 +126,6 @@ class StudentsController extends AppController
             $logged_user = $this->request->getSession()->read('Auth.User');
             $student = $this->Students->patchEntity($student, $this->request->getData());
 
-        
-           
-
             $est_valide = ( $student->errors() == null) ? 1 : 0;
 
             if($logged_user['role'] == 'admin'){
@@ -150,7 +148,7 @@ class StudentsController extends AppController
 
                         $this->request->getSession()->write('Auth.User.student', $student);
                     }
-                    return $this->redirect(['action' => 'index']);
+                    return $this->redirect(Router::url('/', true));
                 }
             }
             $this->Flash->error(__('The student could not be saved. Please, try again.'));
