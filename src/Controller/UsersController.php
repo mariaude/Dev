@@ -4,6 +4,7 @@ use Cake\Core\App;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
 use Cake\Routing\Router;
+use Cake\I18n\Time;
 use App\Controller\AppController;
 /**
  * Users Controller
@@ -135,8 +136,12 @@ class UsersController extends AppController
     {
         $password_link = TableRegistry::get('PasswordLinks')->find()->where(['uuid' => $uuid])->contain(['Users'])->first();
 
-        $time_validity = ($password_link->created->isWithinNext('15 minutes') && $password_link->created->wasWithinLast('15 minutes'));
+        //$time_validity = ($password_link->created->isWithinNext('15 minutes'));
+
+        $time_validity = ($password_link->created < Time::now()->modify('+15 minutes') 
+                        && $password_link->created > Time::now()->modify('-15 minutes'));
         
+
         if(isset($password_link) && $password_link->user != null){
             $user = $password_link->user;
             if(!$password_link->used && $time_validity){
