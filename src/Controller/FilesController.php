@@ -81,45 +81,51 @@ class FilesController extends AppController {
     public function add() {
         $file = $this->Files->newEntity();
         if ($this->request->is('post')) {
-            if (!empty($this->request->data['name']['name'])) {
 
-                $file_pick = $this->request->data['name'];
+            $files = $this->request->getData()['name'];
 
-                $fileName = $file_pick['name'];
-                $uploadPath = 'Files/';
-                $uploadFile = $uploadPath . $fileName;
-
-                $user = TableRegistry::get('Users')->find()->where(['id =' => $this->request->getSession()->read('Auth.User.id')])->first();
-
-                $file_explode = explode(".", $fileName);
-
-                $extension = $file_explode[sizeof($file_explode) - 1];
-
-                if (in_array($extension, array("docx", "pdf"))) {
-
-                    if (move_uploaded_file($this->request->data['name']['tmp_name'], 'img/' . $uploadFile)) {
-
-                        $file->name = $fileName;
-                        $file->path = $uploadPath;
-                        $file->student_id = $user->student->id;
-
+            foreach ($files as $file_pick) {
                 
-                        if ($this->Files->save($file)) {
-                            $this->Flash->success(__('File has been uploaded and inserted successfully.'));
-                        } else {
+                if (!empty($file_pick['name'])) {
+
+                    $fileName = $file_pick['name'];
+                    $uploadPath = 'Files/';
+                    $uploadFile = $uploadPath . $fileName;
+    
+                    $user = TableRegistry::get('Users')->find()->where(['id =' => $this->request->getSession()->read('Auth.User.id')])->first();
+    
+                    $file_explode = explode(".", $fileName);
+    
+                    $extension = $file_explode[sizeof($file_explode) - 1];
+    
+                    if (in_array($extension, array("docx", "pdf"))) {
+    
+                        if (move_uploaded_file($file_pick['tmp_name'], 'img/' . $uploadFile)) {
+    
+                            $file->name = $fileName;
+                            $file->path = $uploadPath;
+                            $file->student_id = $user->student->id;
+    
+                    
+                            if ($this->Files->save($file)) {
+                                $this->Flash->success(__('File has been uploaded and inserted successfully.'));
+                            } else {
+                                $this->Flash->error(__('Unable to upload file, please try again.'));
+                            }
+                            
+                        }  else {
                             $this->Flash->error(__('Unable to upload file, please try again.'));
                         }
-                        
-                    }  else {
-                        $this->Flash->error(__('Unable to upload file, please try again.'));
+       
+                    } else {
+                        $this->Flash->error(__('Unable to save files of this type, please try again.'));
                     }
-   
                 } else {
-                    $this->Flash->error(__('Unable to save files of this type, please try again.'));
+                    $this->Flash->error(__('Please choose a file to upload.'));
                 }
-            } else {
-                $this->Flash->error(__('Please choose a file to upload.'));
+
             }
+            
         }
         $this->set(compact('file'));
     }

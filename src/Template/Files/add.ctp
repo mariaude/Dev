@@ -15,8 +15,8 @@
     <fieldset>
         <legend><?= __('Add File') ?></legend>
         <?php
-            echo $this->Form->control('name', ['type' => 'file']);
-            echo $this->Form->control('status');
+            echo $this->Form->control('name', ['name' => 'name[]', 'type' => 'file', "multiple"]);
+            //echo $this->Form->control('status');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
