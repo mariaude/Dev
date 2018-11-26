@@ -429,3 +429,2653 @@ Stack Trace:
         "full_name": "Mathieu Allard"
     }
 }
+2018-11-26 18:59:10 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 18:59:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 18:59:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 18:59:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:00:01 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:01:28 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:01:28 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:01:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:01:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:01:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:01:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:15:30 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:15:47 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:15:47 Error: [Error] Call to undefined function App\Controller\checkFileExtensions()
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->add()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-11-26 19:15:47 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:15:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:15:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:15:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:21:06 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:21:12 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:21:13 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:21:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:21:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:21:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:04 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:22:13 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:22:13 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:13 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:15 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:22:19 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:22:20 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:22:20 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:25:53 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:26:20 Error: Array
+(
+    [id] => 1
+    [email] => cynt@bidon.com
+    [role] => admin
+    [enterprise] => Array
+        (
+            [id] => 1
+            [user_id] => 1
+            [name] => 2020 Inc
+            [adress] => 1700 Boulevard des laurentides
+            [city] => Laval
+            [province] => Québec
+            [postal_code] => H7M 2Y
+            [region] => rive nord
+            [active] => 1
+            [additional_informations] => Type d'établissement: Autre
+            [enterprise_type] => 
+        )
+
+    [student] => 
+)
+
+2018-11-26 19:26:21 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:26:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:26:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:26:21 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 19:27:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sudent_id' in 'where clause'
+Request URL: /files
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(195): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Connection.php(334): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Connection.php(337): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Database\Query.php(219): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Query.php(1127): Cake\Database\Query->execute()
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(309): Cake\ORM\Query->_execute()
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\ORM\Query.php(1074): Cake\ORM\Query->_all()
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Datasource\Paginator.php(186): Cake\ORM\Query->all()
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(200): Cake\Datasource\Paginator->paginate(Object(App\Model\Table\FilesTable), Array, Array)
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(872): Cake\Controller\Component\PaginatorComponent->paginate(Object(Cake\ORM\Query), Array)
+#13 C:\Program Files (x86)\Ampps\www\Dev\src\Controller\FilesController.php(51): Cake\Controller\Controller->paginate(Object(Cake\ORM\Query))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->index()
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#17 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#29 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#32 {main}
+
+
+2018-11-26 19:27:53 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:27:58 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:28:02 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:28:11 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:28:45 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:28:50 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:28:57 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:29:01 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:29:07 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:29:11 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:29:37 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:29:55 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:30:02 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:30:25 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:30:31 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:30:41 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:30:46 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:32:04 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:32:14 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:36:50 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:36:56 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:37:38 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:37:46 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:38:26 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:38:30 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:39:36 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:39:42 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:40:06 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:40:12 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:40:21 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:40:29 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:40:59 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:42:17 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:42:48 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:42:57 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:43:01 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:43:31 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:46:22 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:47:04 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:47:38 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:47:40 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:47:43 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:47:50 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:48:10 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:48:13 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:48:16 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:48:57 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:49:20 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:49:30 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:49:53 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:53:06 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:53:06 Error: [Error] Class 'App\Controller\File' not found
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->add()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-11-26 19:53:24 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:53:24 Error: [Error] Class 'App\Controller\File' not found
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->add()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-11-26 19:53:42 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:53:42 Error: [Error] Class 'App\Controller\File' not found
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->add()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-11-26 19:54:04 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:54:15 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:54:15 Error: [Error] Class 'App\Controller\File' not found
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->add()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-11-26 19:55:01 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:55:49 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:56:13 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:56:17 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:56:59 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:57:13 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:57:52 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:58:05 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:58:55 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:59:21 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 19:59:57 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:00:40 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:01:01 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:02:40 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:02:41 Error: [Error] Call to undefined function App\Controller\size_of()
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\FilesController->add()
+#1 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\Dev\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-11-26 20:02:51 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:02:51 Warning: Warning (2): Illegal string offset 'name' in [C:\Program Files (x86)\Ampps\www\Dev\src\Controller\FilesController.php, line 99]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+App\Controller\FilesController::add() - APP/Controller\FilesController.php, line 99
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 107
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 20:03:12 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:07:43 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:07:44 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 20:07:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 20:07:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 20:07:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\Dev\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /files/add
+Referer URL: http://localhost/Dev/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2018-11-26 20:08:06 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:08:56 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:09:03 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:09:30 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:09:38 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+
+2018-11-26 20:09:44 Error: Array
+(
+    [id] => 44
+    [email] => etudiant1.letsgostage@gmail.com
+    [role] => student
+    [enterprise] => 
+    [student] => Array
+        (
+            [id] => 20
+            [user_id] => 44
+            [admission_number] => 99999999
+            [first_name] => Gfdg
+            [last_name] => Nnk
+            [phone_number] => 562..32.5.36.
+            [informations] => J'ai faim
+            [notes] => 
+            [active] => 1
+            [full_name] => Gfdg Nnk
+        )
+
+)
+

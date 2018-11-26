@@ -18,7 +18,7 @@ class FilesController extends AppController {
 
         $action = $this->request->getParam('action');
         $this->log($user);
-        if (isset($user['role']) && $user['role'] === 'admin' || $user["student"]) {
+        if (isset($user['role']) && ( $user['role'] == "student"|| $user['role'] == "admin")) {
             if(in_array($action, ['add', 'view', 'edit', 'delete'])){
                 return true;
             }
@@ -38,7 +38,18 @@ class FilesController extends AppController {
      * @return \Cake\Http\Response|void
      */
     public function index() {
+        $logged_user = $this->request->getSession()->read('Auth.User');
+
+        $this->paginate = [
+            'contain' => ['Students']
+        ];
         $files = $this->paginate($this->Files);
+
+        if($logged_user["student"]){
+            
+            $query = $this->Files->find()->where(['student_id' => $logged_user["student"]["id"]]);
+            $files = $this->paginate($query);
+        }
 
         $this->set(compact('files'));
     }
@@ -71,32 +82,40 @@ class FilesController extends AppController {
         $file = $this->Files->newEntity();
         if ($this->request->is('post')) {
             if (!empty($this->request->data['name']['name'])) {
-                $fileName = $this->request->data['name']['name'];
+
+                $file_pick = $this->request->data['name'];
+
+                $fileName = $file_pick['name'];
                 $uploadPath = 'Files/';
                 $uploadFile = $uploadPath . $fileName;
 
                 $user = TableRegistry::get('Users')->find()->where(['id =' => $this->request->getSession()->read('Auth.User.id')])->first();
 
-                /*
-                $student_id = $this->Students->find()
-                    ->leftJoinWith('Users')
-                    ->where(['Students.user_id =' => $this->request->getSession()->read('Auth.User.id'));
-*/
+                $file_explode = explode(".", $fileName);
+
+                $extension = $file_explode[sizeof($file_explode) - 1];
+
+                if (in_array($extension, array("docx", "pdf"))) {
+
+                    if (move_uploaded_file($this->request->data['name']['tmp_name'], 'img/' . $uploadFile)) {
+
+                        $file->name = $fileName;
+                        $file->path = $uploadPath;
+                        $file->student_id = $user->student->id;
 
                 
-                if (move_uploaded_file($this->request->data['name']['tmp_name'], 'img/' . $uploadFile)) {
-                    $file = $this->Files->patchEntity($file, $this->request->getData());
-                    $file->name = $fileName;
-                    $file->path = $uploadPath;
-                    $file->student_id = $user->student->id;
-
-                    if ($this->Files->save($file)) {
-                        $this->Flash->success(__('File has been uploaded and inserted successfully.'));
-                    } else {
+                        if ($this->Files->save($file)) {
+                            $this->Flash->success(__('File has been uploaded and inserted successfully.'));
+                        } else {
+                            $this->Flash->error(__('Unable to upload file, please try again.'));
+                        }
+                        
+                    }  else {
                         $this->Flash->error(__('Unable to upload file, please try again.'));
                     }
+   
                 } else {
-                    $this->Flash->error(__('Unable to save file, please try again.'));
+                    $this->Flash->error(__('Unable to save files of this type, please try again.'));
                 }
             } else {
                 $this->Flash->error(__('Please choose a file to upload.'));
@@ -146,5 +165,13 @@ class FilesController extends AppController {
 
         return $this->redirect(['action' => 'index']);
     }
+
+    /*public function checkFileExtensions($ext){
+        $bonneExtension = false;
+        if ($ext == 'doc' || $ext == 'docx' || $ext == 'pdf'){
+            $bonneExtension = true;
+        } 
+        return $bonneExtension;
+    }*/
 
 }
