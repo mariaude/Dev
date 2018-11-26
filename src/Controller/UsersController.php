@@ -134,9 +134,12 @@ class UsersController extends AppController
     public function resetPassword($uuid = null)
     {
         $password_link = TableRegistry::get('PasswordLinks')->find()->where(['uuid' => $uuid])->contain(['Users'])->first();
+
+        $time_validity = ($password_link->created->isWithinNext('15 minutes') && $password_link->created->wasWithinLast('15 minutes'));
+        
         if(isset($password_link) && $password_link->user != null){
             $user = $password_link->user;
-            if(!$password_link->used){
+            if(!$password_link->used && $time_validity){
                 if ($this->request->is(['patch', 'post', 'put'])) {
 
                     if($this->request->getData('password') === $this->request->getData('password_confirm')){
@@ -155,7 +158,6 @@ class UsersController extends AppController
                     $this->Flash->error(__('The password could not be reset. Please, try again.'));
                 }
             }else{
-                echo 'test';
                 //Déja utilisé
                 $this->Flash->error(__('This password reset link is expired. Please request an other.'));
                 return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
