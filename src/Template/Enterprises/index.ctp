@@ -22,7 +22,7 @@
                 ['value' => 0, 'text' => 'Inactives'],
             ],
             ['multiple' => false,
-            'value' => -1,
+            'value' => $active,
             'hiddenField' => false,
             'label' => 'Filtrer les entreprises...']
             );?>

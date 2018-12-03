@@ -8,7 +8,7 @@
     <h3><?= __('Students') ?></h3>
     <?= $this->Html->link(__('New Student'), ['controller' => 'Users', 'action' => 'add']) ?>
 
-    <?= $this->Form->create()?>
+    <?= $this->Form->create();?>
         <h6 id="actionLabel">Options de filtrage</h6>
         <?= $this->Form->radio('hired', 
             [
@@ -17,7 +17,7 @@
                 ['value' => 0, 'text' => 'Étudiants non engagés'],
             ],
             ['multiple' => false,
-            'value' => -1,
+            'value' => $hired,
             'hiddenField' => false,
             'label' => 'Filtrer les étudiants...']
             );?>

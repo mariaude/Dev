@@ -28,6 +28,9 @@ class StudentsController extends AppController
         
         $students_query = $this->Students;
 
+
+        $hired = $this->request->getData('hired')!=null ? $this->request->getData('hired') : -1;
+
         if ($this->request->is('post')) {
             
             $students_query = $this->Students;
@@ -44,7 +47,7 @@ class StudentsController extends AppController
 
         $students = $this->paginate($students_query);
 
-        $this->set(compact('students'));
+        $this->set(compact('students', 'hired'));
     }
 
     public function setHiredOrNot($id = null){

@@ -26,19 +26,18 @@ class EnterprisesController extends AppController
         
         $enterprises_query = $this->Enterprises;
 
+        $active = $this->request->getData('active')!=null ? $this->request->getData('active') : -1;
+
         if ($this->request->is('post')) {
             $enterprises_query = $this->Enterprises;
 
-            $this->log($this->request->getData());
-            $active = $this->request->getData('active');
-            $this->log($active);
             if($active != -1){
                 $enterprises_query = $enterprises_query->find()->where(['active' => $active]);
             }
         }
 
         $enterprises = $this->paginate($enterprises_query);
-        $this->set(compact('enterprises'));
+        $this->set(compact('enterprises', 'active'));
     }
 
     /**
