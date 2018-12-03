@@ -40,6 +40,7 @@ class Student extends Entity
         'informations' => true,
         'notes' => true,
         'active' => true,
+        'hired' => true,
         'user' => true,
         'candidacies' => true,
         'files' => true
