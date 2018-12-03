@@ -43,8 +43,26 @@
             <th scope="row"><?= __('Active') ?></th>
             <td><?= $student->active ? __('Yes') : __('No'); ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Hired') ?></th>
+            <td><?= $student->hired ? __('Yes') : __('No'); ?></td>
+        </tr>
        
     </table>
+
+    <?php if($this->request->getSession()->read('Auth.User.enterprise')):?>
+                        <?= $this->Form->create(null, ['url' => ['controller' => 'Students', 'action' => 'setHiredOrNot', $student->id]]) ?>
+
+                        <?= $this->Form->hidden('hired', [
+                                        'value' => !$student->hired ? 1 : 0
+                                    ]);?>
+                            <?= $this->Form->button(!$student->hired ?__("Engager cet étudiant") : __("Ne plus engager cet etudiant"), [
+                                'class' => 'petitbtn button'
+
+                            ])?>
+                   
+            <?php endif;?>
+
     <div class="related">
         <h4><?= __('Related Files') ?></h4>
         <?php if (!empty($student->files)): ?>

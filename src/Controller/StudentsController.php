@@ -25,9 +25,41 @@ class StudentsController extends AppController
         $this->paginate = [
             'contain' => ['Users', 'Files']
         ];
-        $students = $this->paginate($this->Students);
         
+        $students_query = $this->Students;
+
+        if ($this->request->is('post')) {
+            
+            $students_query = $this->Students;
+
+            $this->log($this->request->getData());
+            $hired = $this->request->getData('hired');
+            $this->log($hired);
+            if($hired != -1){
+                $this->log('filtre');
+                $students_query = $students_query->find()->where(['hired' => $hired]);
+                $this->log($students_query);
+            }
+        }
+
+        $students = $this->paginate($students_query);
+
         $this->set(compact('students'));
+    }
+
+    public function setHiredOrNot($id = null){
+
+        $student = $this->Students->get($id);
+        $hired = $this->request->getData('hired');
+        $this->log($this->request->getData());
+        $student->hired = $hired;
+
+        if ($this->Students->save($student)) {
+            $this->Flash->success(__('The student has been saved.'));
+            return $this->redirect($this->request->referer());
+        }else{
+            $this->Flash->error(__('The student could not be saved. Please, try again.'));
+        }
     }
 
     /**
@@ -231,6 +263,12 @@ class StudentsController extends AppController
         if (in_array($action, ['add']) && isset($user['role']) && $user['role'] === 'student' && !$user['student']) {
              $valide = true;
         }
+        else
+
+        if (in_array($action, ['setHiredOrNot']) && isset($user['role']) && $user['enterprise']) {
+             $valide = true;
+        }
+
 
         return ($valide) ? $valide : parent::isAuthorized($user);
 
