@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 03, 2018 at 03:16 PM
+-- Generation Time: Dec 03, 2018 at 03:34 PM
 -- Server version: 10.1.36-MariaDB-cll-lve
 -- PHP Version: 5.6.30
 
@@ -32,17 +32,6 @@ CREATE TABLE `candidacies` (
   `internship_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
---
--- Dumping data for table `candidacies`
---
-
-INSERT INTO `candidacies` (`internship_id`, `student_id`) VALUES
-(26, 21),
-(27, 21),
-(28, 21),
-(28, 22),
-(29, 22);
 
 -- --------------------------------------------------------
 
@@ -120,16 +109,6 @@ CREATE TABLE `convocations` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
---
--- Dumping data for table `convocations`
---
-
-INSERT INTO `convocations` (`internship_id`, `student_id`, `created`, `modified`) VALUES
-(1, 18, '2018-10-29 18:00:49', '2018-10-29 18:02:47'),
-(1, 19, '2018-10-29 18:10:04', '2018-10-29 18:10:04'),
-(23, 19, '2018-10-29 18:03:44', '2018-10-29 18:03:44'),
-(28, 21, '2018-12-03 20:05:00', '2018-12-03 20:05:00');
-
 -- --------------------------------------------------------
 
 --
@@ -155,8 +134,6 @@ CREATE TABLE `enterprises` (
 --
 
 INSERT INTO `enterprises` (`id`, `user_id`, `name`, `adress`, `city`, `province`, `postal_code`, `region`, `active`, `additional_informations`, `enterprise_type`) VALUES
-(1, 1, '2020 Inc', '1700 Boulevard des laurentides', 'Laval', 'Québec', 'H7M 2Y', 'rive nord', 1, 'Type d\'établissement: Autre', ''),
-(2, 42, 'Test', '123 rue abc', 'Repentigny', 'Quebec', 'j7k828', '1', 1, '1', 'centreReadaptation'),
 (4, 49, 'Advanced Progress', '2639 rue Pavot', 'Laval', 'Quebec', 'H8F5D6', 'Laval', 1, 'Clientèle jeune', 'cliniquePrivee'),
 (6, 50, 'Hôpital Soleil', '7193 avenue Papineau', 'Montreal', 'Quebec', 'H52R6G', 'Montreal', 1, 'Hôpital récemment rénové ', 'centreHospitalier');
 
@@ -170,15 +147,6 @@ CREATE TABLE `enterprises_client_types` (
   `enterprise_id` int(11) NOT NULL,
   `client_type_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `enterprises_client_types`
---
-
-INSERT INTO `enterprises_client_types` (`enterprise_id`, `client_type_id`) VALUES
-(2, 17),
-(2, 19),
-(2, 29);
 
 -- --------------------------------------------------------
 
@@ -239,10 +207,6 @@ CREATE TABLE `internships` (
 --
 
 INSERT INTO `internships` (`id`, `enterprise_id`, `semester`, `start_date`, `end_date`, `available_places`, `work_hours`, `title`, `description`) VALUES
-(1, 1, 'automne 2018', '2018-09-24', '2018-09-24', 200, '60', 'prog', 'programmer'),
-(21, 1, '2', '0000-00-00', '0000-00-00', 0, '', 'Int1', ''),
-(22, 1, '2', '2018-10-02', '2018-10-02', 0, '', 'Int2', ''),
-(23, 1, '2', '2018-10-02', '2018-10-02', 1, '', 'Int3', ''),
 (26, 6, 'winter', '2018-01-21', '2018-05-14', 20, '40', 'Aide physiothérapeutre', 'Porter assistance à l\'un de nos physiothérapeutre: Suivi des cas, manipulations etc. '),
 (27, 6, 'autumn', '2018-09-24', '2018-12-10', 5, '30', 'Préposé aux machines', 'Assister et expliquer aux patients comment effectuer les exercices sur les machines spécialisées. '),
 (28, 4, 'autumn', '2018-09-26', '2018-12-10', 10, '25', 'Entraineur', 'Entrainer les patients dans la section gym selon les recommandations du physiothérapeutre. '),
@@ -306,14 +270,6 @@ CREATE TABLE `password_links` (
   `used` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
---
--- Dumping data for table `password_links`
---
-
-INSERT INTO `password_links` (`id`, `user_id`, `uuid`, `created`, `used`) VALUES
-(2, 42, '5baae0f4-688a-4710-9fed-c749de987481', '2018-12-03 00:00:00', 0),
-(3, 42, 'ddb29de6-8ad5-4319-9b3a-d226be1860d4', '2018-12-03 20:14:59', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -360,14 +316,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 (1, 'a.letsgostage@gmail.com', '$2y$10$WNhHViUMwxqBBdqFIPxoM.F.PJ0ViPhiCY2SW8L7sMf36KbT34ZgW', 'admin'),
-(42, 'ma.gamestore.app@gmail.com', '$2y$10$8r.TSwvCp.8tYIRevvsYTOWcxYXwTWhdOrOKlMdGGgBbGoDVMneui', 'enterprise'),
-(43, 'allard.mathieu7@gmail.com', '$2y$10$8S8tpDf/xfqGuhxh.d7gDeE5vFLVsomZO/GYxcLaNHX.ZbjaThi7a', 'student'),
-(46, 'cyntboissonneault@gmail.com', '$2y$10$SxQsO.dkSiyv41VeLdchFOtvGEo3uD31cWd4SrAgxW.Sj2WxF0LcK', 'enterprise'),
 (47, 'etudiant1.letsgostage@gmail.com', '$2y$10$bOMDMMTN2.bXoddIB3vfeet48uw2r3SDRrsVYJBMAKyCqeQkVC6L2', 'student'),
 (48, 'etudiant2.letsgostage@gmail.com', '$2y$10$lEY1n.pSlXQepI4BLDBZge1FzaThoVfRHL0WTsCijFiXUS3zWMUei', 'student'),
 (49, 'entreprise1.letsgostage@gmail.com', '$2y$10$pPVkMXnPRHsA5x6W.HWMiekXtrvnuiBWSDfOqYOY6mQrN1.l23mfO', 'enterprise'),
-(50, 'entreprise2.letsgostage@gmail.com', '$2y$10$pPVkMXnPRHsA5x6W.HWMiekXtrvnuiBWSDfOqYOY6mQrN1.l23mfO', 'enterprise'),
-(51, 'test@l.com', '$2y$10$WNhHViUMwxqBBdqFIPxoM.F.PJ0ViPhiCY2SW8L7sMf36KbT34ZgW', 'student');
+(50, 'entreprise2.letsgostage@gmail.com', '$2y$10$pPVkMXnPRHsA5x6W.HWMiekXtrvnuiBWSDfOqYOY6mQrN1.l23mfO', 'enterprise');
 
 --
 -- Indexes for dumped tables
