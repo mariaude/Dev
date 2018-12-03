@@ -62,6 +62,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
                     <li><?= $this->Html->link(__('Entreprises'), ['controller' => 'Enterprises', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('Candidatures'), ['controller' => 'Candidacies', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('Convocations'), ['controller' => 'Convocations', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Fichiers'), ['controller' => 'Files', 'action' => 'index']) ?></li>
 
                 <?php endif;?>
 
